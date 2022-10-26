@@ -1,0 +1,298 @@
+<!doctype html>
+<html class="no-js" lang="uk">
+    <head>
+		<!-- Basic page needs
+        ============================================ --> 
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{title}</title>
+        <meta name="description" content="">
+		<!-- Mobile specific metas --> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- FONTS -->
+		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,600italic,300italic,700' rel='stylesheet' type='text/css'>
+		<!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="{main_sait}favicon.ico">
+		<!-- font awesome -->
+        <link rel="stylesheet" href="{template}css/font-awesome.min.css">
+		<!-- carousel CSS -->
+		<link rel="stylesheet" href="{template}css/owl.carousel.css">
+		<!-- carousel Theme CSS -->
+		<link rel="stylesheet" href="{template}css/owl.my_theme.css">
+		<!-- carousel transitions CSS -->
+		<link rel="stylesheet" href="{template}css/owl.transitions.css">
+		<!-- nivo slider slider css -->
+        <link rel="stylesheet" href="{template}css/nivo-slider.css">
+		<!-- animate css -->
+        <link rel="stylesheet" href="{template}css/animate.css">
+		<!-- Price jquery-ui  -->
+        <link rel="stylesheet" href="{template}css/jquery-ui.css">
+		<!-- fancy-box theme -->
+        <link rel="stylesheet" href="{template}fancy-box/jquery.fancybox.css">
+		<!-- normalizer -->
+        <link rel="stylesheet" href="{template}css/normalize.css">
+		<!-- bootstrap -->
+        <link rel="stylesheet" href="{template}css/bootstrap.min.css">
+		<!-- Mobile menu css -->
+        <link rel="stylesheet" href="{template}css/meanmenu.min.css">
+		<!-- main -->
+        <link rel="stylesheet" href="{template}css/main.css">
+		<!-- style -->
+        <link rel="stylesheet" href="{template}style.css">
+		<!-- Responsive css -->
+        <link rel="stylesheet" href="{template}css/responsive.css">
+		<!-- modernizr JS -->
+        <script src="{template}js/vendor/modernizr-2.8.3.min.js"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-233005209-1">
+		</script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-233005209-1');
+		</script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+		<!--Start Header area -->
+		<div class="home2_header_top_area">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+						<!--Start logo area -->
+						<div class="logo logo_border"> 
+							<a href="{main_sait}">
+								<img src="{template}/img/kombat-logo.png" alt="" />
+							</a>
+						</div>
+						<!--End logo area -->
+					</div>
+					<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+						<div class="row">
+						<div class="home2_contact_info">
+							<div class="contact_info_text">
+								<p>Зв'язок з нами: (068) 000 23 77</p>
+							</div>
+							<!--Start Account area -->
+							<div class="account_card_area account_cart_home2"> 
+								<ul id="account_nav">
+									<li><a class="list_cl" href="#"><i class="fa fa-key"></i>Аккаунт</a>
+										<div class="account_menu_list">
+											<div class="account_single_item" style="width: 100%;margin-left: 0;">
+												<h2 style="margin-left: 10px;">Користувач</h2>
+												<ul id="account_single_nav_3">
+													{loginInSite}
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li class="fieldCartBlock"></li>
+								</ul>
+							</div> 
+							<!--End Account area -->
+						</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-8 col-md-12 col-sm-8 col-xs-12">
+								<!--Start Main menu area -->
+								<div class="main_menu main_menu_tb">
+									<ul id="nav_menu" class="active_cl nav_manu_lf">
+										<li><a class="home2_size" href="{main_sait}"><span class="Sales">Головна</span></a>
+										<li><a class="home2_size" href="https://kombat.in.ua/ua/shop/showAllInStock/?p=76"><span class="Clothings">Категорії</span></a>
+											<div class="mega_menu_list menu_home2_list">
+													{menu}
+											</div>
+										</li>
+										<li><a class="home2_size" href="{main_sait}ua/shop/comingSoon/?p=77"><span class="Sales">Скоро в наявності</span></a>
+										<li><a class="home2_size" href="#"><span class="Footwear">Покупцю</span></a>
+											<div class="home_mega_menu menu_home2_looktr">
+												<a href="https://kombat.in.ua/ua/mode/content-1.html">Оплата та доставка</a>
+												<a href="https://kombat.in.ua/ua/mode/content-4.html">Договір оферта</a>
+												<a href="https://kombat.in.ua/ua/mode/content-5.html">Політика конфіденційності</a>
+												<a href="https://kombat.in.ua/ua/mode/content-1.html">Доставка</a>
+												<a href="https://kombat.in.ua/ua/mode/content-3.html">Про нас</a>
+											</div>
+										</li>
+										<li><a class="home2_size" href="https://kombat.in.ua/ua/mode/news/contact_1.html"><span class="Sales">Контакти</span></a>
+										</li>
+									</ul>
+								</div>
+								<!--End Main menu area -->
+							</div>
+							<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+								<!--Start Search area -->
+								<div class="search_box_hopme2">
+									<form action="{main_sait}ua/shop/search/" name="myForm" method="GET">
+										<div class="search_box seach_box_home2_area">
+											<input name="search" id="itp" class="input_text" type="text" placeholder="Пошук"/>
+											<button type="submit" class="btn-search">
+												<i class="fa fa-search"></i>
+											</button>
+										</div>
+									</form> 
+								</div>
+								<!--End Search area -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--start Mobile Menu area -->
+			<div class="mobile-menu-area">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+							<div class="mobile-menu">
+								<nav id="dropdown">
+									<ul>
+										<li><a href="{main_sait}">Головна</a></li>
+										<li><a href="#">Категорії</a>
+											<ul>
+												{menu}
+											</ul>
+										</li>
+										<li><li><a href="{main_sait}ua/shop/comingSoon/?p=77">Скоро в наявності</a></li>
+										<li><a href="#">Покупцю</a>
+											<ul>
+												<li><a href="https://kombat.in.ua/ua/mode/content-1.html">Оплата та доставка</a></li>
+												<li><a href="https://kombat.in.ua/ua/mode/content-4.html">Договір оферта</a></li>
+												<li><a href="https://kombat.in.ua/ua/mode/content-5.html">Політика конфіденційності</a></li>
+												<li><a href="https://kombat.in.ua/ua/mode/content-1.html">Доставка</a></li>
+												<li><a href="https://kombat.in.ua/ua/mode/content-3.html">Про нас</a></li>
+											</ul>
+										</li>
+										<li><a  href="https://kombat.in.ua/ua/mode/news/contact_1.html"><span class="Sales">Контакти</span></a></li>
+									</ul>
+								</nav>
+							</div>					
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--End Mobile Menu area -->
+		</div>
+		{onlyMainPage}
+		{body}
+		<div class="footer_area">
+			<div class="container">
+				<div class="footer_menu_area">
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+							<div class="help_support">
+								<h2>Покупцю</h2>
+								<ul class="footer_menu">
+									<li><a href="#" onclick="$('#modalLogin').modal('show');"> Вхід</a></li>
+									<li><a href="{main_sait}ru/register.html">Реєстрація</a></li>
+									<li><a href="https://kombat.in.ua/ua/orders.html">Ваші замовлення</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+							<div class="help_support help_border">
+								<h2>Інформація</h2>
+								<ul class="footer_menu">
+									<li><a href="https://kombat.in.ua/ua/mode/content-1.html">Оплата та доставка</a></li>
+									<li><a href="https://kombat.in.ua/ua/mode/content-4.html">Договір оферта</a></li>
+									<li><a href="https://kombat.in.ua/ua/mode/content-5.html">Політика конфіденційності</a></li>
+									<li><a href="https://kombat.in.ua/ua/mode/content-1.html">Доставка</a></li>
+									<li><a href="https://kombat.in.ua/ua/mode/content-3.html">Про нас</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+							<div class="help_support help_border">
+								<h2>Інше</h2>
+								<ul class="footer_menu">
+									<li><a href="{main_sait}ua/mode/news">Новини</a></li>
+									<li><a href="https://kombat.in.ua/ua/mode/news/contact_1.html">Контакти</a></li>
+									<li><a href="https://kombat.in.ua/ua/mode/content-3.html">Про нас</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+							<div class="help_support help_border">
+								<h2>Контактна інформація</h2>
+								<p>Україна, Волинська обл. м. Луцьк</p>
+								<p>Тел.: <span>(068) 000 23 77</span></p>
+								<p>Email: <span>info@kombat.in.ua</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="footer_bottom_area">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<div class="copy_visa">
+								<div class="copy_right">
+									<h2>Copyright © 2022 <a href="https://kombat..in.ua">KOMBAT.IN.UA</a>. All Rights Reserved.</h2>
+								</div>
+								<div class="visa_card">
+									<img src="{template}/img/payment/payment.png" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal" tabindex="-1"  id="modalLogin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Вхід на сайт</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<table class="table table-bordered table-striped">
+							<tr>
+								<td>Телефон:</td>
+								<td><input type="text" id="loginInSite" class="form-control input-sm" placeholder="телефон"></td>
+							</tr>
+							<tr>
+								<td>Пароль:</td>
+								<td><input type="password" id="passwordInSite" class="form-control input-sm" placeholder="пароль"></td>
+							</tr>
+						</table>
+						<div id="errorLogin" style="display: none;" class="alert alert-danger">
+							Телефон або пароль введено не вірно!
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+						<button type="button" class="btn btn-primary" onclick="loginInSite2();">Увійти</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--End Footer area -->
+		<!-- jquery JS -->
+        <script src="{template}/js/vendor/jquery-1.12.4.min.js"></script>
+		<!-- fancybox JS -->
+        <script src="{template}/fancy-box/jquery.fancybox.pack.js"></script>
+		<!-- price slider JS  -->
+        <script src="{template}/js/price-slider.js"></script>
+		<!-- Mobile menu JS -->
+        <script src="{template}/js/jquery.meanmenu.js"></script>
+		<!-- nivo slider JS -->
+        <script src="{template}/js/jquery.nivo.slider.pack.js"></script>
+		<!-- wow JS -->
+        <script src="{template}/js/wow.js"></script>
+		<!-- nivo-plugin JS -->
+		<script src="{template}/js/nivo-plugin.js"></script>
+		<!-- scrollUp JS -->
+		<script src="{template}/js/jquery.scrollUp.js"></script>
+		<!-- carousel JS -->
+        <script src="{template}/js/owl.carousel.min.js"></script>
+		<!-- bootstrap JS -->
+        <script src="{template}/js/bootstrap.min.js"></script>
+		<!-- plugins JS -->
+        <script src="{template}/js/plugins.js"></script>
+		<!-- main JS  -->
+        <script src="{template}/js/main.js"></script>
+		<script src="{main_sait}js/OSMS_kombat.js"></script>
+		{script}
+    </body>
+</html>

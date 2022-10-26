@@ -1,0 +1,17 @@
+<div class="col-lg-3 col-xs-6" style="margin-top: 20px;">
+    <div class="itemShop"{dopStyleItemShop}>
+        <div style="position: relative;">
+            <a href="{link}" style="{imgStyle} border: none;margin-bottom: 0;" class="thumbnail" onclick="clickItem({name: '{nameEmpty}', id: {id}, price: '{price}', brand: '{brand}', category: '{category}', url: '{link}'});"><img src="{image}"></a>
+            {addAct}
+        </div>
+        <div class="nameItem">{name}</div>
+        <div class="row bottomItem">
+            <div class="col-lg-7" style="padding: 0px;">
+                <div class="price">{strike}{price_old}{/strike} <span class="priceNow">{price_discount} грн</span></div>
+            </div>
+            <div class="col-lg-5" style="padding: 0px;">
+                <a href="{link}" class="btn btn-info" style="width: 100%;" onclick="clickItem({name: '{nameEmpty}', id: {id}, price: '{price}', brand: '{brand}', category: '{category}', url: '{link}'});">Купити</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,783 @@
+body {
+	padding: 10px;
+	
+	font: 12px/18px verdana, arial, sans-serif;
+	color: #444;
+	text-align: center;
+	
+	background: #DDDDDD;
+}
+#title {
+	font-size:14px;
+}
+#container {
+	position: relative;
+	
+	margin: 0 auto;
+	padding: 0;
+	width: 970px;
+	
+	border: 1px solid #369;
+	
+	text-align: left;
+}
+
+#content {
+	position: relative;
+	background: #FFFFFF;
+	margin: 0;
+	padding: 15px;
+	width: 940px;
+}
+
+#footer {
+	position: relative;
+	
+	margin: 0;
+	padding: 7px 0 0 15px;
+	width: 955px;
+	height: 18px;
+	
+	font-size: 11px;
+	line-height: 11px;
+	color: #fff;
+	
+	background: #69c;
+}
+
+#footer div#credits {
+	position: absolute;
+	top: 7px;
+	right: 15px;
+}
+
+/* Navigation Styles
+----------------------------------------------- */
+
+#navigation {
+	position: relative;
+	
+	margin: 0;
+	padding: 0;
+	width: 970px;
+	
+	font-size: 11px;
+	line-height: 25px !important; /* Modified for IE 7 */
+	line-height: 24px; /* IE SUCKS */
+	color: #fff;
+	
+	background: #369;
+}
+
+#navigation ul {
+	margin: 0 0 0 15px;
+	padding: 0; /* Modified for IE 7 */		
+	white-space: nowrap;	
+	list-style-type: none;
+}
+
+#navigation ul li {
+	display: inline;
+}
+
+#navigation li a {
+	margin: 0;
+	padding: 5px 15px;
+	border-top: 1px solid #275380;
+	border-right: 1px solid #275380;
+	color: #fff;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+#primary {
+	position: relative;
+	margin: 0;
+	padding: 10px 0 0;
+	height: 25px;
+}
+
+#primary li a {
+	color: #fff;
+	background: #4F7EAD;
+}
+
+#primary a.current, #primary a.current:hover, #primary a:hover {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #69c;
+	background: #69c;
+}
+
+#secondary {
+	position: relative;
+	
+	margin: 0;
+	padding: 10px 0 0;
+	height: 25px;
+	
+	background: #69c;
+}
+
+#secondary li a {
+	color: #444;
+	background: #D7E9F5;
+}
+
+#secondary a.current, #secondary a.current:hover, #secondary a:hover {
+	border-top: 1px solid #FFC73C;
+	border-bottom: 1px solid #fff;
+	
+	color: #444;
+	background: #fff;
+}
+
+#signout {
+	position: absolute;
+	top: 11px;
+	right: 15px;
+	
+	color: #fff;
+	text-align: right;
+}
+
+#signout a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+#signout a:hover {
+	color: #369;
+	text-decoration: none;
+	background: #fff;
+}
+
+
+
+/* General Content Styles
+----------------------------------------------- */
+
+h1 {
+	margin: 0;
+	padding: 0 0 5px;
+	
+	font: 20px/20px arial, verdana, sans-serif;
+	color: #369;
+}
+
+hr {
+	margin: 10px 0 !important; /* IE Sucks */
+	margin: 0;
+	padding: 0;
+	height: 1px;
+	
+	border: 0;
+	border-bottom: 1px solid #369;
+}
+
+p {
+	margin: 0;
+	padding: 5px 0;
+}
+
+
+
+/* Message Styles
+----------------------------------------------- */
+
+#msg-error {
+	margin: 10px 0;
+	padding: 5px 10px;
+	
+	color: #fff;
+	
+	background: #c00;
+}
+
+#msg-success {
+	margin: 10px 0;
+	padding: 5px 10px;
+	
+	color: #fff;
+	
+	background: #393;
+}
+
+#msg-alert {
+	margin: 10px 0;
+	padding: 5px 10px;
+	
+	color: #fff;
+	
+	background: #f60;
+}
+
+span.success, span.alert, span.error {
+	padding: 1px 3px;
+	
+	color: #fff;
+	font-weight: bold;
+	
+	background: #393;
+}
+
+span.alert {
+	background: #f60;
+}
+
+span.error {
+	background: #c00;
+}
+
+
+
+/* Image Styles
+----------------------------------------------- */
+
+img {
+	border: 0;
+}
+
+
+
+/* Link Styles
+----------------------------------------------- */
+
+a {
+	color: #369;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #c00;
+}
+
+a.title {
+	font-weight: bold;
+}
+
+#pages div#links a {
+	padding: 2px 3px;
+	
+	color: #fff;
+	text-decoration: none;
+}
+
+#pages div#links a:hover, #pages div#links a.current {
+	color: #369;
+	
+	background: #fff;
+}
+
+
+
+/* Table Styles
+----------------------------------------------- */
+
+th, td {
+	padding: 5px;
+	
+	font-size: 11px;
+	line-height: 15px;
+}
+
+th {
+	padding: 3px 5px;
+	
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	
+	background: #69c;
+}
+
+tr.alt {
+	background: #E7F1F8;
+}
+
+
+/* Предпросмотр
+----------------------------------------------- */
+
+#summary h1 {
+	font-size: 12px;
+	color: #C33902;
+	letter-spacing: 1px;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	line-height : 120%;
+	text-transform : uppercase;
+	text-align: center
+}
+	
+#summary h2 {
+	font-size: 13px;
+	color: #2B2B2D;
+	letter-spacing: 1px;
+	font-weight: bolder;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: italic;
+	line-height : 120%
+	}
+
+	
+#summary h3 {
+	font-size: 14px;
+	color: #2B2B2D;
+	letter-spacing: 1px;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	line-height : 120%;
+	text-transform : uppercase;
+	text-align: center
+}
+
+#summary h4 {
+	font-family: Arial, Tahoma, Verdana;
+	font-weight: bold;
+	color: #2B2B2D;
+	text-decoration: none;
+	font-size: 13px;
+}
+#summary a {
+	color: #1069EE;
+	text-decoration: underline;
+}
+#summary a:hover {
+	color: #1069EE;
+	text-decoration: none;
+}
+#summary .t1
+ {
+	font-family: Arial, Tahoma, Verdana;
+	font-weight: normal;
+	color: #2B2B2D;
+	text-decoration: none;
+	font-size: 13px;
+}	
+#summary a.t1:hover {
+	color: #2B2B2D;
+	text-decoration: underline;
+}
+#summary .t2 
+{
+	font-family: Arial, Tahoma, Verdana;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 13px;
+	color: #C33902;
+}
+#summary a.t2:hover {
+	color: #C33902;
+	text-decoration: underline;
+}
+
+#summary .t3 
+{
+	font-family: Arial, Tahoma, Verdana;
+	font-weight: normal;
+	text-decoration: none;
+	font-size: 13px;
+	color: #C33902;
+}
+
+#summary .t4 
+{
+	font-size: 12px;
+	color: #2B2B2D;
+	letter-spacing: 1px;
+	font-weight: bolder;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: italic;
+	line-height : 120%
+	}
+
+#summary .t5 
+{
+	font-family: Arial, Tahoma, Verdana;
+	font-weight: normal;
+	text-decoration: none;
+	font-size: 10px;
+	color: #2B2B2D;
+}
+
+#summary .t6 
+{
+	font-family: "Times New Roman", Times, serif;
+	font-weight: normal;
+	text-decoration: none;
+	font-size: 13px;
+	color: #C33902;
+}
+
+
+
+/* Page Link Styles
+----------------------------------------------- */
+
+#pages {
+	position: relative;
+	
+	margin: 0;
+	padding: 4px 10px 0 10px;
+	width: 920px;
+	height: 16px;
+	
+	font-size: 11px;
+	line-height: 11px;
+	color: #fff;
+	
+	background: #69c;
+}
+
+#pages div#links {
+	position: absolute;
+	top: 4px;
+	right: 10px;
+}
+
+
+div.checkbox {
+	float:left;
+	width: 150px;
+	margin: 2px 0;
+}
+div.checkbox input {
+	vertical-align:middle;
+	margin-right: 5px;
+	width: 16px;
+	height: 16px;
+	color: green;
+}
+
+/* Listing Summary Styles
+----------------------------------------------- */
+
+div.form table.summary td {
+	padding-right: 40px;
+}
+
+#display {
+	position: relative;
+	
+	margin-top: 20px;
+	
+	text-align: center;
+}
+
+table.display {
+	margin: 0 auto;
+	text-align: left;
+}
+
+table.display td {
+	padding: 0;
+}
+
+table.info td {
+	padding: 8px 0 0;
+}
+
+table.info td.label {
+	width: 100px;
+}
+
+#display td.title {
+	margin: 0;
+	padding: 4px 0;
+	
+	color: #fff;
+	font-weight: bold;
+	
+	text-align: center;
+	
+	background: #369;
+}
+
+
+
+/* Form Styles
+----------------------------------------------- */
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+div.form {
+	position: relative;
+	
+	margin: 0;
+	padding: 10px;
+}
+
+div.form td {
+	padding: 4px 0;
+	font-size: 12px;
+}
+
+div.form td.label {
+	width: 170px;
+}
+
+div.form td.field {
+	width: 300px;
+}
+
+div.form td.check, div.check {
+	padding: 7px 0 8px;
+}
+
+div.alt {
+	border-top: 1px solid #69c;
+	border-bottom: 1px solid #69c;
+	
+	background: #E7F1F8;
+}
+
+input.widtha {
+	width: 300px;
+}
+
+input.widthb {
+	width: 150px;
+}
+
+input.widthc {
+	width: 700px;
+}
+
+input.widthd {
+	width: 80px;
+}
+
+select.widtha {
+	width: 234px !important; /* ie and ff both render select box widths wrong? */
+	width: 236px;
+}
+
+select.widthb {
+	width: 154px !important; /* ie and ff both render select box widths wrong? */
+	width: 156px;
+}
+select.widthc {
+	width: 554px !important; /* ie and ff both render select box widths wrong? */
+	width: 556px;
+}
+textarea.widtha {
+	width: 300px;
+	height: 100px;
+}
+textarea.widthc {
+	width: 700px;
+	height: 200px;
+}
+
+input.check {
+	margin: 0;
+	padding: 0;
+}
+
+
+
+/* Search/Sort Bar Styles
+----------------------------------------------- */
+
+#search {
+	position: relative;
+	
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+#search input, #search select {
+	font-size: 11px;
+}
+
+#search select.widtha {
+	width: 160px !important; /* ie and ff both render select box widths wrong? */
+	width: 162px;
+}
+
+#search input.widtha {
+	width: 160px;
+}
+
+#search input.widthb {
+	width: 90px;
+}
+
+#search select.widthb {
+	width: 94px !important; /* ie and ff both render select box widths wrong? */
+	width: 96px;
+}
+
+#search table.search td {
+	/*padding: 0 10px 0 0;*/
+	padding: 0;
+}
+
+#options {
+	display: none;
+	position: relative;
+	
+	margin: 10px 0 0;
+	
+	font-size: 11px;
+}
+
+
+
+/* Stats Graphs Styles
+----------------------------------------------- */
+
+table.graph {
+	margin: 5px 0;
+	border: 1px solid #69c;
+}
+
+table.graph td, table.graph th {
+	padding: 4px 0;
+}
+
+table.graph td.label {
+	font: 11px "Courier New", Courier, mono;
+	color: #fff;
+	background: #69c;
+}
+
+table.graph td.label2 {
+	font: 11px "Courier New", Courier, mono;
+	color: #fff;
+	background: #369;
+}
+
+
+
+/* Color Options Styles
+----------------------------------------------- */
+
+div.preview {
+	margin: 0 15px;
+	width: 50px;
+	height: 22px;
+	
+	background: #e2e2e2;
+}
+
+
+
+/* Sign In and Setup Wizard Page Styles
+----------------------------------------------- */
+#info_admin_page {
+	font-family: Arial, Tahoma, Verdana;
+	color:#3282D1;
+}
+#menu_table a{
+	text-decoration:none;
+	font-family: Arial, Tahoma, Verdana;
+	color:black;
+}
+#menu_table a:hover{
+	font-family: Arial, Tahoma, Verdana;
+	text-decoration:none;
+	color:#BA2222;
+}
+#container_admin_page {
+	position: relative;
+	margin: 10px auto 10px;
+	border: 1px solid #9BA2A3;
+	padding: 0px;
+	width: 95%;
+	background: #C8D1D3;
+}
+#sign_container {
+	position: relative;
+	border: 1px solid #9BA2A3;
+	padding: 5px;
+	width: 250px;
+	background: #C8D1D3;
+}
+#info {
+	margin: 5px 0px 0px 0px;
+	position: relative;
+	border: 1px solid #9BA2A3;
+	padding: 5px;
+	width: 100%
+	background: #E8FFEA;
+}
+#errmsg {
+	font-weight:bold;
+	position: relative;
+	margin: 100px auto 10px;
+	border: 1px solid #9BA2A3;
+	padding: 5px;
+	width: 250px;
+	background: #FFA6A6;
+}
+
+#sign_header_full_admin {
+	position: relative;
+	font: 12px Verdana;
+	color: #727C7E;
+}
+
+#sign_header {
+	position: relative;
+	margin: 0;
+	padding: 2px 0 7px 0;
+	font: 12px Verdana;
+	font-weight: bold;
+	line-height: 11px;
+	color: #727C7E;
+}
+
+#sign_content {
+	position: relative;
+	
+	margin: 0;
+	padding: 15px 25px 25px;
+	
+	text-align: left;
+	
+	background: #fff;
+}
+
+#sign_form {
+	position: relative;
+	
+	margin: 0;
+	padding: 0;
+}
+
+#sign_form td {
+	padding: 4px 0;
+	font-size: 12px;
+}
+
+.textform { 
+ font-size: 10px; 
+ background-color: #CCCCCC; 
+ border: 1px solid #666666; 
+}
+
+/*Some example styles to pass your tooltip courtesy of the blueprint CSS framework*/
+.error, .notice, .success {padding:.8em;margin-bottom:1em;border:2px solid #ddd; text-decoration:none;}
+.error {background:#FBE3E4;color:#8a1f11;border-color:#FBC2C4;}
+.notice {background:#FFF6BF;color:black; text-decoration:none;}
+.success {background:#E6EFC2;color:#264409;border-color:#C6D880;}
+.error a {color:#8a1f11;}
+.notice a {color:#514721; text-decoration:none;}
+.success a {color:#264409;}
+
+/*The tooltip styles*/
+.tooltip {padding: 0px;}
+.tooltip * {z-index: 999;position: absolute;margin: 0 0 0 4px; display:inline; text-decoration:none}
+
+.link_add_category {
+text-decoration:none;
+}
+.form_text {
+border:1px solid #369;
+}

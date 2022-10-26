@@ -1,0 +1,78 @@
+<?php
+/**
+ * Created by JetBrains PhpStorm.
+ * User: ivashka
+ * Date: 1/30/17
+ * Time: 12:57 PM
+ * To change this template use File | Settings | File Templates.
+ */
+if (isset ($_GET['del'])){
+    mysql_query("DELETE FROM `ls_baner` WHERE `id` = '".intval($_GET['del'])."';");
+}
+if (isset ($_POST['link'])){
+    $uploaddir = 'upload/baner';
+    $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
+    if (move_uploaded_file($_FILES['userfile']['tmp_name'], '../'.$uploadfile)) {
+        $body_admin .= '<div class="alert alert-success">Файл корректен и был успешно загружен.</div>';
+        mysql_query("
+        INSERT INTO  `ls_baner` (
+        `link` ,
+        `file`,
+        `main`
+        )
+        VALUES (
+        '".mysql_real_escape_string($_POST['link'])."' ,
+        '".mysql_real_escape_string($uploadfile)."' ,
+        '".intval($_POST['main'])."'
+        );
+        ");
+    } else {
+        $body_admin .= '<div class="alert alert-error">Ошибка загрузки</div>';
+    }
+}
+$body_admin .= '
+<h2>Добавить банер</h2>
+<form enctype="multipart/form-data" action="" method="POST">
+    <!-- Поле MAX_FILE_SIZE должно быть указано до поля загрузки файла -->
+        <!-- Название элемента input определяет имя в массиве $_FILES -->
+    <div>Ссылка: <input type="text" name="link"></div>
+    <div>Куда? <select class="form-control" name="main"><option value="1">В верхний банер</option><option value="0">В левый банер</option></select></div>
+    <div>Отправить этот файл: <input name="userfile" type="file" /></div>
+    <div><input type="submit" value="Загрузить" /></div>
+</form>
+<h2>Завантажені банери:</h2>
+';
+if ($array = getArray("SELECT * FROM `ls_baner`")){
+    $body_admin .= '
+    <table class="table table-bordered table-striped">
+    <thead>
+        <th>IMG</th>
+        <th>Розміщення</th>
+        <th>LINK</th>
+        <th>DEL</th>
+    </thead>
+    <tbody>
+    ';
+    foreach ($array as $v){
+        switch ($v['main']){
+            case 0:
+                $main = 'лівий банер';
+                break;
+            case 1:
+                $main = 'верхній банер';
+                break;
+        }
+        $body_admin .= '
+        <tr>
+            <td><img src="'.$config['site_url'].$v['file'].'" style="width: 200px;"></td>
+            <td>'.$main.'</td>
+            <td><a href="'.$v['link'].'" target="_blank">'.$v['link'].'</a></td>
+            <td><a href="index.php?do=baner&del='.$v['id'].'">видалити</a></td>
+        </tr>
+        ';
+    }
+    $body_admin .= '
+    </tbody>
+    </table>
+    ';
+}

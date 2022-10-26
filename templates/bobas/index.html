@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="description" content="{description}">
+    <title>{title}</title>
+    <link href="{template}css/bootstrap.min.css" rel="stylesheet">
+    <link href="{template}css/prettyPhoto.css" rel="stylesheet">
+    <link href="{template}css/price-range.css" rel="stylesheet">
+    <link href="{main_sait}css/select2.min.css" rel="stylesheet" />
+    <link href="{template}css/animate.css" rel="stylesheet">
+    <link href="{template}css/main.css" rel="stylesheet">
+    <link href="{template}css/responsive.css" rel="stylesheet">
+    <link href="{template}css/prettyPhoto.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="{template}js/html5shiv.js"></script>
+    <script src="{template}js/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://kit.fontawesome.com/9a1f1f4197.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="{template}favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{template}favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{template}favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{template}favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{template}favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{template}favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{template}favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{template}favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{template}favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{template}favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{template}favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="{template}favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{template}favicon/favicon-16x16.png">
+    <link rel="manifest" href="{template}favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{template}favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="facebook-domain-verification" content="tp4lifrma9f50r4e5v0y8he64fjif5" />
+    <meta name="google-site-verification" content="lrwkHU5w3ZmbNQJN5Dk3tWCML0_SUwjsEGFHyGEbuiI" />
+    <meta name="google-site-verification" content="3Eu5BVC9syFsm9X06GTRyNfCsiJZW4wz2YPoyr1G0sE" />
+    {origin}
+    <script src="{template}js/jquery.js"></script>
+    <script src="{template}js/bootstrap.min.js"></script>
+    <script src="{template}js/jquery.scrollUp.min.js"></script>
+    <script src="{template}js/price-range.js"></script>
+    <script src="{template}js/jquery.prettyPhoto.js"></script>
+    <script src="{template}js/main.js"></script>
+    <script src="{template}js/jquery.prettyPhoto.js"></script>
+    <script src="{main_sait}js/OSMS_sorokavorona.js"></script>
+    <script src="{main_sait}js/select2.min.js"></script>
+    <script src="{main_sait}js/jquery.touchSwipe.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-462132080"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-462132080');
+    </script>
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '375655424124984');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=375655424124984&ev=PageView&noscript=1"
+    /></noscript>
+</head><!--/head-->
+
+<body>
+{header}
+
+{onlyMainPage}
+<div class="container">{body}</div>
+{footer}
+<div id="modalShort"></div>
+<script>
+    $( document ).ready(function() {
+        $("#kodSearch").select2({
+            ajax: {
+                url: "https://bobas.ua/index.php?mode=ajax&ajax=search",
+                dataType: 'json',
+                delay: 250,
+                data: function (params) {
+                    $("#kodId").val(params.term);
+                    return {
+                        q: params.term, // search term
+                        page: params.page
+                    };
+                },
+                processResults: function (data, params) {
+                    // parse the results into the format expected by Select2
+                    // since we are using custom formatting functions we do not need to
+                    // alter the remote JSON data, except to indicate that infinite
+                    // scrolling can be used
+                    params.page = params.page || 1;
+
+                    return {
+                        results: data.items,
+                        pagination: {
+                            more: (params.page * 30) < data.total_count
+                        }
+                    };
+                },
+                cache: true
+            },
+            escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
+            minimumInputLength: 1,
+            templateResult: formatRepo, // omitted for brevity, see the source of this page
+            templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
+        });
+    });
+    function formatRepo (repo) {
+        if (repo.loading) return repo.text;
+
+        var markup = '<div class="row"><div class="col-lg-3"><a href="' + repo.link + '" class="thumbnail"><img src="' + repo.avatar_url + '"></a></div>'
+                + '<div class="col-lg-6"><a href="' + repo.link + '" class="linkInSearch">' + repo.full_name + '</a></div><div class="col-lg-3">' + repo.price + '</div>'
+                + '</div>';
+//        var markup = "<div class='select2-result-repository clearfix'>" +
+//                "<div class='select2-result-repository__avatar'><img src='" + repo.avatar_url + "' /></div>" +
+//                "<div class='select2-result-repository__meta'>" +
+//                "<div class='select2-result-repository__title'>" + repo.full_name + "</div>";
+
+        if (repo.description) {
+            markup += "<div class='select2-result-repository__description'>" + repo.description + "</div>";
+        }
+
+        markup += "<div class='select2-result-repository__statistics'>" +
+                "</div>" +
+                "</div></div>";
+
+        return markup;
+    }
+
+    function formatRepoSelection (repo) {
+//        return repo.full_name || repo.text;
+//        window.location (repo.link);
+//        alert($(".select2-search__field").val());
+        window.location.href = 'https://bobas.ua/ua/shop/search/?search=' + $(".select2-search__field").val();
+
+    }
+</script>
+{script}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B7S6PZQGMN"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-B7S6PZQGMN');
+</script>
+<!-- Facebook Pixel Code -->
+<!-- Facebook Pixel Code -->
+<!-- End Facebook Pixel Code -->
+<!-- End Facebook Pixel Code -->
+</body>
+</html>
