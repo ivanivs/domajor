@@ -84,7 +84,7 @@ if (fwrite($fp, $page)) {
             if ($data!='error'){
                 $dataArray = json_decode($data,true);
                 if (!empty($dataArray['img'])){
-                    foreach ($dataArray as $v){
+                    foreach ($dataArray['img'] as $v){
                         $imgNameTmp = explode('/', $v);
                         $imgName = $imgNameTmp[count($imgNameTmp)-1];
                         $file_name = time().rand(0,100).'_'.$imgName;
