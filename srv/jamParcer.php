@@ -57,6 +57,7 @@ if (isset ($_GET['id'])){
         $page = get_web_page($dataArray[0])['content'];
         if (substr_count($page, '{"item_id":"39977"')>0){
             preg_match_all('|<a rel="gal_group" href="(.*)"|isU', $page, $img_array);
+            print_r ($img_array);
             $img_array_tmp = $img_array[1];
             $img_array = Array();
             foreach ($img_array_tmp as $v){
