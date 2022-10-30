@@ -106,7 +106,6 @@ if (fwrite($fp, $page)) {
                 sleep(1);
             }
             $new++;
-            exit();
         }
     }
     echo "\r\nОновили: " . $update . "\r\nНових:" . $new;
