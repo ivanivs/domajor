@@ -54,6 +54,11 @@ if (isset ($_GET['id'])){
     $dataArray = getSearch($_GET['id'])[1];
     if (count($dataArray)==2){
         echo $dataArray[0];
-        echo get_web_page($dataArray[0])['content'];
+        $page = get_web_page($dataArray[0])['content'];
+        if (substr_count($page, '{"item_id":"39977"')>0){
+
+        } else {
+            echo 'Не той товар';
+        }
     }
 }
