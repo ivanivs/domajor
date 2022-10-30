@@ -50,22 +50,20 @@ function get_web_page( $url, $cookiesIn = '' ){
     $header['all'] = $rough_content;
     return $header;
 }
-echo $page = get_web_page('https://jam.ua/ua/search/30430')['content'];
-preg_match_all('|<div id="search_item_left">(.*)</table>|isU', $page, $text);
-$text = $text[1];
-foreach ($text as $v){
-    if (substr_count($v, 30430)>0){
-        preg_match('|<a href="(.*)"|isU', $v, $link);
-        $link = $link[1];
-    }
-}
-echo $link;
-exit();
+
 if (isset ($_GET['id'])){
-    $dataArray = getSearch($_GET['id'])[1];
+    $page = get_web_page('https://jam.ua/ua/search/'.$_GET['id'])['content'];
+    preg_match_all('|<div id="search_item_left">(.*)</table>|isU', $page, $text);
+    $text = $text[1];
+    foreach ($text as $v){
+        if (substr_count($v, $_GET['id'])>0){
+            preg_match('|<a href="(.*)"|isU', $v, $link);
+            $link = $link[1];
+        }
+    }
 //    if (count($dataArray)==2){
-        echo $dataArray[0];
-        $page = get_web_page($dataArray[0])['content'];
+    if (!empty($link)){
+        $page = get_web_page($link)['content'];
         if (substr_count($page, '{"item_id":"'.$_GET['id'].'"')>0){
             preg_match_all('|<div class="img-item-block"><a href="(.*)"|isU', $page, $img_array);
             $img_array_tmp = $img_array[1];
@@ -80,5 +78,5 @@ if (isset ($_GET['id'])){
         } else {
             echo 'Не той товар';
         }
-//    }
+    }
 }
