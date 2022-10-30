@@ -5,8 +5,7 @@ $mysql_connect_id = mysql_connect($config ['host'], $config ['user_datebase'], $
 mysql_select_db($config ['database']);
 mysql_query("SET NAMES 'UTF8';");
 require('../include/functions.php');
-echo $data = file_get_contents('https://new.domajor.com.ua/srv/jamParcer.php?id=24565');
-exit();
+//$data = file_get_contents('https://new.domajor.com.ua/srv/jamParcer.php?id=24565');
 $srv = '193.193.194.28';
 $port = '5839';
 $ftp_user_name = 'export';
@@ -48,7 +47,12 @@ if (fwrite($fp, $page)) {
             mysql_query("UPDATE `ls_items` SET `price_1` = '" . mysql_real_escape_string($oneItem['price']) . "', `price_2` = '" . mysql_real_escape_string($oneItem['acc']) . "', `text_4` = '" . $stock . "' WHERE `id` = '" . $infoItem['id'] . "';");
             $update++;
         } else {
+            $body = '';
             $data = file_get_contents('https://new.domajor.com.ua/srv/jamParcer.php?id='.$oneItem['code']);
+            if ($data!='error'){
+                $dataArray = json_encode($data,true);
+                $body = $dataArray['body'];
+            }
             mysql_query("
                 INSERT INTO `ls_items` (
                 `id_card`,
@@ -60,7 +64,8 @@ if (fwrite($fp, $page)) {
                 `select_4`,
                 `text_3`,
                 `text_1`,
-                `text_5`
+                `text_5`,
+                `text_2`
                 ) VALUES (
                 '1',
                 '" . time() . "',
@@ -71,10 +76,36 @@ if (fwrite($fp, $page)) {
                 '1',
                 '" . mysql_real_escape_string($oneItem['code']) . "',
                 '" . mysql_real_escape_string($oneItem['manufacturer']) . " " . mysql_real_escape_string($oneItem['article']) . "',
-                '".mysql_real_escape_string($oneItem['article'])."'
+                '".mysql_real_escape_string($oneItem['article'])."',
+                '".mysql_real_escape_string($body)."'
                 )
                 ");
+            $idItem = mysql_insert_id();
+            if ($data!='error'){
+                $dataArray = json_encode($data,true);
+                if (!empty($dataArray['img'])){
+                    foreach ($dataArray as $v){
+                        $imgNameTmp = explode('/', $v);
+                        $imgName = $imgNameTmp[count($imgNameTmp)-1];
+                        $file_name = time().rand(0,100).'_'.$imgName;
+                        copy($v, '../upload/userparams/'.$file_name);
+                        mysql_query ("
+                            INSERT INTO  `ls_values_image` (
+                            `id_item` ,
+                            `id_cardparam` ,
+                            `value`
+                            )
+                            VALUES (
+                            '".$idItem."',
+                            '1' ,
+                            '".$file_name."'
+                            );
+                            ");
+                    }
+                }
+            }
             $new++;
+            exit();
         }
     }
     echo "\r\nОновили: " . $update . "\r\nНових:" . $new;
