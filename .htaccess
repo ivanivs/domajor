@@ -1,0 +1,69 @@
+#php_flag max_execution_time 300
+#php_value upload_max_filesize 10M
+#php_value post_max_size 10M
+##php_flag display_errors on
+##php_flag display_startup_errors on
+#RewriteEngine On
+#RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+#RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+#RewriteRule ^(.*)/index.html$ index.php?lang=$1 [QSA]
+#RewriteRule ^(.*)/register.html$ index.php?lang=$1&mode=register [QSA]
+#RewriteRule ^(.*)/recoveryPassword.html$ index.php?lang=$1&mode=recoveryPassword [QSA]
+#RewriteRule ^(.*)/userInfo.html$ index.php?lang=$1&mode=userInfo [QSA]
+#RewriteRule ^(.*)/bonus.html$ index.php?lang=$1&mode=bonus [QSA]
+#RewriteRule ^(.*)/favorite.html$ index.php?lang=$1&mode=favorite [QSA]
+#RewriteRule ^(.*)/resultPage.html$ index.php?lang=$1&mode=resultPage [QSA]
+#RewriteRule ^(.*)/changePassword.html$ index.php?lang=$1&mode=changePassword [QSA]
+#RewriteRule ^(.*)/orders.html$ index.php?lang=$1&mode=orders [QSA]
+#RewriteRule ^(.*)/cabinet.html$ index.php?lang=$1&mode=cabinet [QSA]
+#RewriteRule ^(.*)/mode/shop.html$ index.php?mode=shop&lang=$1 [QSA]
+#RewriteRule ^(.*)/mode/shop_sale.html$ index.php?mode=shop&lang=$1&param=sale [QSA]
+#RewriteRule ^(.*)/mode/cart.html$ index.php?mode=cart&lang=$1 [QSA]
+#RewriteRule ^(.*)/mode/item-(.*)-(.*).html$ index.php?mode=item&lang=$1&id=$3 [QSA]
+#RewriteRule ^(.*)/mode/content-(.*).html$ index.php?mode=content&lang=$1&id_content=$2 [QSA]
+##RewriteRule ^(.*)/shop/(.*)/$ index.php?mode=shop&lang=$1&trash=$2 [QSA]
+#RewriteRule ^(.*)/pc/(.*)/(.*)/(.*)$ index.php?mode=shop&lang=$1&category=$2&producer=$3&model=$4 [QSA]
+#RewriteRule ^(.*)/pc/(.*)/(.*)$ index.php?mode=shop&lang=$1&category=$2&producer=$3 [QSA]
+#RewriteRule ^(.*)/producer/(.*)/(.*)/(.*)$ index.php?mode=shop&lang=$1&producer=$3&model=$4 [QSA]
+#RewriteRule ^(.*)/producer/(.*)/(.*)$ index.php?mode=shop&lang=$1&producer=$3 [QSA]
+#RewriteRule ^(.*)/shop/(.*)/(.*)$ index.php?mode=shop&lang=$1&category=$3 [QSA]
+#RewriteRule ^(.*)/shop/$ index.php?mode=shop&lang=$1&category=0 [QSA]
+#RewriteRule ^(.*)/mode/news$ index.php?mode=news [QSA]
+#RewriteRule ^(.*)/mode/news/contact_(.*).html$ index.php?mode=contact&lang=$1&id=$2 [QSA]
+#RewriteRule ^(.*)/mode/news/(.*)_(.*)/(.*)_(.*).html$ index.php?lang=$1&mode=news&id_category=$3&id_news=$5 [QSA]
+#RewriteRule ^(.*)/mode/calculator.html$ index.php?lang=$1&mode=calculator [QSA]
+#RewriteRule ^(.*)/mode/reviews.html$ index.php?lang=$1&mode=reviews [QSA]
+##php_value include_path "."
+#RedirectMatch 404 /\\.hg(/|$)
+php_flag max_execution_time 300
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+php_flag display_errors off
+php_flag display_startup_errors off
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+RewriteRule ^(.*)/index.html$ index.php?lang=$1 [QSA]
+RewriteRule ^(.*)/register.html$ index.php?lang=$1&mode=register [QSA]
+RewriteRule ^(.*)/userInfo.html$ index.php?lang=$1&mode=userInfo [QSA]
+RewriteRule ^(.*)/orders.html$ index.php?lang=$1&mode=orders [QSA]
+RewriteRule ^(.*)/mode/shop.html$ index.php?mode=shop&lang=$1 [QSA]
+RewriteRule ^(.*)/mode/shop_sale.html$ index.php?mode=shop&lang=$1&param=sale [QSA]
+RewriteRule ^(.*)/mode/cart.html$ index.php?mode=cart&lang=$1 [QSA]
+RewriteRule ^(.*)/mode/item-(.*).html$ index.php?mode=item&lang=$1&id=$2 [QSA]
+RewriteRule ^(.*)/item-(.*).html$ index.php?mode=item&lang=$1&id=$2 [QSA]
+RewriteRule ^(.*)/mode/content-(.*).html$ index.php?mode=content&lang=$1&id_content=$2 [QSA]
+RewriteRule ^(.*)/shop/(.*)/$ index.php?mode=shop&lang=$1&trash=$2 [QSA]
+RewriteRule ^(.*)/search/(.*)/$ index.php?mode=ss&lang=$1&key=$2 [QSA]
+RewriteRule ^(.*)/mode/news$ index.php?mode=news [QSA]
+RewriteRule ^(.*)/mode/news/contact_(.*).html$ index.php?mode=contact&lang=$1&id=$2 [QSA]
+RewriteRule ^(.*)/mode/news/(.*)_(.*)/(.*)_(.*).html$ index.php?lang=$1&mode=news&id_category=$3&id_news=$5 [QSA]
+RewriteRule ^(.*)/mode/calculator.html$ index.php?lang=$1&mode=calculator [QSA]
+RewriteRule ^(.*)/mode/reviews.html$ index.php?lang=$1&mode=reviews [QSA]
+RewriteRule ^(.*)/cabinet.html$ index.php?lang=$1&mode=cabinet [QSA]
+RewriteRule ^(.*)/changePassword.html$ index.php?lang=$1&mode=changePassword [QSA]
+RewriteRule ^(.*)/recovery.html$ index.php?lang=$1&mode=recovery [QSA]
+RewriteRule ^(.*)/success.html$ index.php?lang=$1&mode=successPay [QSA]
+RewriteRule ^l/(.*).html$ index.php?mode=shortLink&id=$1 [QSA]
+#php_value include_path "."
+RedirectMatch 404 /\\.hg(/|$)
