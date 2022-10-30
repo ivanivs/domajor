@@ -6,7 +6,7 @@ if (!isset ($_GET['path'])){
 } else {
     $url_img = '/var/www/domajorcomua/data/www/domajor.com.ua/new/'.urldecode($_GET['path']).str_replace(' ', '+',$url_img);
 }
-
+echo $url_img;exit();
 if (!file_exists($url_img) or !is_file($url_img)){
     $url_img = '/var/www/kombat_in_ua_usr74/data/www/kombat.in.ua/images/no-image.jpg';
 }
