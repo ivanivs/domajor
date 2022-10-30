@@ -103,6 +103,7 @@ if (fwrite($fp, $page)) {
                             ");
                     }
                 }
+                sleep(1);
             }
             $new++;
             exit();
