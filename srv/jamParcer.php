@@ -53,7 +53,6 @@ function get_web_page( $url, $cookiesIn = '' ){
 if (isset ($_GET['id'])){
     $dataArray = getSearch($_GET['id'])[1];
     if (count($dataArray)==2){
-        echo $dataArray[0];
         $page = get_web_page($dataArray[0])['content'];
         if (substr_count($page, '{"item_id":"39977"')>0){
 
