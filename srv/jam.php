@@ -5,6 +5,8 @@ $mysql_connect_id = mysql_connect($config ['host'], $config ['user_datebase'], $
 mysql_select_db($config ['database']);
 mysql_query("SET NAMES 'UTF8';");
 require('../include/functions.php');
+echo $data = file_get_contents('https://new.domajor.com.ua/srv/jamParcer.php?id=24565');
+exit();
 $srv = '193.193.194.28';
 $port = '5839';
 $ftp_user_name = 'export';
@@ -46,6 +48,7 @@ if (fwrite($fp, $page)) {
             mysql_query("UPDATE `ls_items` SET `price_1` = '" . mysql_real_escape_string($oneItem['price']) . "', `price_2` = '" . mysql_real_escape_string($oneItem['acc']) . "', `text_4` = '" . $stock . "' WHERE `id` = '" . $infoItem['id'] . "';");
             $update++;
         } else {
+            $data = file_get_contents('https://new.domajor.com.ua/srv/jamParcer.php?id='.$oneItem['code']);
             mysql_query("
                 INSERT INTO `ls_items` (
                 `id_card`,
