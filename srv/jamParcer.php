@@ -51,5 +51,8 @@ function get_web_page( $url, $cookiesIn = '' ){
     return $header;
 }
 if (isset ($_GET['id'])){
-    print_r (getSearch($_GET['id']));
+    $dataArray = getSearch($_GET['id'])[1];
+    if (count($dataArray)==2){
+        echo get_web_page($dataArray[0]);
+    }
 }
