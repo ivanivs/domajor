@@ -6,7 +6,7 @@ function getSearch($q){
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, Array("search" => htmlspecialchars($q)));
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    echo $server_output = curl_exec ($ch);
+    $server_output = curl_exec ($ch);
     curl_close ($ch);
     preg_match_all('|<a href="(.*)"|isU', $server_output, $return);
     return ($return);
