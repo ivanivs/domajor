@@ -55,7 +55,7 @@ if (isset ($_GET['id'])){
 //    if (count($dataArray)==2){
         echo $dataArray[0];
         $page = get_web_page($dataArray[0])['content'];
-        if (substr_count($page, '{"item_id":"39977"')>0){
+        if (substr_count($page, '{"item_id":"'.$_GET['id'].'"')>0){
             preg_match_all('|<div class="img-item-block"><a href="(.*)"|isU', $page, $img_array);
             $img_array_tmp = $img_array[1];
             $img_array = Array();
