@@ -56,15 +56,16 @@ if (isset ($_GET['id'])){
         echo $dataArray[0];
         $page = get_web_page($dataArray[0])['content'];
         if (substr_count($page, '{"item_id":"39977"')>0){
-            echo $page;
             preg_match_all('|<div class="img-item-block"><a href="(.*)"|isU', $page, $img_array);
-            print_r ($img_array);
             $img_array_tmp = $img_array[1];
             $img_array = Array();
             foreach ($img_array_tmp as $v){
                 $img_array[] = 'https://jam.ua'.$v;
             }
+            preg_match('|<div class="item_menu_sub_wrapper" id="wrapper_sub_im1" style="height:200px; overflow: hidden;">(.*)</div>|isU', $page, $text);
+            $body = $text[1];
             print_r ($img_array);
+            echo $body;
         } else {
             echo 'Не той товар';
         }
