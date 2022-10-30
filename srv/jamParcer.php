@@ -75,7 +75,8 @@ if (isset ($_GET['id'])){
             preg_match('|<div class="item_menu_sub_wrapper" id="wrapper_sub_im1" style="height:200px; overflow: hidden;">(.*)</div>|isU', $page, $text);
             $body = $text[1];
             print_r ($img_array);
-            echo str_replace('"/images/content/', '"https://jam.ua/images/content/', $body);
+            $body = str_replace('"/images/content/', '"https://jam.ua/images/content/', $body);
+            echo $body;
         } else {
             echo 'Не той товар';
         }
