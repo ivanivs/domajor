@@ -61,6 +61,7 @@ if (isset ($_GET['id'])){
             $link = $link[1];
         }
     }
+    echo $link;
 //    if (count($dataArray)==2){
     if (!empty($link)){
         $page = get_web_page($link)['content'];
