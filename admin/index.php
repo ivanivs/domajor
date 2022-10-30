@@ -83,7 +83,6 @@ if (!isset ($_COOKIE['id_user_online']) or $_COOKIE['accessLevel']!=100)
 		$body_admin = '';
 		$body_admin .= $lang[281].$balance.'<br>
 		'.$lang[283].' <b>'.$count_item.'</b>
-		<div><a href="https://kombat.in.ua/driveGoogle/kombat.php" target="_blank">Запустити обробку Комбат прайс та таблицю googleDrive</a></div>
 		';
         if (isset ($_POST['startGoogleDrive'])){
             mysql_query("UPDATE `ls_settings` SET `value` = 1 WHERE `id` = '39';");
