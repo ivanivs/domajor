@@ -55,7 +55,7 @@ preg_match_all('|<div id="search_item_left">(.*)</table>|isU', $page, $text);
 $text = $text[1];
 foreach ($text as $v){
     if (substr_count($v, 30430)>0){
-        preg_match_all('|<a href="(.*)"|isU', $v, $link);
+        preg_match('|<a href="(.*)"|isU', $v, $link);
         $link = $link[1];
     }
 }
