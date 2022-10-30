@@ -51,7 +51,7 @@ function get_web_page( $url, $cookiesIn = '' ){
     return $header;
 }
 echo $page = get_web_page('https://jam.ua/ua/search/30430')['content'];
-preg_match_all('|<div id="search_item_left">(.*)</table>|isU', $page, );
+preg_match_all('|<div id="search_item_left">(.*)</table>|isU', $page, $text);
 $text = $text[1];
 foreach ($text as $v){
     if (substr_count($v, 30430)>0){
