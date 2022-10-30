@@ -8,7 +8,8 @@ function getSearch($q){
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     echo $server_output = curl_exec ($ch);
     curl_close ($ch);
-    return ($server_output);
+    preg_match('|<a href="(.*)"|isU', $server_output, $return);
+    return ($return);
 }
 function get_web_page( $url, $cookiesIn = '' ){
     $options = array(
@@ -50,5 +51,5 @@ function get_web_page( $url, $cookiesIn = '' ){
     return $header;
 }
 if (isset ($_GET['id'])){
-    getSearch($_GET['id']);
+    print_r (getSearch($_GET['id']));
 }
