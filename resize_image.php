@@ -2,7 +2,7 @@
 error_reporting(E_ALL ^ E_NOTICE);
 $url_img = urldecode($_GET['filename']);
 if (!isset ($_GET['path'])){
-    $url_img = '/var/www/domajorcomua/data/www/domajor.com.ua/new/'.$url_img;
+    $url_img = '/var/www/domajorcomua/data/www/domajor.com.ua/new/upload/userparams/'.$url_img;
 } else {
     $url_img = '/var/www/domajorcomua/data/www/domajor.com.ua/new/'.urldecode($_GET['path']).str_replace(' ', '+',$url_img);
 }
