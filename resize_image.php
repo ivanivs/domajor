@@ -2,9 +2,9 @@
 error_reporting(E_ALL ^ E_NOTICE);
 $url_img = urldecode($_GET['filename']);
 if (!isset ($_GET['path'])){
-    $url_img = '/var/www/kombat_in_ua_usr74/data/www/kombat.in.ua/upload/userparams/'.$url_img;
+    $url_img = '/var/www/domajorcomua/data/www/domajor.com.ua/new/'.$url_img;
 } else {
-    $url_img = '/var/www/kombat_in_ua_usr74/data/www/kombat.in.ua/'.urldecode($_GET['path']).str_replace(' ', '+',$url_img);
+    $url_img = '/var/www/domajorcomua/data/www/domajor.com.ua/new/'.urldecode($_GET['path']).str_replace(' ', '+',$url_img);
 }
 
 if (!file_exists($url_img) or !is_file($url_img)){
