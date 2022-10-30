@@ -50,7 +50,7 @@ if (fwrite($fp, $page)) {
             $body = '';
             $data = file_get_contents('https://new.domajor.com.ua/srv/jamParcer.php?id='.$oneItem['code']);
             if ($data!='error'){
-                $dataArray = json_encode($data,true);
+                $dataArray = json_decode($data,true);
                 $body = $dataArray['body'];
             }
             mysql_query("
@@ -82,7 +82,7 @@ if (fwrite($fp, $page)) {
                 ");
             $idItem = mysql_insert_id();
             if ($data!='error'){
-                $dataArray = json_encode($data,true);
+                $dataArray = json_decode($data,true);
                 if (!empty($dataArray['img'])){
                     foreach ($dataArray as $v){
                         $imgNameTmp = explode('/', $v);
