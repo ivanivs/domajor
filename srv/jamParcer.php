@@ -61,7 +61,7 @@ if (isset ($_GET['id'])){
             $link = $link[1];
         }
     }
-    echo $link;
+//    echo $link;
 //    if (count($dataArray)==2){
     if (!empty($link)){
         $page = get_web_page($link)['content'];
@@ -74,11 +74,14 @@ if (isset ($_GET['id'])){
             }
             preg_match('|<div class="item_menu_sub_wrapper" id="wrapper_sub_im1" style="height:200px; overflow: hidden;">(.*)</div>|isU', $page, $text);
             $body = $text[1];
-            print_r ($img_array);
+//            print_r ($img_array);
             $body = str_replace('"/images/content/', '"https://jam.ua/images/content/', $body);
-            echo $body;
+            $arrayOut = Array();
+            $arrayOut['img'] = $img_array;
+            $arrayOut['body'] = $body;
+            echo json_encode($arrayOut);
         } else {
-            echo 'Не той товар';
+            echo 'error';
         }
     }
 }
