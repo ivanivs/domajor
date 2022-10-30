@@ -51,6 +51,8 @@ function get_web_page( $url, $cookiesIn = '' ){
     return $header;
 }
 echo $page = get_web_page('https://jam.ua/ua/search/30430')['content'];
+preg_match_all('|<div id="search_item_right">(.*)</div>|isU', $page, $text);
+print_r ($text);
 exit();
 if (isset ($_GET['id'])){
     $dataArray = getSearch($_GET['id'])[1];
