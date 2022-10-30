@@ -56,7 +56,8 @@ if (fwrite($fp, $page)) {
                 `text_4`,
                 `select_4`,
                 `text_3`,
-                `text_1`
+                `text_1`,
+                `text_5`
                 ) VALUES (
                 '1',
                 '" . time() . "',
@@ -66,7 +67,8 @@ if (fwrite($fp, $page)) {
                 '" . $stock . "',
                 '1',
                 '" . mysql_real_escape_string($oneItem['code']) . "',
-                '" . mysql_real_escape_string($oneItem['manufacturer']) . " " . mysql_real_escape_string($oneItem['article']) . "'
+                '" . mysql_real_escape_string($oneItem['manufacturer']) . " " . mysql_real_escape_string($oneItem['article']) . "',
+                '".mysql_real_escape_string($oneItem['article'])."'
                 )
                 ");
             $new++;
