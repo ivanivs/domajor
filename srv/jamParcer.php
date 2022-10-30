@@ -56,7 +56,13 @@ if (isset ($_GET['id'])){
         echo $dataArray[0];
         $page = get_web_page($dataArray[0])['content'];
         if (substr_count($page, '{"item_id":"39977"')>0){
-
+            preg_match_all('|<a rel="gal_group" href="(.*)"|isU', $page, $img_array);
+            $img_array_tmp = $img_array[1];
+            $img_array = Array();
+            foreach ($img_array_tmp as $v){
+                $img_array[] = 'https://jam.ua'.$v;
+            }
+            print_r ($img_array);
         } else {
             echo 'Не той товар';
         }
