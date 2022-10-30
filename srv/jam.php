@@ -55,8 +55,8 @@ if (fwrite($fp, $page)) {
                 `price_1`,
                 `text_4`,
                 `select_4`,
-                `text_6`,
-                `text_2`
+                `text_3`,
+                `text_1`
                 ) VALUES (
                 '1',
                 '" . time() . "',
