@@ -1,6 +1,10 @@
 <?php
 $slider = '';
-if ($arrayItem = getArray("SELECT `ls_items`.* FROM `ls_items` LEFT JOIN `ls_values_image` ON `ls_values_image`.`id_item` = `ls_items`.`id` WHERE `ls_items`.`text_4` > 0 ORDER BY RAND() LIMIT 0,3")){
+if ($arrayItem = getArray("SELECT `ls_items`.* FROM `ls_items` LEFT JOIN `ls_values_image` ON `ls_values_image`.`id_item` = `ls_items`.`id` WHERE 
+        `ls_items`.`text_4` > 0
+            AND 
+        `ls_values_image`.`id_item` NOT NULL
+        ORDER BY RAND() LIMIT 0,3")){
     foreach ($arrayItem as $v){
         $priceArray = getPriceArray($v);
         $slider .= '
