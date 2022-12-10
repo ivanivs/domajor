@@ -12,7 +12,40 @@ foreach ($arraySelectTmp[1] as $oneSelectOption){
     }
     $html = str_replace('{select_'.$selectId.'_'.$selectValue.'}', $link, $html);
 }
-
+if ($arrayCategory = getArray("SELECT * FROM `ls_params_select_values` WHERE `id_params` = 1 order by `position` DESC ")){
+    $nav = '';
+    foreach ($arrayCategory as $oneCategory){
+        $nav .= '<li class="menu-item-has-children">
+										<a href="'.getCategoryLink($oneCategory).'" title="'.$oneCategory['text'].'" class="dropdown">
+											<span class="menu-title">
+												'.getOneValue($oneCategory['id'])['text'].'
+											</span>
+										</a>
+        ';
+        if ($arrayChildCategory = getArray("SELECT * FROM `ls_params_select_values` WHERE `parent_param_id` = '".$oneCategory['id']."' ORDER by `position` DESC")){
+            $nav .= '<ul class="submenu">';
+            foreach ($arrayChildCategory as $child){
+                $text = getOneValue($child['id'])['text'];
+                if (empty($child['text']))
+                    $child['text'] = $text;
+                $nav .= '<li><a href="'.getCategoryLink($child).'">'.$text.'</a></li>';
+//                if ($arrayChildChildCategory = getArray("SELECT * FROM `ls_params_select_values` WHERE `parent_param_id` = '".$child['id']."'")){
+//                    $nav .= '<ul>';
+//                    foreach ($arrayChildChildCategory as $childChild){
+//                        $nav .= '<li>
+//                                    <a href="'.getCategoryLink($childChild).'" title="">'.$childChild['text'].'</a>
+//                                </li>';
+//                    }
+//                    $nav .= '</ul>';
+//                }
+//                $nav .= '</ul>';
+            }
+            $nav .= '</ul>';
+        }
+        $nav .= '</li>';
+    }
+}
+$html = str_replace ('{allCategory}', $nav, $html);
 /*
  * <li><a href="shop-2.html"><i class="fal fa-chair"></i> Furniture</a></li>
                            <li class="menu-item-has-children"><a href="shop.html"><i class="far fa-campfire"></i>
