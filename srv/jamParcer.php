@@ -6,7 +6,7 @@ function getSearch($q){
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, Array("search" => htmlspecialchars($q)));
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    echo $server_output = curl_exec ($ch);
+    $server_output = curl_exec ($ch);
     curl_close ($ch);
     preg_match_all('|<a href="(.*)"|isU', $server_output, $return);
     return ($return);
@@ -50,10 +50,10 @@ function get_web_page( $url, $cookiesIn = '' ){
     $header['all'] = $rough_content;
     return $header;
 }
-
+$_GET['id'] = 39961;
 if (isset ($_GET['id'])){
-    print_r(getSearch($_GET['id']));
     $page = get_web_page('https://jam.ua/ua/search/'.$_GET['id'])['content'];
+    print_r ($page);
     preg_match_all('|<div id="search_item_left">(.*)</table>|isU', $page, $text);
     $text = $text[1];
     foreach ($text as $v){
