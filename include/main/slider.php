@@ -29,4 +29,3 @@ if ($arrayItem = getArray("SELECT `ls_items`.* FROM `ls_items` LEFT JOIN `ls_val
     }
 }
 $onlyMainPage = str_replace('{slider}', $slider, $onlyMainPage);
-echo $slider;
