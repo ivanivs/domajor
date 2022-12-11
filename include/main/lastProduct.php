@@ -79,6 +79,10 @@ if ($array = getArray("SELECT * FROM `ls_news` ORDER BY `id` DESC LIMIT 0,4")){
         $full_news_link = '{main_sait}{lang}/mode/news/'.translit($info_category_news['text']).'_'.$v['id_category'].'/'.translit($info_name_news['text']).'_'.$v['id'].'.html';
         preg_match('~(?<=src=")[^"]+(?=")~', $info_short_news['text'], $arr);
         $img = $arr[0] ?? '';
+        if (!empty($img)){
+            $imgArr = explode('/', $img);
+            $img = $imgArr[count($imgArr)-1];
+        }
         echo $img;
         $blog .= '<div class="col-lg-3 col-md-6 col-sm-6 tpblogborder mb-30">
             <div class="blogitem">
