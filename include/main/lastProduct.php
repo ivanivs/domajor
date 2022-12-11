@@ -56,3 +56,12 @@ if ($arrayItems = getArray($sql)){
     unset ($array);
     $onlyMainPage = str_replace('{topBuy}', $lastAdd, $onlyMainPage);
 }
+$lastAdd = '';
+if ($arrayValue = getValuesSelectParam(3)){
+    print_r ($arrayValue);
+    $html12 = '
+    <div class="swiper-slide">
+                    YAMAHA
+                </div>
+    ';
+}
