@@ -83,11 +83,11 @@ if ($array = getArray("SELECT * FROM `ls_news` ORDER BY `id` DESC LIMIT 0,4")){
             $imgArr = explode('/', $img);
             $img = $imgArr[count($imgArr)-1];
         }
-        echo $img;
+        $imgHtml = $config['site_url'].'resize_image.php?filename='.$img.'&const=128&width=300&height=200&r=255&g=255&b=255&path=upload/reviews/';
         $blog .= '<div class="col-lg-3 col-md-6 col-sm-6 tpblogborder mb-30">
             <div class="blogitem">
                 <div class="blogitem__thumb fix mb-20">
-                    <a href="'.$full_news_link.'"><img src="{template}assets/img/blog/blog-thumb-01.jpg" alt="blog-bg"></a>
+                    <a href="'.$full_news_link.'"><img src="'.$imgHtml.'" alt="blog-bg"></a>
                 </div>
                 <div class="blogitem__content">
                     <div class="blogitem__contetn-date mb-10">
@@ -107,4 +107,5 @@ if ($array = getArray("SELECT * FROM `ls_news` ORDER BY `id` DESC LIMIT 0,4")){
             </div>
         </div>';
     }
+    $onlyMainPage = str_replace('{blog}', $blog, $onlyMainPage);
 }
