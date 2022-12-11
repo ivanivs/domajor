@@ -17,7 +17,7 @@ if ($arrayItem = getArray("SELECT `ls_items`.* FROM `ls_items` LEFT JOIN `ls_val
                             <p>'.getOneValueText($v['select_3']).'</p>
                             <div class="tpslidertwo__slide-btn d-flex align-items-center ">
                                 <a class="tp-btn banner-animation mr-25" href="'.getItemLink($v).'">Детальніше... <i class="fal fa-long-arrow-right"></i></a>
-                                <span>Всього <br> <b>'.$priceArray['price'].'</b></span>
+                                <span>Всього <br> <b>'.$priceArray['price'].' грн.</b></span>
                             </div>
                         </div>
                     </div>
