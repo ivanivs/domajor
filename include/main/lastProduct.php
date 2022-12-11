@@ -8,7 +8,7 @@
  */
 $lastProduct = '';
 $htmlTemplate = file_get_contents('templates/'.$config ['default_template'].'/mainOneItem.html');
-if ($arrayItems = getArray("SELECT `ls_items`.* FROM `ls_items` JOIN `ls_values_image` ON `ls_items`.`id` = `ls_values_image`.`id_item` WHERE `ls_items`.`text_4` > 0 GROUP by `ls_items`.`id` ORDER by `ls_items`.`time` DESC LIMIT 0,10")){
+if ($arrayItems = getArray("SELECT `ls_items`.* FROM `ls_items` JOIN `ls_values_image` ON `ls_items`.`id` = `ls_values_image`.`id_item` WHERE `ls_items`.`text_4` > 0 GROUP by `ls_items`.`id` ORDER by `ls_items`.`id` DESC LIMIT 0,10")){
     foreach ($array as $key => $v){
         $active = '';
         $oneItem = $htmlTemplate;
