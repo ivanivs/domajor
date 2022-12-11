@@ -44,6 +44,7 @@ if (fwrite($fp, $page)) {
         }
 
         if ($infoItem = getOneString("SELECT * FROM `ls_items` WHERE `select_4` = '1' AND `text_3` = '" . $oneItem['code'] . "'")) {
+            echo $infoItem['id']." ".$infoItem['text_1']."\r\n";
             mysql_query("UPDATE `ls_items` SET `price_1` = '" . mysql_real_escape_string($oneItem['price']) . "', `price_2` = '" . mysql_real_escape_string($oneItem['acc']) . "', `text_4` = '" . $stock . "' WHERE `id` = '" . $infoItem['id'] . "';");
             $update++;
         } else {
