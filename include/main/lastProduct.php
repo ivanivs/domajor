@@ -43,3 +43,16 @@ if ($arrayItems = getArray($sql)){
     unset ($array);
     $onlyMainPage = str_replace('{actions}', $lastAdd, $onlyMainPage);
 }
+$lastAdd = '';
+$htmlTemplate = file_get_contents('templates/'.$config ['default_template'].'/itemTopBuy.html');
+$sql = "SELECT `ls_items`.* FROM `ls_items` JOIN `ls_values_image` ON `ls_items`.`id` = `ls_values_image`.`id_item` WHERE `ls_items`.`price_2` != 0 AND `ls_items`.`price_1` != `ls_items`.`price_2` AND `ls_items`.`text_4` > 0 AND `ls_values_image`.`id_item` IS NOT NULL GROUP by `ls_items`.`id` ORDER by `ls_items`.`visit` DESC LIMIT 0,10";
+if ($arrayItems = getArray($sql)){
+    foreach ($arrayItems as $key => $v){
+        $active = '';
+        $oneItem = $htmlTemplate;
+        $oneItem = getOneItem($v, $oneItem);
+        $lastAdd .= $oneItem;
+    }
+    unset ($array);
+    $onlyMainPage = str_replace('{topBuy}', $lastAdd, $onlyMainPage);
+}
