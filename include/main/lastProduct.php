@@ -58,10 +58,12 @@ if ($arrayItems = getArray($sql)){
 }
 $lastAdd = '';
 if ($arrayValue = getValuesSelectParam(3)){
-    print_r ($arrayValue);
-    $html12 = '
-    <div class="swiper-slide">
-                    YAMAHA
-                </div>
-    ';
+    foreach ($arrayValue as $v){
+        $brands .= '
+        <div class="swiper-slide" style="font-size:1.5em; color:#FFF; font-weight: bold;">
+            <a href="'.$config['site_url'].'ua/shop/Brands/?p='.$v['id'].'">YAMAHA</a>
+        </div>
+        ';
+    }
+    $onlyMainPage = str_replace('{brands}', $brands, $onlyMainPage);
 }
