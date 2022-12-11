@@ -67,3 +67,40 @@ if ($arrayValue = getValuesSelectParam(3)){
     }
     $onlyMainPage = str_replace('{brands}', $brands, $onlyMainPage);
 }
+$blog = '';
+if ($array = getArray("SELECT * FROM `ls_news` ORDER BY `id` DESC LIMIT 0,4")){
+    foreach ($array as $v){
+        $sql = "SELECT `text` FROM `ls_translate` WHERE `type` = 'news_name' and `id_lang` = '".$id_online_lang."' and `id_elements` = '".$v['id']."';";
+        $info_name_news = mysql_fetch_array(mysql_query($sql), MYSQL_ASSOC);
+        $sql = "SELECT `text` FROM `ls_translate` WHERE `type` = 'news_short' and `id_lang` = '".$id_online_lang."' and `id_elements` = '".$v['id']."';";
+        $info_short_news = mysql_fetch_array(mysql_query($sql), MYSQL_ASSOC);
+        $sql = "SELECT `text` FROM `ls_translate` WHERE `type` = 'news_category_n' and `id_lang` = '".$id_online_lang."' and `id_elements` = '".$v['id_category']."';";
+        $info_category_news = mysql_fetch_array(mysql_query($sql), MYSQL_ASSOC);
+        $full_news_link = '{main_sait}{lang}/mode/news/'.translit($info_category_news['text']).'_'.$v['id_category'].'/'.translit($info_name_news['text']).'_'.$v['id'].'.html';
+        preg_match('~(?<=src=")[^"]+(?=")~', $info_short_news['text'], $arr);
+        $img = $arr[0] ?? '';
+        echo $img;
+        $blog .= '<div class="col-lg-3 col-md-6 col-sm-6 tpblogborder mb-30">
+            <div class="blogitem">
+                <div class="blogitem__thumb fix mb-20">
+                    <a href="'.$full_news_link.'"><img src="{template}assets/img/blog/blog-thumb-01.jpg" alt="blog-bg"></a>
+                </div>
+                <div class="blogitem__content">
+                    <div class="blogitem__contetn-date mb-10">
+                        <ul>
+                            <li>
+                                <a class="date-color" href="#">'.date("d.m.Y H:i", $v['time']).'</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <h4 class="blogitem__title mb-15">
+                        <a href="'.$full_news_link.'">'.$info_name_news['text'].'</a>
+                    </h4>
+                    <div class="blogitem__btn">
+                        <a href="'.$full_news_link.'">Детальніше...</a>
+                    </div>
+                </div>
+            </div>
+        </div>';
+    }
+}
