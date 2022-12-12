@@ -318,20 +318,14 @@ if (isset ($_GET['select'][32])){
                        <div class="col-sm-6">
                           <div class="product-navtabs d-flex justify-content-end align-items-center">
                              <div class="tp-shop-selector">
-                                <select style="display: none;">
-                                   <option>Show 12</option>
-                                   <option>Show 14</option>
-                                   <option>Show 05</option>
-                                   <option>Show 22</option>
-                                </select><div class="nice-select" tabindex="0">
-                                <span class="current">Show 22</span>
-                                <ul class="list">
-                                    <li data-value="Show 12" class="option">Show 12</li>
-                                    <li data-value="Show 14" class="option focus">Show 14</li>
-                                    <li data-value="Show 05" class="option">Show 05</li>
-                                    <li data-value="Show 22" class="option selected">Show 22</li>
-                                    </ul>
-                                </div>
+                                <select onchange="sortSorokaVorona();" id="sortSorokaVorona" class="form-control">
+                                    <option value="dateAsk" selected>по даті ↓</option>                    
+                                    <option value="dateDesc">по даті ↑</option>                    
+                                    <option value="popularAsk">по популярності ↓</option>                    
+                                    <option value="popularDesc">по популярності ↑</option>                    
+                                    <option value="priceAsk">по ціні ↓</option>                    
+                                    <option value="priceDesc">по ціні ↑</option>       
+                                </select>
                              </div>
                              <div class="tpproductnav tpnavbar product-filter-nav">
                                 <nav>
@@ -354,14 +348,7 @@ if (isset ($_GET['select'][32])){
                         <div class="col-lg-5 col-12">
                             <div class="sort-by" style="position: relative;top:0;">
                                 <label>Сортувати за</label>
-                                <select onchange="sortSorokaVorona();" id="sortSorokaVorona">
-                                    <option value="dateAsk" selected>по даті ↓</option>                    
-                                    <option value="dateDesc">по даті ↑</option>                    
-                                    <option value="popularAsk">по популярності ↓</option>                    
-                                    <option value="popularDesc">по популярності ↑</option>                    
-                                    <option value="priceAsk">по ціні ↓</option>                    
-                                    <option value="priceDesc">по ціні ↑</option>       
-                                </select>
+                                
                             </div>                
                         </div>
                     </div>
