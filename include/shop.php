@@ -305,56 +305,90 @@ if (isset ($_GET['select'][32])){
 </section>
 <div class="container">
     <div class="row" style="margin-top: 30px;">
-    <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-        <div class="catagory_price_color">
-            '.$leftBlock.'
-            '.$addFiltr.'
+        <div class="col-lg-10 col-md-12" style="position: relative;">
+            <div class="product-sidebar__product-item">
+                <input type="hidden" id="searchField" value="'.htmlspecialchars($_GET['search']).'">
+                <div class="product-filter-content mb-40">
+                    <div class="row align-items-center">
+                       <div class="col-sm-6">
+                          <div class="product-item-count">
+                             <span><b>32</b> з 250</span>
+                          </div>
+                       </div>
+                       <div class="col-sm-6">
+                          <div class="product-navtabs d-flex justify-content-end align-items-center">
+                             <div class="tp-shop-selector">
+                                <select onchange="sortSorokaVorona();" id="sortSorokaVorona">
+                                    <option value="dateAsk" selected>по даті ↓</option>                    
+                                    <option value="dateDesc">по даті ↑</option>                    
+                                    <option value="popularAsk">по популярності ↓</option>                    
+                                    <option value="popularDesc">по популярності ↑</option>                    
+                                    <option value="priceAsk">по ціні ↓</option>                    
+                                    <option value="priceDesc">по ціні ↑</option>       
+                                </select><div class="nice-select" tabindex="0"><span class="current">Show 22</span><ul class="list"><li data-value="Show 12" class="option">Show 12</li><li data-value="Show 14" class="option focus">Show 14</li><li data-value="Show 05" class="option">Show 05</li><li data-value="Show 22" class="option selected">Show 22</li></ul></div>
+                             </div>
+                             <div class="tpproductnav tpnavbar product-filter-nav">
+                                <nav>
+                                   <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                      <button class="nav-link" id="nav-all-tab" data-bs-toggle="tab" data-bs-target="#nav-all" type="button" role="tab" aria-controls="nav-all" aria-selected="false"><i class="fal fa-list-ul"></i></button>
+        
+                                      <button class="nav-link active" id="nav-popular-tab" data-bs-toggle="tab" data-bs-target="#nav-popular" type="button" role="tab" aria-controls="nav-popular" aria-selected="true"><i class="fal fa-th"></i></button>
+                                   </div>
+                                </nav>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                <div id="allItems" class="blockItems">
+                    <div class="row">
+                        <div class="col-lg-6 col-12 text-center">
+                            <ul class="pagination_list">'.$paginator.'</ul>
+                        </div>
+                        <div class="col-lg-5 col-12">
+                            <div class="sort-by" style="position: relative;top:0;">
+                                <label>Сортувати за</label>
+                                <select onchange="sortSorokaVorona();" id="sortSorokaVorona">
+                                    <option value="dateAsk" selected>по даті ↓</option>                    
+                                    <option value="dateDesc">по даті ↑</option>                    
+                                    <option value="popularAsk">по популярності ↓</option>                    
+                                    <option value="popularDesc">по популярності ↑</option>                    
+                                    <option value="priceAsk">по ціні ↓</option>                    
+                                    <option value="priceDesc">по ціні ↑</option>       
+                                </select>
+                            </div>                
+                        </div>
+                    </div>
+                    <hr>
+                    <div style="clear:both;" id="itemsScroll"></div>
+                    <div class="row">
+                        '.$items.'
+                    </div>
+                    <div style="clear:both;"></div>
+                    <div class="row" style="margin-top:1em;">
+                        <div class="col-12">
+                            <ul class="pagination_list">'.$paginator.'<ul/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12" style="color: grey;">
+                            '.$infoCategory.'
+                        </div>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+                <input type="hidden" id="pageAjax" value="'.$thisPageInt.'">
+                <input type="hidden" id="sortAjax" value="'.$sortAjax.'">
+                <input type="hidden" id="askDesc" value="1">
+                <input type="hidden" id="categoryId" value="'.$idCategory.'">
+            </div>
         </div>
-    </div>
-    
-    '.$addH1.'
-    <div class="col-xs-12'.$colRightBlock.'" style="position: relative;">
-    <input type="hidden" id="searchField" value="'.htmlspecialchars($_GET['search']).'">
-        <div id="allItems" class="blockItems">
-            <div class="row">
-                <div class="col-lg-6 col-12 text-center">
-                    <ul class="pagination_list">'.$paginator.'</ul>
-                </div>
-                <div class="col-lg-5 col-12">
-                    <div class="sort-by" style="position: relative;top:0;">
-                        <label>Сортувати за</label>
-                        <select onchange="sortSorokaVorona();" id="sortSorokaVorona">
-                            <option value="dateAsk" selected>по даті ↓</option>                    
-                            <option value="dateDesc">по даті ↑</option>                    
-                            <option value="popularAsk">по популярності ↓</option>                    
-                            <option value="popularDesc">по популярності ↑</option>                    
-                            <option value="priceAsk">по ціні ↓</option>                    
-                            <option value="priceDesc">по ціні ↑</option>       
-                        </select>
-                    </div>                
-                </div>
-            </div>
-            <hr>
-            <div style="clear:both;" id="itemsScroll"></div>
-            <div class="row">'.$items.'</div>
-            <div style="clear:both;"></div>
-            <div class="row" style="margin-top:1em;">
-                <div class="col-12">
-                    <ul class="pagination_list">'.$paginator.'<ul/>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12" style="color: grey;">
-                    '.$infoCategory.'
-                </div>
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+            <div class="catagory_price_color">
+                '.$leftBlock.'
+                '.$addFiltr.'
             </div>
         </div>
-        <div style="clear:both;"></div>
-        <input type="hidden" id="pageAjax" value="'.$thisPageInt.'">
-        <input type="hidden" id="sortAjax" value="'.$sortAjax.'">
-        <input type="hidden" id="askDesc" value="1">
-        <input type="hidden" id="categoryId" value="'.$idCategory.'">
-    </div>
     </div>
 </div>
 
