@@ -369,7 +369,7 @@ if (isset ($_GET['select'][32])){
     ';
     $js_script .= '
     $(document).ready(function() {
-            $(".classStyle li").click(function() {
+            $(".classStyle input").click(function() {
                 $(this).toggleClass("activeFiltrElement");
                 if ($(this).find("input").val()==0)
                 {
