@@ -294,7 +294,7 @@ if (isset ($_GET['select'][32])){
        <div class="col-xl-7 col-lg-12 col-md-12 col-12">
           <div class="tp-breadcrumb">
              <div class="tp-breadcrumb__link mb-10">
-                <span class="breadcrumb-item-active"><a href="'.$config['site_url'].'">Home</a></span>
+                <span class="breadcrumb-item-active"><a href="'.$config['site_url'].'">Головна</a></span>
                 '.$valueBreadcrumb.'
              </div>
              <h2 class="tp-breadcrumb__title">'.$valueBreadcrumb.'</h2>
