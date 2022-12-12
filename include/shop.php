@@ -369,6 +369,7 @@ if (isset ($_GET['select'][32])){
     $js_script .= '
     $(document).ready(function() {
             $(".param").change(function() {
+                console.log("click");            
                 $(this).toggleClass("activeFiltrElement");
                 if ($(this).find("input").val()==0)
                 {
