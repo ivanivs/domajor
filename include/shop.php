@@ -60,7 +60,7 @@ if (isset ($_GET['param']) AND !isset($_GET['search']))
     $array_itemsData = getAllItemsWithParam($_GET, $limit, $sortSql, 0);
     $array_items = $array_itemsData['data'];
     $countItem = getNumberAllItemsWithParam($_GET);
-    $numberPage = ceil($countItem/33);
+    $numberPage = ceil($countItem/32);
 } else {
     if (!isset ($_GET['page']))
     {
@@ -314,7 +314,7 @@ if (isset ($_GET['select'][32])){
                     <div class="row align-items-center">
                        <div class="col-sm-6">
                           <div class="product-item-count">
-                             <span><b>33</b> з '.$countItem.'</span>
+                             <span><b>32</b> з '.$countItem.'</span>
                           </div>
                        </div>
                        <div class="col-sm-6">
