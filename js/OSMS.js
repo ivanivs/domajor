@@ -1036,7 +1036,7 @@ function generateUrl(){
     var kvp = document.location.href.substr(1).split('?');
     setLocation('h' + kvp[0]);
     $(".param").each(function(i, elem){
-        if ($(this).val()==1)
+        if ($(this).prop("checked")==true)
         {
 //            alert ($(this).val());
             array[j] = ($(this).attr("name"));
