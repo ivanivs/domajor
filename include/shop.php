@@ -288,21 +288,22 @@ if (isset ($_GET['select'][32])){
     $body = '
 '.((isset ($_GET['p']) AND $_GET['p']==76) ? '<input type="hidden" class="param" name="select|5|76" value="1">' : '').'
 '.((isset ($_GET['p']) AND $_GET['p']==77) ? '<input type="hidden" class="param" name="select|5|77" value="1">' : '').'
+<section class="breadcrumb__area pt-60 pb-60 tp-breadcrumb__bg" data-background="" style="">
+ <div class="container">
+    <div class="row align-items-center">
+       <div class="col-xl-7 col-lg-12 col-md-12 col-12">
+          <div class="tp-breadcrumb">
+             <div class="tp-breadcrumb__link mb-10">
+                <span class="breadcrumb-item-active"><a href="'.$config['site_url'].'">Home</a></span>
+                <li>'.$valueBreadcrumb.'</li>
+             </div>
+             <h2 class="tp-breadcrumb__title">'.$valueBreadcrumb.'</h2>
+          </div>
+       </div>
+    </div>
+ </div>
+</section>
 <div class="container">
-    <div class="breadcrumbs_area">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<div class="breadcrumb-single">
-							<ul id="breadcrumbs">
-								<li><a href="'.$config['site_url'].'"><i class="fa fa-home"></i>Головна</a></li>
-								<li>'.$valueBreadcrumb.'</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
     <div class="row" style="margin-top: 30px;">
     <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
         <div class="catagory_price_color">
