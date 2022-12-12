@@ -1696,46 +1696,27 @@ $body = '
 		</div>
 	</div>
 '.$admin_menu;
-//$js_script .= '
-//    $(document).ready(function () {
-//        $(document).ready(function(){
-//                $("[rel^=\'prettyPhoto[fullImage]\']").prettyPhoto();
-//            });
-//    });
-//    function gtag_report_conversion(url) {
-//      var callback = function () {
-//        if (typeof(url) != \'undefined\') {
-//          window.location = url;
-//        }
-//      };
-//      gtag(\'event\', \'conversion\', {
-//          \'send_to\': \'AW-462132080/6eH7CJDotPEBEPCmrtwB\',
-//          \'event_callback\': callback
-//      });
-//      return false;
-//    }
-//gtag(\'event\', \'view_item\', {
-//    \'send_to\': \'AW-462132080\',
-//    \'items\': [{
-//    \'id\': \''.$infoItem['id'].'\',
-//      \'google_business_vertical\': \'retail\'
-//    }]
-//  });
-//  dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
-//    dataLayer.push({
-//      event: "view_item",
-//      ecommerce: {
-//        items: [{
-//          item_name: "'.$infoItem['text_1'].' '.getOneValueText($infoItem['select_1']).' '.$infoItem['text_4'].'", // Name or ID is required.
-//          item_id: "'.$infoItem['id'].'",
-//          price: '.(($infoItem['price_1']!=$infoItem['price_2'] AND $infoItem['price_2']!=0) ? $infoItem['price_2'] : $infoItem['price_1']).',
-//          item_brand: "'.getOneValueText($infoItem['select_1']).'",
-//          item_category: "'.getOneValueText($infoItem['select_2']).'",
-//          item_category2: "'.getOneValueText($infoItem['select_3']).'",
-//          item_list_name: "View item",  // If associated with a list selection.
-//          index: 1,  // If associated with a list selection.
-//          quantity: 1
-//        }]
-//      }
-//    });
-//    ';
+$body = '
+<section class="breadcrumb__area pt-60 pb-60 tp-breadcrumb__bg" data-background="" style="">
+ <div class="container">
+    <div class="row align-items-center">
+       <div class="col-xl-7 col-lg-12 col-md-12 col-12">
+          <div class="tp-breadcrumb">
+             <div class="tp-breadcrumb__link mb-10">
+                <span class="breadcrumb-item-active"><a href="'.$config['site_url'].'">Головна</a></span>
+                <span class="breadcrumb-item"><a href="{main_sait}ua/shop/'.translit(getOneValueText($infoItem['select_1'])).'/?p='.$infoItem['select_1'].'">'.$infoItem['select_1'].'</a></span>
+                '.((!empty($infoItem['select_2'] AND $infoItem['select_2']!=0) ? '
+                <span class="breadcrumb-item"><a href="{main_sait}ua/shop/'.translit(getOneValueText($infoItem['select_1']).'_'.getOneValueText($infoItem['select_2'])).'/?p='.$infoItem['select_1'].','.$infoItem['select_2'].'">'.$infoItem['select_2'].'</a></span>
+                ' : '')).'
+                '.((!empty($infoItem['select_3'] AND $infoItem['select_3']!=0) ? '
+                <span class="breadcrumb-item"><a href="{main_sait}ua/shop/'.translit(getOneValueText($infoItem['select_1']).'_'.getOneValueText($infoItem['select_2']).'_'.getOneValueText($infoItem['select_3'])).'/?p='.$infoItem['select_1'].','.$infoItem['select_2'].','.$infoItem['select_3'].'">'.$infoItem['select_3'].'</a></span>
+                ' : '')).'
+                <span>'.getNameItem($infoItem).'</span>
+             </div>
+             <h2 class="tp-breadcrumb__title">'.getNameItem($infoItem).'</h2>
+          </div>
+       </div>
+    </div>
+ </div>
+</section>
+';
