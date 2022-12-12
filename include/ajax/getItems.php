@@ -262,41 +262,37 @@ switch ($_POST['sort']){
         }
         break;
 }
-$arrayOut['data'] = '
-<div class="row">
-    <div class="col-lg-6 col-12 text-center">
-        <ul class="pagination_list">'.$paginator.'</ul>
-    </div>
-    <div class="col-lg-5 col-12">
-        <div class="sort-by" style="position: relative;top:0;">
-            <label>Сортувати за</label>
-            <select onchange="sortSorokaVorona();" id="sortSorokaVorona">
-                <option value="dateAsk" '.$dateAsk.'>по даті ↓</option>
-                <option value="dateDesc" '.$dateDesc.'>по даті ↑</option>
-                <option value="popularAsk" '.$popularAsk.'>по популярності ↓</option>
-                <option value="popularDesc" '.$popularDesc.'>по популярності ↑</option>
-                <option value="priceAsk" '.$priceAsk.'>по ціні ↓</option>
-                <option value="priceDesc" '.$priceDesc.'>по ціні ↑</option>
-            </select>
-        </div>                
-    </div>
-</div>
-<hr>
-<div style="clear:both;" id="itemsScroll"></div>
-<div class="row">'.$items.'</div>
-<div style="clear:both;"></div>
-<div class="row">
-     <div class="col-12">
-        <ul class="pagination_list">'.$paginator.'<ul/>
-    </div>
-</div>
-<hr>
-';
+//$arrayOut['data'] = '
+//<div class="row">
+//    <div class="col-lg-6 col-12 text-center">
+//        <ul class="pagination_list">'.$paginator.'</ul>
+//    </div>
+//    <div class="col-lg-5 col-12">
+//        <div class="sort-by" style="position: relative;top:0;">
+//            <label>Сортувати за</label>
+//            <select onchange="sortSorokaVorona();" id="sortSorokaVorona">
+//                <option value="dateAsk" '.$dateAsk.'>по даті ↓</option>
+//                <option value="dateDesc" '.$dateDesc.'>по даті ↑</option>
+//                <option value="popularAsk" '.$popularAsk.'>по популярності ↓</option>
+//                <option value="popularDesc" '.$popularDesc.'>по популярності ↑</option>
+//                <option value="priceAsk" '.$priceAsk.'>по ціні ↓</option>
+//                <option value="priceDesc" '.$priceDesc.'>по ціні ↑</option>
+//            </select>
+//        </div>
+//    </div>
+//</div>
+//<hr>
+//<div style="clear:both;" id="itemsScroll"></div>
+//<div class="row">'.$items.'</div>
+//<div style="clear:both;"></div>
+//<div class="row">
+//     <div class="col-12">
+//        <ul class="pagination_list">'.$paginator.'<ul/>
+//    </div>
+//</div>
+//<hr>
+//';
 $array['data'] = $items;
-$arrayOut['data'] = str_replace ('YOYO 2', 'YOYO<sup>2</sup>', $arrayOut['data']);
-$arrayOut['data'] = str_replace ('Yoyo 2', 'YOYO<sup>2</sup>', $arrayOut['data']);
-$arrayOut['data'] = str_replace ('Yoyo', 'YOYO', $arrayOut['data']);
-$arrayOut['data'] = str_replace ('Babyzen', 'BABYZEN', $arrayOut['data']);
 echo json_encode($arrayOut);
 /*<div class="sortFiltr" style="text-align: right;">
     '.$sort.'
