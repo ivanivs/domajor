@@ -260,10 +260,12 @@ if (isset ($_GET['select'][32])){
             }
         }
         $leftBlock = '
-            <div class="leftBlock">
-                <div id="leftFiltr">'.$filtr.'</div>
-                '.$select2.'
-                <div id="fixedBlock" class="findBlock" style="z-index:10;"></div>
+            <div class="leftBlock product-sidebar__widget mb-30">
+                <div class="product-sidebar__info product-info-list">
+                    <div id="leftFiltr">'.$filtr.'</div>
+                    '.$select2.'
+                    <div id="fixedBlock" class="findBlock" style="z-index:10;"></div>
+                </div>
             </div>
         ';
         $colRightBlock = '  col-lg-9';
@@ -354,9 +356,11 @@ if (isset ($_GET['select'][32])){
             </div>
         </div>
         <div class="col-lg-2 col-md-12">
-            <div class="catagory_price_color">
-                '.$leftBlock.'
-                '.$addFiltr.'
+            <div class="tpsidebar product-sidebar__product-category">
+                <div class="product-sidebar">
+                    '.$leftBlock.'
+                    '.$addFiltr.'                                    
+                </div>            
             </div>
         </div>
     </div>
