@@ -293,6 +293,8 @@ switch ($_POST['sort']){
 //<hr>
 //';
 $arrayOut['data'] = $items;
+$arrayOut['paginator'] = $paginator;
+$arrayOut['countItem'] = $countItem;
 echo json_encode($arrayOut);
 /*<div class="sortFiltr" style="text-align: right;">
     '.$sort.'
