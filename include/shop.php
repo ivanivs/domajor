@@ -378,18 +378,7 @@ if (isset ($_GET['select'][32])){
                 }
                 var param = $(".leftBlock").find("input").attr("name").split("|");
                 viewItems();
-                goTo("allItems");
-            });
-            $(".classSize div").click(function() {
-                $(this).toggleClass("sizeFiltrButtonActive");
-                if ($(this).find("input").val()==0)
-                {
-                    $(this).find("input").val(1);
-                } else {
-                    $(this).find("input").val(0);
-                }
-                 viewItems();
-                 goTo("allItems");
+                //goTo("allItems");
             });
         });
     ';
