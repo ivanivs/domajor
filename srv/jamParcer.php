@@ -22,12 +22,12 @@ function get_web_page( $url, $cookiesIn = '' ){
         CURLOPT_TIMEOUT        => 30,      // timeout on response
         CURLOPT_MAXREDIRS      => 10,       // stop after 10 redirects
         CURLINFO_HEADER_OUT    => true,
-        CURLOPT_SSL_VERIFYPEER => true,     // Validate SSL Certificates
+        CURLOPT_SSL_VERIFYHOST => false,     // Validate SSL Certificates
+        CURLOPT_SSL_VERIFYPEER => false,     // Validate SSL Certificates
         CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
         CURLOPT_COOKIE         => $cookiesIn,
         CURLOPT_USERAGENT      => 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1'
     );
-
     $ch      = curl_init( $url );
     curl_setopt_array( $ch, $options );
     $rough_content = curl_exec( $ch );
