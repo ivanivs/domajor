@@ -278,13 +278,12 @@ if (isset ($_GET['select'][32])){
 //        $infoCategorySql = getOneString("SELECT * FROM `ls_params_select_values` WHERE `id` = '".$_GET['select'][2][0]."';");
 //        $infoCategory = $infoCategorySql['bodyText'];
     }
-    print_r ($_GET);
-    if (isset ($_GET['select'][1])){
-        $valueBreadcrumb = getOneValueText($_GET['select'][1][0]);
+    if (isset ($_GET['select'][2])){
+        $valueBreadcrumb = getOneValueText($_GET['select'][2][0]);
         $title = $valueBreadcrumb.' на Domajor.com.ua';
     } elseif (isset ($_GET['select'][5])) {
-        $valueBreadcrumb = getOneValueText($_GET['select'][5][0]);
-        $title = $valueBreadcrumb.' на Domajor.com.ua';
+//        $valueBreadcrumb = getOneValueText($_GET['select'][5][0]);
+//        $title = $valueBreadcrumb.' на Domajor.com.ua';
     }
     $body = '
 '.((isset ($_GET['p']) AND $_GET['p']==76) ? '<input type="hidden" class="param" name="select|5|76" value="1">' : '').'
