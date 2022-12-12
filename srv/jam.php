@@ -51,7 +51,7 @@ if (fwrite($fp, $page)) {
                 $body = $dataArray['body'];
             }
             mysql_query("UPDATE `ls_items` SET `text_2` = '".mysql_real_escape_string($body)."', `price_1` = '" . mysql_real_escape_string($oneItem['price']) . "', `price_2` = '" . mysql_real_escape_string($oneItem['acc']) . "', `text_4` = '" . $stock . "' WHERE `id` = '" . $infoItem['id'] . "';");
-            sleep(5);
+            sleep(1);
             $update++;
         } else {
             $body = '';
@@ -110,7 +110,7 @@ if (fwrite($fp, $page)) {
                             ");
                     }
                 }
-                sleep(5);
+                sleep(1);
             }
             $new++;
         }
