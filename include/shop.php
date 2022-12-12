@@ -339,7 +339,17 @@ if (isset ($_GET['select'][32])){
                     <div style="clear:both;"></div>
                     <div class="row" style="margin-top:1em;">
                         <div class="col-12">
-                            <ul class="pagination_list">'.$paginator.'<ul/>
+                        <div class="row">
+                        <div class="col-xxl-12">
+                           <div class="basic-pagination text-center pb-50">
+                              <nav>
+                                 <ul>
+                                 '.$paginator.'
+                                 </ul>
+                               </nav>
+                           </div>
+                        </div>
+                     </div>
                         </div>
                     </div>
                     <div class="row">
