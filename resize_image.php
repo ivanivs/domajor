@@ -7,7 +7,7 @@ if (!isset ($_GET['path'])){
     $url_img = '/var/www/domajorcomua/data/www/domajor.com.ua/new/'.urldecode($_GET['path']).str_replace(' ', '+',$url_img);
 }
 if (!file_exists($url_img) or !is_file($url_img)){
-    $url_img = '/var/www/kombat_in_ua_usr74/data/www/kombat.in.ua/images/no-image.jpg';
+    $url_img = '/var/www/domajorcomua/data/www/domajor.com.ua/new/images/no-image.jpg';
 }
 $true_name = md5($url_img.$_GET['width'].$_GET['height'].$_GET['const']);
 if (!file_exists('img_small/'.$_GET['const'].'_'.$true_name.'.jpg'))
