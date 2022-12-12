@@ -278,12 +278,13 @@ if (isset ($_GET['select'][32])){
 //        $infoCategorySql = getOneString("SELECT * FROM `ls_params_select_values` WHERE `id` = '".$_GET['select'][2][0]."';");
 //        $infoCategory = $infoCategorySql['bodyText'];
     }
+    print_r ($_GET);
     if (isset ($_GET['select'][1])){
         $valueBreadcrumb = getOneValueText($_GET['select'][1][0]);
-        $title = $valueBreadcrumb.' на Kobmat.in.ua';
+        $title = $valueBreadcrumb.' на Domajor.com.ua';
     } elseif (isset ($_GET['select'][5])) {
         $valueBreadcrumb = getOneValueText($_GET['select'][5][0]);
-        $title = $valueBreadcrumb.' на Kobmat.in.ua';
+        $title = $valueBreadcrumb.' на Domajor.com.ua';
     }
     $body = '
 '.((isset ($_GET['p']) AND $_GET['p']==76) ? '<input type="hidden" class="param" name="select|5|76" value="1">' : '').'
@@ -295,7 +296,7 @@ if (isset ($_GET['select'][32])){
           <div class="tp-breadcrumb">
              <div class="tp-breadcrumb__link mb-10">
                 <span class="breadcrumb-item-active"><a href="'.$config['site_url'].'">Home</a></span>
-                <li>'.$valueBreadcrumb.'</li>
+                '.$valueBreadcrumb.'
              </div>
              <h2 class="tp-breadcrumb__title">'.$valueBreadcrumb.'</h2>
           </div>
