@@ -345,19 +345,6 @@ if (isset ($_GET['select'][32])){
                         <div class="col-lg-6 col-12 text-center">
                             <ul class="pagination_list">'.$paginator.'</ul>
                         </div>
-                        <div class="col-lg-5 col-12">
-                            <div class="sort-by" style="position: relative;top:0;">
-                                <label>Сортувати за</label>
-                                <select onchange="sortSorokaVorona();" id="sortSorokaVorona">
-                                    <option value="dateAsk" selected>по даті ↓</option>                    
-                                    <option value="dateDesc">по даті ↑</option>                    
-                                    <option value="popularAsk">по популярності ↓</option>                    
-                                    <option value="popularDesc">по популярності ↑</option>                    
-                                    <option value="priceAsk">по ціні ↓</option>                    
-                                    <option value="priceDesc">по ціні ↑</option>       
-                                </select>
-                            </div>                
-                        </div>
                     </div>
                     <hr>
                     <div style="clear:both;" id="itemsScroll"></div>
