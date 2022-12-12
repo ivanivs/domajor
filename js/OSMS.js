@@ -169,8 +169,10 @@ function viewItems()
     $(".param").each(function(i, elem){
         if ($(this).val()==1)
         {
-            array[j] = ($(this).attr("name"));
-            j = j + 1;
+            if ($(this).prop('checked')==true) {
+                array[j] = ($(this).attr("name"));
+                j = j + 1;
+            }
         }
     });
     $.ajax({
