@@ -184,7 +184,7 @@ if ($numberPage>1)
         if (($i>($_POST['page']-5) and $i<($_POST['page']+5)) or $i == 1 or $i==$numberPage) {
             if ($i == $_POST['page'] or ($i == 1 and !isset ($_POST['page']))) {
                 $paginator .= '
-                <li class="active"><a href="#" onclick="return false;">' . $i . '</a></li>
+                <li class="active"><span class="current">' . $i . '</span></li>
                 ';
             } else {
                 $paginator .= '
