@@ -187,6 +187,14 @@ function viewItems()
             searchField: $("#searchField").val(),
         },
         success: function(result) {
+            if (result['countItem']<32){
+                $("#countView").html(result['countItem']);
+                $("#countViewFrom").html(result['countViewFrom']);
+            } else {
+                $("#countView").html(32);
+                $("#countViewFrom").html(result['countViewFrom']);
+            }
+            $("#pag").html(result['paginator']);
             $("#leftFiltr").html(result['filtr']);
             $(".blockItems").html(result['data']);
             $("#fixedBlock").hide(100);

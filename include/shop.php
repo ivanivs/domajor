@@ -314,7 +314,7 @@ if (isset ($_GET['select'][32])){
                     <div class="row align-items-center">
                        <div class="col-sm-6">
                           <div class="product-item-count">
-                             <span><b>32</b> з '.$countItem.'</span>
+                             <span><b id="countView">32</b> з <span id="countViewFrom">'.$countItem.'</span></span>
                           </div>
                        </div>
                        <div class="col-sm-6">
@@ -343,7 +343,7 @@ if (isset ($_GET['select'][32])){
                         <div class="col-xxl-12">
                            <div class="basic-pagination text-center pb-50">
                               <nav>
-                                 <ul>
+                                 <ul id="pag">
                                  '.$paginator.'
                                  </ul>
                                </nav>
