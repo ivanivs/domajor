@@ -292,6 +292,7 @@ $arrayOut['data'] = '
 </div>
 <hr>
 ';
+$array['data'] = $items;
 $arrayOut['data'] = str_replace ('YOYO 2', 'YOYO<sup>2</sup>', $arrayOut['data']);
 $arrayOut['data'] = str_replace ('Yoyo 2', 'YOYO<sup>2</sup>', $arrayOut['data']);
 $arrayOut['data'] = str_replace ('Yoyo', 'YOYO', $arrayOut['data']);

@@ -331,9 +331,9 @@ if (isset ($_GET['select'][32])){
                        </div>
                     </div>
                  </div>
-                <div id="allItems" class="blockItems">
+                <div class="blockItems">
                     <div style="clear:both;" id="itemsScroll"></div>
-                    <div class="row row-cols-xxl-4 row-cols-xl-4 row-cols-lg-3 row-cols-md-3 row-cols-sm-2 row-cols-1 tpproduct">
+                    <div class="row row-cols-xxl-4 row-cols-xl-4 row-cols-lg-3 row-cols-md-3 row-cols-sm-2 row-cols-1 tpproduct"  id="allItems">
                         '.$items.'
                     </div>
                     <div style="clear:both;"></div>
