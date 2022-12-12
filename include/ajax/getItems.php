@@ -292,7 +292,7 @@ switch ($_POST['sort']){
 //</div>
 //<hr>
 //';
-$array['data'] = $items;
+$arrayOut['data'] = $items;
 echo json_encode($arrayOut);
 /*<div class="sortFiltr" style="text-align: right;">
     '.$sort.'
