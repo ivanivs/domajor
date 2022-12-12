@@ -192,6 +192,19 @@ function viewItems()
             $("#fixedBlock").hide(100);
             $(".blockItems").css("opacity", '1');
             $('[data-toggle="tooltip"]').tooltip();
+            $(".param").change(function() {
+                console.log("click");
+                $(this).toggleClass("activeFiltrElement");
+                if ($(this).find("input").val()==0)
+                {
+                    $(this).find("input").val(1);
+                } else {
+                    $(this).find("input").val(0);
+                }
+                var param = $(".leftBlock").find("input").attr("name").split("|");
+                viewItems();
+                goTo("allItems");
+            });
             // $(".classStyle li").click(function() {
             //     $(this).toggleClass("activeFiltrElement");
             //     if ($(this).find("input").val()==0)
