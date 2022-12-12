@@ -353,7 +353,7 @@ if (isset ($_GET['select'][32])){
                 <input type="hidden" id="categoryId" value="'.$idCategory.'">
             </div>
         </div>
-        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-2 col-md-12">
             <div class="catagory_price_color">
                 '.$leftBlock.'
                 '.$addFiltr.'
