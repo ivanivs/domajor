@@ -45,67 +45,73 @@ if (fwrite($fp, $page)) {
 
         if ($infoItem = getOneString("SELECT * FROM `ls_items` WHERE `select_4` = '1' AND `text_3` = '" . $oneItem['code'] . "'")) {
             echo $infoItem['id']." ".$infoItem['text_1']."\r\n";
-            mysql_query("UPDATE `ls_items` SET `price_1` = '" . mysql_real_escape_string($oneItem['price']) . "', `price_2` = '" . mysql_real_escape_string($oneItem['acc']) . "', `text_4` = '" . $stock . "' WHERE `id` = '" . $infoItem['id'] . "';");
+            $data = file_get_contents('https://new.domajor.com.ua/srv/jamParcer.php?id='.$oneItem['code']);
+            if ($data!='error'){
+                $dataArray = json_decode($data,true);
+                $body = $dataArray['body'];
+            }
+            mysql_query("UPDATE `ls_items` SET `text_2` = '".mysql_real_escape_string($body)."', `price_1` = '" . mysql_real_escape_string($oneItem['price']) . "', `price_2` = '" . mysql_real_escape_string($oneItem['acc']) . "', `text_4` = '" . $stock . "' WHERE `id` = '" . $infoItem['id'] . "';");
+            sleep(5);
             $update++;
         } else {
-//            $body = '';
-//            $data = file_get_contents('https://new.domajor.com.ua/srv/jamParcer.php?id='.$oneItem['code']);
-//            if ($data!='error'){
-//                $dataArray = json_decode($data,true);
-//                $body = $dataArray['body'];
-//            }
-//            mysql_query("
-//                INSERT INTO `ls_items` (
-//                `id_card`,
-//                `time`,
-//                `searchField`,
-//                `status`,
-//                `price_1`,
-//                `text_4`,
-//                `select_4`,
-//                `text_3`,
-//                `text_1`,
-//                `text_5`,
-//                `text_2`
-//                ) VALUES (
-//                '1',
-//                '" . time() . "',
-//                '" . mysql_real_escape_string($oneItem['article']) . " " . mysql_real_escape_string($oneItem['manufacturer']) . "',
-//                '1',
-//                '" . mysql_real_escape_string($oneItem['price']) . "',
-//                '" . $stock . "',
-//                '1',
-//                '" . mysql_real_escape_string($oneItem['code']) . "',
-//                '" . mysql_real_escape_string($oneItem['manufacturer']) . " " . mysql_real_escape_string($oneItem['article']) . "',
-//                '".mysql_real_escape_string($oneItem['article'])."',
-//                '".mysql_real_escape_string($body)."'
-//                )
-//                ");
-//            $idItem = mysql_insert_id();
-//            if ($data!='error'){
-//                $dataArray = json_decode($data,true);
-//                if (!empty($dataArray['img'])){
-//                    foreach ($dataArray['img'] as $v){
-//                        $imgNameTmp = explode('/', $v);
-//                        $imgName = $imgNameTmp[count($imgNameTmp)-1];
-//                        $file_name = time().rand(0,100).'_'.$imgName;
-//                        copy($v, '../upload/userparams/'.$file_name);
-//                        mysql_query ("
-//                            INSERT INTO  `ls_values_image` (
-//                            `id_item` ,
-//                            `id_cardparam` ,
-//                            `value`
-//                            )
-//                            VALUES (
-//                            '".$idItem."',
-//                            '1' ,
-//                            '".$file_name."'
-//                            );
-//                            ");
-//                    }
-//                }
-//                sleep(1);
-//            }
+            $body = '';
+            $data = file_get_contents('https://new.domajor.com.ua/srv/jamParcer.php?id='.$oneItem['code']);
+            if ($data!='error'){
+                $dataArray = json_decode($data,true);
+                $body = $dataArray['body'];
+            }
+            mysql_query("
+                INSERT INTO `ls_items` (
+                `id_card`,
+                `time`,
+                `searchField`,
+                `status`,
+                `price_1`,
+                `text_4`,
+                `select_4`,
+                `text_3`,
+                `text_1`,
+                `text_5`,
+                `text_2`
+                ) VALUES (
+                '1',
+                '" . time() . "',
+                '" . mysql_real_escape_string($oneItem['article']) . " " . mysql_real_escape_string($oneItem['manufacturer']) . "',
+                '1',
+                '" . mysql_real_escape_string($oneItem['price']) . "',
+                '" . $stock . "',
+                '1',
+                '" . mysql_real_escape_string($oneItem['code']) . "',
+                '" . mysql_real_escape_string($oneItem['manufacturer']) . " " . mysql_real_escape_string($oneItem['article']) . "',
+                '".mysql_real_escape_string($oneItem['article'])."',
+                '".mysql_real_escape_string($body)."'
+                )
+                ");
+            $idItem = mysql_insert_id();
+            if ($data!='error'){
+                $dataArray = json_decode($data,true);
+                if (!empty($dataArray['img'])){
+                    foreach ($dataArray['img'] as $v){
+                        $imgNameTmp = explode('/', $v);
+                        $imgName = $imgNameTmp[count($imgNameTmp)-1];
+                        $file_name = time().rand(0,100).'_'.$imgName;
+                        copy($v, '../upload/userparams/'.$file_name);
+                        mysql_query ("
+                            INSERT INTO  `ls_values_image` (
+                            `id_item` ,
+                            `id_cardparam` ,
+                            `value`
+                            )
+                            VALUES (
+                            '".$idItem."',
+                            '1' ,
+                            '".$file_name."'
+                            );
+                            ");
+                    }
+                }
+                sleep(5);
+            }
             $new++;
         }
     }
