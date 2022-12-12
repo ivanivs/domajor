@@ -182,7 +182,7 @@ if ($numberPage>1)
         if (($i>($_GET['page']-5) and $i<($_GET['page']+5)) or $i == 1 or $i==$numberPage) {
             if ($i == $_GET['page'] or ($i == 1 and !isset ($_GET['page']))) {
                 $paginator .= '
-                <li class="active"><a href="' . $link . '&amp;page=' . $i . '&sort=' . $_GET['sort'] . '">' . $i . '</a></li>
+                <li><span class="current">' . $i . '</span></li>
                 ';
             } else {
                 $paginator .= '
