@@ -365,7 +365,6 @@ if (isset ($_GET['select'][32])){
         </div>
     </div>
 </div>
-
     ';
     $js_script .= '
     $(document).ready(function() {
