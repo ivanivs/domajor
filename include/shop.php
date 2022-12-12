@@ -134,7 +134,7 @@ if (isset ($array_itemsData['sql'])){
 }
 if ($array_items)
 {
-    $htmlTemplate = file_get_contents('templates/'.$config ['default_template'].'/mainOneItem.html');
+    $htmlTemplate = file_get_contents('templates/'.$config ['default_template'].'/oneItemShop.html');
     $i = 0;
     if (MOBILEVER==0){
         $keyMobile = 3;
