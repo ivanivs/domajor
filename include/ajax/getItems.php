@@ -73,7 +73,7 @@ if (isset ($_POST['searchField']) and !empty($_POST['searchField'])){
     $countItem = getNumberAllItemsWithParam($arrayParam);
 }
 $numberPage = ceil($countItem/32);
-$htmlTemplate = file_get_contents($config['site_url'].'templates/'.$config ['default_template'].'/mainOneItem.html');
+$htmlTemplate = file_get_contents($config['site_url'].'templates/'.$config ['default_template'].'/oneItemShop.html');
 $i = 0;
 if (MOBILEVER==0){
     $keyMobile = 3;
