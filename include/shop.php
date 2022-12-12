@@ -89,7 +89,7 @@ if (isset ($_GET['param']) AND !isset($_GET['search']))
         $array_items = getAllItemsWithParamSEARCH($_GET['search'], $limit, $sortSql, 1);
         $countItem = getNumberAllItemsWithParamSEARCH($_GET['search']);
         $numberPage = ceil($countItem/33);
-        $title = 'Kombat - '.ucfirst(htmlspecialchars($_GET['search']));
+        $title = 'Domajor.com.ua - '.ucfirst(htmlspecialchars($_GET['search']));
     }
 }
 $brand = '';
@@ -102,13 +102,13 @@ if (isset ($_GET['select'][2][0])){
         $value = getOneValue(intval($_GET['select'][2][0]));
         $bodyText = $value['bodyText'];
     } else {
-        $title = getOneValueText(intval($_GET['select'][3][0])).' '.$brand.'- '.getOneValueText(intval($_GET['select'][2][0])).' на Kombat.in.ua';
+        $title = getOneValueText(intval($_GET['select'][3][0])).' '.$brand.'- '.getOneValueText(intval($_GET['select'][2][0])).' на Domajor.com.ua';
         $value = getOneValue(intval($_GET['select'][3][0]));
         $bodyText = $value['bodyText'];
     }
 } else {
     if (isset ($_GET['select'][1][0])){
-        $title = getOneValueText(intval($_GET['select'][1][0])).' -  на Kombat.in.ua';
+        $title = getOneValueText(intval($_GET['select'][1][0])).' -  на Domajor.com.ua';
         $value = getOneValue(intval($_GET['select'][1][0]));
         $bodyText = $value['bodyText'];
     }
