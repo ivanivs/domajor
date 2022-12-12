@@ -1704,12 +1704,12 @@ $body = '
           <div class="tp-breadcrumb">
              <div class="tp-breadcrumb__link mb-10">
                 <span class="breadcrumb-item-active"><a href="'.$config['site_url'].'">Головна</a></span>
-                <span class="breadcrumb-item"><a href="{main_sait}ua/shop/'.translit(getOneValueText($infoItem['select_1'])).'/?p='.$infoItem['select_1'].'">'.$infoItem['select_1'].'</a></span>
+                <span class="breadcrumb-item"><a href="{main_sait}ua/shop/'.translit(getOneValueText($infoItem['select_1'])).'/?p='.$infoItem['select_1'].'">'.getOneValueText($infoItem['select_1']).'</a></span>
                 '.((!empty($infoItem['select_2'] AND $infoItem['select_2']!=0) ? '
-                <span class="breadcrumb-item"><a href="{main_sait}ua/shop/'.translit(getOneValueText($infoItem['select_1']).'_'.getOneValueText($infoItem['select_2'])).'/?p='.$infoItem['select_1'].','.$infoItem['select_2'].'">'.$infoItem['select_2'].'</a></span>
+                <span class="breadcrumb-item"><a href="{main_sait}ua/shop/'.translit(getOneValueText($infoItem['select_1']).'_'.getOneValueText($infoItem['select_2'])).'/?p='.$infoItem['select_1'].','.$infoItem['select_2'].'">'.getOneValueText($infoItem['select_2']).'</a></span>
                 ' : '')).'
                 '.((!empty($infoItem['select_3'] AND $infoItem['select_3']!=0) ? '
-                <span class="breadcrumb-item"><a href="{main_sait}ua/shop/'.translit(getOneValueText($infoItem['select_1']).'_'.getOneValueText($infoItem['select_2']).'_'.getOneValueText($infoItem['select_3'])).'/?p='.$infoItem['select_1'].','.$infoItem['select_2'].','.$infoItem['select_3'].'">'.$infoItem['select_3'].'</a></span>
+                <span class="breadcrumb-item"><a href="{main_sait}ua/shop/'.translit(getOneValueText($infoItem['select_1']).'_'.getOneValueText($infoItem['select_2']).'_'.getOneValueText($infoItem['select_3'])).'/?p='.$infoItem['select_1'].','.$infoItem['select_2'].','.$infoItem['select_3'].'">'.getOneValueText($infoItem['select_3']).'</a></span>
                 ' : '')).'
                 <span>'.getNameItem($infoItem).'</span>
              </div>
