@@ -9,6 +9,9 @@ if (!isset ($_GET['path'])){
 if (!file_exists($url_img) or !is_file($url_img)){
     $url_img = '/var/www/domajorcomua/data/www/domajor.com.ua/new/images/no-image.jpg';
 }
+if (empty($_GET['filename'])){
+    $url_img = '/var/www/domajorcomua/data/www/domajor.com.ua/new/images/no-image.jpg';
+}
 $true_name = md5($url_img.$_GET['width'].$_GET['height'].$_GET['const']);
 if (!file_exists('img_small/'.$_GET['const'].'_'.$true_name.'.jpg'))
 {
