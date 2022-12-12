@@ -321,20 +321,9 @@ if (isset ($_GET['select'][32])){
                                 <select onchange="sortSorokaVorona();" id="sortSorokaVorona" class="form-control">
                                     <option value="dateAsk" selected>по даті ↓</option>                    
                                     <option value="dateDesc">по даті ↑</option>                    
-                                    <option value="popularAsk">по популярності ↓</option>                    
-                                    <option value="popularDesc">по популярності ↑</option>                    
                                     <option value="priceAsk">по ціні ↓</option>                    
                                     <option value="priceDesc">по ціні ↑</option>       
                                 </select>
-                             </div>
-                             <div class="tpproductnav tpnavbar product-filter-nav">
-                                <nav>
-                                   <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                      <button class="nav-link" id="nav-all-tab" data-bs-toggle="tab" data-bs-target="#nav-all" type="button" role="tab" aria-controls="nav-all" aria-selected="false"><i class="fal fa-list-ul"></i></button>
-        
-                                      <button class="nav-link active" id="nav-popular-tab" data-bs-toggle="tab" data-bs-target="#nav-popular" type="button" role="tab" aria-controls="nav-popular" aria-selected="true"><i class="fal fa-th"></i></button>
-                                   </div>
-                                </nav>
                              </div>
                           </div>
                        </div>
