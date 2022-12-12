@@ -377,7 +377,7 @@ if (isset ($_GET['select'][32])){
                 } else {
                     $(this).find("input").val(0);
                 }
-                var param = $(this).find("input").attr("name").split("|");
+                var param = $(".leftBlock").find("input").attr("name").split("|");
                 viewItems();
                 goTo("allItems");
             });
