@@ -330,20 +330,8 @@ if (isset ($_GET['select'][32])){
                     </div>
                  </div>
                 <div id="allItems" class="blockItems">
-                    <div class="row">
-                        <div class="col-lg-6 col-12 text-center">
-                            <ul class="pagination_list">'.$paginator.'</ul>
-                        </div>
-                        <div class="col-lg-5 col-12">
-                            <div class="sort-by" style="position: relative;top:0;">
-                                <label>Сортувати за</label>
-                                
-                            </div>                
-                        </div>
-                    </div>
-                    <hr>
                     <div style="clear:both;" id="itemsScroll"></div>
-                    <div class="row">
+                    <div class="row row-cols-xxl-4 row-cols-xl-4 row-cols-lg-3 row-cols-md-3 row-cols-sm-2 row-cols-1 tpproduct">
                         '.$items.'
                     </div>
                     <div style="clear:both;"></div>
