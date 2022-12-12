@@ -189,10 +189,10 @@ function viewItems()
         success: function(result) {
             if (result['countItem']<32){
                 $("#countView").html(result['countItem']);
-                $("#countViewFrom").html(result['countViewFrom']);
+                $("#countViewFrom").html(result['countItem']);
             } else {
                 $("#countView").html(32);
-                $("#countViewFrom").html(result['countViewFrom']);
+                $("#countViewFrom").html(result['countItem']);
             }
             $("#pag").html(result['paginator']);
             $("#leftFiltr").html(result['filtr']);
