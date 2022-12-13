@@ -1,1 +1,30 @@
 <a href="{main_sait}ua/register.html"><i class="fal fa-user"></i></a>
+<div class="modal fade" tabindex="-1" role="dialog" id="modalLogin">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Вхід на сайт</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <td>Телефон:</td>
+                        <td><input type="text" id="loginInSite" class="form-control input-sm" placeholder="телефон"></td>
+                    </tr>
+                    <tr>
+                        <td>Пароль:</td>
+                        <td><input type="password" id="passwordInSite" class="form-control input-sm" placeholder="пароль"></td>
+                    </tr>
+                </table>
+                <div id="errorLogin" style="display: none;" class="alert alert-danger">
+                    Телефон або пароль введено не вірно!
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+                <button type="button" class="btn btn-success" onclick="loginInSite2();">Увійти</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

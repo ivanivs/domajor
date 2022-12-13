@@ -150,6 +150,7 @@ $body .= '
                 </table>
             </div>
         </div>
+        <div class="col-lg-4"><a href="#" onclick="$(\'#modalLogin\').modal(\'show\');" class="btn btn-danger btn-xs" style="border-radius: 3px;"><i class="fa fa-user" aria-hidden="true"></i> Вхід</a></div>
     </div>
 </div>
 ';
