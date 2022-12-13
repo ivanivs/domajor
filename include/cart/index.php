@@ -587,18 +587,13 @@ if (!isset ($_GET['go']))
 						</div>
 					</div>       
 					<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-						<div class="total_price">
-							<table class="total_rate">
-								<tbody>
-								<tr>
-									<th style="font-size:20px;">Загальна вартість</th>
-									<th style="font-size:20px;white-space: nowrap;">'.$allpriceFullHtml.$allsuma.'</span> грн.</th>
-								</tr>
-							</tbody></table>
-						</div>
-						<div class="check_out_simble review_button ">
-						    <button class="button" id="submitOrderForm" onclick="checkDostavka(); gtag_report_conversion();">Оформити замовлення</button>
-						</div>
+					    <div class="cart-page-total">
+                             <h2>Загальна вартість</h2>
+                             <ul class="mb-20">
+                                <li>Разом <span>'.$allpriceFullHtml.$allsuma.'</span> грн.</span></li>
+                             </ul>
+                             <a href="#" onclick="checkDostavka();" class="tp-btn tp-color-btn banner-animation">Оформити замовлення</a>
+                          </div>
 					</div>     
                 </div>
             </div>
