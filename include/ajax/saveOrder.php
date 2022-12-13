@@ -180,18 +180,6 @@ VALUES (
                 </div>
             </div>
             '.$oplata.'
-            <!-- Global site tag (gtag.js) - Google Analytics -->
-            <script>
-                $( document ).ready(function() {
-                    gtag(\'event\', \'purchase\', {
-                        \'transaction_id\': \''.$idOrder.'\',
-                        \'value\': \''.$allPrice.'\',
-                        \'currency\': \'UAH\',
-                        \'items\': ['.implode(',',$itemsToGTag).']
-                      });
-                });
-           
-            </script>
             '.$onlinePayBlock.'
             
             
