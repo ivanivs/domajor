@@ -1813,4 +1813,5 @@ $body = '
         </div>    
     </div>
 </div>
+<div id="addToItemHtml"></div>
 ';
