@@ -50,7 +50,6 @@ function get_web_page( $url, $cookiesIn = '' ){
     $header['all'] = $rough_content;
     return $header;
 }
-$_GET['id'] = 39961;
 if (isset ($_GET['id'])){
     $page = get_web_page('https://jam.ua/ua/search/'.$_GET['id'])['content'];
     preg_match_all('|<div id="search_item_left">(.*)</table>|isU', $page, $text);
