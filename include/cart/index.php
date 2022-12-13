@@ -618,15 +618,31 @@ if (!isset ($_GET['go']))
 						<div class="checkbox-form">
 							<h3>Дані отримувача</h3>
 							<h5>Введіть дані отримувача, перевірте правильність введення номера телефону</h5>
-							<div class="shopping_form">
-								<h4>П.І.Б.</h4>
-								<input type="text" name="pib" id="pib" class="input-text" value="'.$infoUser['name'].' '.$infoUser['surName'].'">
-								<h4>Номер телефону:</h4>
-								<input type="text" name="tel" id="phoneOrder" value="'.$infoUser['login'].'" onkeypress="return isNumberOrPlusKey(event)"  maxlength="13" class="input-text" placeholder="+380000000000">
-								<h4>E-Mail:</h4>
-								<input type="text" name="email" id="email" value="'.$infoUser['email'].'">
-								<h4>'.$lang[237].':</h4>
-								<input type="text" name="dop_info" id="dop_info" value="">
+							<div class="row">
+							    <div class="col-12">
+                                    <div class="checkout-form-list">
+                                       <label>П.І.Б. <span class="required">*</span></label>
+                                       <input type="text" name="pib" id="pib" class="input-text" value="'.$infoUser['name'].' '.$infoUser['surName'].'">
+                                    </div>							    
+                                </div>
+							    <div class="col-12">
+                                    <div class="checkout-form-list">
+                                       <label>Номер телефону: <span class="required">*</span></label>
+                                       <input type="text" name="tel" id="phoneOrder" value="'.$infoUser['login'].'" onkeypress="return isNumberOrPlusKey(event)"  maxlength="13" class="input-text" placeholder="+380000000000">
+                                    </div>							    
+                                </div>
+							    <div class="col-12">
+                                    <div class="checkout-form-list">
+                                       <label>E-Mail: <span class="required">*</span></label>
+                                       <input type="text" name="email" id="email" value="'.$infoUser['email'].'">
+                                    </div>							    
+                                </div>
+							    <div class="col-12">
+                                    <div class="checkout-form-list">
+                                       <label>'.$lang[237].': <span class="required">*</span></label>
+                                       <input type="text" name="dop_info" id="dop_info" value="">
+                                    </div>							    
+                                </div>
 								<label>
                                     <input type="checkbox" value="1" onclick="checkTerms();" id="confirmTerms" checked style="width: auto; height: auto;"> Погоджуюсь з <a href="'.$config['site_url'].'ua/mode/content-1.html" target="_blank">правилами доставки</a> та <a href="'.$config['site_url'].'ua/mode/content-2.html" target="_blank">правами покупця</a>
                                 </label>
