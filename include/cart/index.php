@@ -523,8 +523,7 @@ if (!isset ($_GET['go']))
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
                         <div class="checkbox-form">
-							<h2>Дані для доставки</h2>
-							<h3>Оберіть зручний для Вас спосіб доставки та оплати</h3>
+							<h3>Дані для доставки</h3>
 							<div class="shopping_form">
 								<h4>Служба доставки<span>*</span></h4>
 								<select id="dostavka" onchange="checkDostavkaType();" class="validate-select" title="Служба доставки">
