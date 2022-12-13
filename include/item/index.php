@@ -1804,49 +1804,6 @@ $body = '
                            <div class="product-details-review">
                               <h3 class="tp-comments-title mb-35">Ваш відгук про: <span>'.getNameItem($infoItem).'</span></h3>
                               '.generateReview($infoItem['id']).'
-                              
-                              <div class="product-details-comment">
-                                 <div class="comment-title mb-20">
-                                    <h3>Add a review</h3>
-                                    <p>Your email address will not be published. Required fields are marked*</p>
-                                 </div>
-                                 <div class="comment-rating mb-20 d-flex">
-                                    <span>Overall ratings</span>
-                                    <ul>
-                                       <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                       <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                       <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                       <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                       <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                    </ul>
-                                 </div>
-                                 <div class="comment-input-box">
-                                    <form action="#">
-                                       <div class="row">
-                                          <div class="col-xxl-12">
-                                             <div class="comment-input">
-                                                <textarea placeholder="Your review..."></textarea>
-                                             </div>
-                                          </div>
-                                          <div class="col-xxl-6">
-                                             <div class="comment-input">
-                                                <input type="text" placeholder="Your Name*">
-                                             </div>
-                                          </div>
-                                          <div class="col-xxl-6">
-                                             <div class="comment-input">
-                                                <input type="email" placeholder="Your Email*">
-                                             </div>
-                                          </div>
-                                          <div class="col-xxl-12">
-                                             <div class="comment-submit">
-                                                <button type="submit" class="tp-btn pro-submit">Submit</button>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </form>
-                                 </div>
-                              </div>
                            </div>
                         </div>
                      </div>
