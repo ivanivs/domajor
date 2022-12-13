@@ -616,7 +616,7 @@ if (!isset ($_GET['go']))
                     </div>    
                     <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 						<div class="shopping_details_des">
-							<h2>Дані отримувача</h2>
+							<h3>Дані отримувача</h3>
 							<h3>Введіть дані отримувача, перевірте правильність введення номера телефону</h3>
 							<div class="shopping_form">
 								<h4>П.І.Б.</h4>
