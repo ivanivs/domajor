@@ -1735,10 +1735,10 @@ $body = '
             <div class="col-lg-6 col-md-7">
                   <div class="tpproduct-details__content tpproduct-details__sticky">
                      <div class="tpproduct-details__tag-area d-flex align-items-center mb-5">
-                        <span class="tpproduct-details__tag">'.getOneValueText($infoItem['select_1']).'</span> 
                         <span class="tpproduct-details__tag">'.getOneValueText($infoItem['select_2']).'</span> 
-                        <span class="tpproduct-details__tag">'.getOneValueText($infoItem['select_3']).'</span>
                         <div class="tpproduct-details__rating">
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
                            <a href="#"><i class="fas fa-star"></i></a>
                            <a href="#"><i class="fas fa-star"></i></a>
                            <a href="#"><i class="fas fa-star"></i></a>
@@ -1746,8 +1746,8 @@ $body = '
                         <a class="tpproduct-details__reviewers">10 Reviews</a>
                      </div>
                      <div class="tpproduct-details__title-area d-flex align-items-center flex-wrap mb-5">
-                        <h3 class="tpproduct-details__title">Wide Cotton Tunic Dress</h3>
-                        <span class="tpproduct-details__stock">In Stock</span>
+                        <h3 class="tpproduct-details__title">'.getNameItem($infoItem).'</h3>
+                        <span class="tpproduct-details__stock">'.(($infoItem['text_4'])>0 ? 'В наявності' : 'Немає в наявності').'</span>
                      </div>
                      <div class="tpproduct-details__price mb-30">
                         <del>$9.35</del>
