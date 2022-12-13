@@ -255,6 +255,7 @@ if (!isset ($_GET['go']))
                     $valuta = $tr_ref_value['value'];
                 }
             }
+            $html_item = str_replace ('{summ}', $allprice, $html_item);
             foreach ($array_select as $select_id)
             {
                 $select = $info_item['select'.$select_id];
