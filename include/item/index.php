@@ -1786,6 +1786,210 @@ $body = '
                         '.((!empty($infoItem['select_3']) AND $infoItem['select_3']!=0) ? '<span><a href="'.getCategoryLinkById($infoItem['select_3']).'">'.getOneValueText($infoItem['select_3']).',</a></span>' : '').'
                      </div>
                   </div>
+                  <div class="tpproduct-details__navtab mb-60">
+                     <div class="tpproduct-details__nav mb-30">
+                        <ul class="nav nav-tabs pro-details-nav-btn" id="myTabs" role="tablist">
+                           <li class="nav-item" role="presentation">
+                              <button class="nav-links active" id="home-tab-1" data-bs-toggle="tab" data-bs-target="#home-1" type="button" role="tab" aria-controls="home-1" aria-selected="true">Description</button>
+                           </li>
+                           <li class="nav-item" role="presentation">
+                              <button class="nav-links" id="information-tab" data-bs-toggle="tab" data-bs-target="#additional-information" type="button" role="tab" aria-controls="additional-information" aria-selected="false">Additional information</button>
+                           </li>
+                           <li class="nav-item" role="presentation">
+                              <button class="nav-links" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">Reviews (2)</button>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="tab-content tp-content-tab" id="myTabContent-2">
+                        <div class="tab-para tab-pane fade active show" id="home-1" role="tabpanel" aria-labelledby="home-tab-1">
+                           <p class="mb-30">In marketing a product is an object or system made available for consumer use it is anything that can be offered to a market to satisfy the desire or need of a customer. In retailing, products are often referred to as
+                              merchandise, and in manufacturing, products are bought as raw materials and then sold as finished goods. A service is also regarded to as a type of product. Commodities are usually raw materials such as metals
+                              and agricultural products, but a commodity can also be anything widely available in the open market. In project management, products are the formal definition of the project deliverables that make up contribute
+                              to delivering the objectives of the project.</p>
+                           <p>A product can be classified as tangible or intangible. A tangible product is a physical object that can be perceived by touch such as a building, vehicle, gadget, or clothing. An intangible product is a product that
+                              can only be perceived indirectly such as an insurance policy. Services can be broadly classified under intangible products which can be durable or non durable. A product line is "a group of products that are
+                              closely related, either because they function in a similar manner, are sold to the same customer groups, are marketed through the same types of outlets, or fall within given price ranges."Many businesses offer a
+                              range of product lines which may be unique to a single organisation or may be common across the business\'s industry. In 2002 the US Census compiled revenue figures for the finance and insurance industry by
+                              various product lines such as "accident, health and medical insurance premiums" and "income from secured consumer loans.</p>
+                        </div>
+                        <div class="tab-pane fade" id="additional-information" role="tabpanel" aria-labelledby="information-tab">
+                           <div class="product__details-info table-responsive">
+                              <table class="table table-striped">
+                                 <tbody>
+                                    <tr>
+                                       <td class="add-info">Weight</td>
+                                       <td class="add-info-list"> 2 lbs</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="add-info">Dimensions</td>
+                                       <td class="add-info-list"> 12 × 16 × 19 in</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="add-info">Product</td>
+                                       <td class="add-info-list"> Purchase this product on rag-bone.com</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="add-info">Color</td>
+                                       <td class="add-info-list"> Gray, Black</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="add-info">Size</td>
+                                       <td class="add-info-list"> S, M, L, XL</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="add-info">Model</td>
+                                       <td class="add-info-list"> Model </td>
+                                    </tr>
+                                    <tr>
+                                       <td class="add-info">Shipping</td>
+                                       <td class="add-info-list"> Standard shipping: $5,95L</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="add-info">Care Info</td>
+                                       <td class="add-info-list"> Machine Wash up to 40ºC/86ºF Gentle Cycle</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="add-info">Brand</td>
+                                       <td class="add-info-list">  Kazen</td>
+                                    </tr>
+                                 </tbody>
+                             </table>
+                           </div>
+                        </div>
+                        <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                           <div class="product-details-review">
+                              <h3 class="tp-comments-title mb-35">3 reviews for “Wide Cotton Tunic extreme hammer”</h3>
+                              <div class="latest-comments mb-55">
+                                 <ul>
+                                    <li>
+                                       <div class="comments-box d-flex">
+                                          <div class="comments-avatar mr-25">
+                                             <img src="assets/img/shop/reviewer-01.png" alt="">
+                                          </div>
+                                          <div class="comments-text">
+                                             <div class="comments-top d-sm-flex align-items-start justify-content-between mb-5">
+                                                <div class="avatar-name">
+                                                   <b>Siarhei Dzenisenka</b>
+                                                   <div class="comments-date mb-20">
+                                                      <span>March 27, 2018 9:51 am</span>
+                                                   </div>
+                                                </div>
+                                                <div class="user-rating">
+                                                   <ul>
+                                                      <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                      <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                      <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                      <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                      <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                   </ul>
+                                                </div>
+                                             </div>
+                                             <p class="m-0">This is cardigan is a comfortable warm classic piece. Great to layer with a light top and you can dress up or down given the jewel buttons. I\'m 5\'8” 128lbs a 34A and the Small fit fine.</p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class="comments-box d-flex">
+                                          <div class="comments-avatar mr-25">
+                                             <img src="assets/img/shop/reviewer-02.png" alt="">
+                                          </div>
+                                          <div class="comments-text">
+                                             <div class="comments-top d-sm-flex align-items-start justify-content-between mb-5">
+                                                <div class="avatar-name">
+                                                   <b>Tommy Jarvis </b>
+                                                   <div class="comments-date mb-20">
+                                                      <span>March 27, 2018 9:51 am</span>
+                                                   </div>
+                                                </div>
+                                                <div class="user-rating">
+                                                   <ul>
+                                                      <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                      <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                      <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                      <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                      <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                   </ul>
+                                                </div>
+                                             </div>
+                                             <p class="m-0">This is cardigan is a comfortable warm classic piece. Great to layer with a light top and you can dress up or down given the jewel buttons. I\'m 5\'8” 128lbs a 34A and the Small fit fine.</p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class="comments-box d-flex">
+                                          <div class="comments-avatar mr-25">
+                                             <img src="assets/img/shop/reviewer-03.png" alt="">
+                                          </div>
+                                          <div class="comments-text">
+                                             <div class="comments-top d-sm-flex align-items-start justify-content-between mb-5">
+                                                <div class="avatar-name">
+                                                   <b>Johnny Cash</b>
+                                                   <div class="comments-date mb-20">
+                                                      <span>March 27, 2018 9:51 am</span>
+                                                   </div>
+                                                </div>
+                                                <div class="user-rating">
+                                                   <ul>
+                                                      <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                      <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                      <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                      <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                      <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                   </ul>
+                                                </div>
+                                             </div>
+                                             <p class="m-0">This is cardigan is a comfortable warm classic piece. Great to layer with a light top and you can dress up or down given the jewel buttons. I\'m 5\'8” 128lbs a 34A and the Small fit fine.</p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="product-details-comment">
+                                 <div class="comment-title mb-20">
+                                    <h3>Add a review</h3>
+                                    <p>Your email address will not be published. Required fields are marked*</p>
+                                 </div>
+                                 <div class="comment-rating mb-20 d-flex">
+                                    <span>Overall ratings</span>
+                                    <ul>
+                                       <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                       <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                       <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                       <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                       <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                    </ul>
+                                 </div>
+                                 <div class="comment-input-box">
+                                    <form action="#">
+                                       <div class="row">
+                                          <div class="col-xxl-12">
+                                             <div class="comment-input">
+                                                <textarea placeholder="Your review..."></textarea>
+                                             </div>
+                                          </div>
+                                          <div class="col-xxl-6">
+                                             <div class="comment-input">
+                                                <input type="text" placeholder="Your Name*">
+                                             </div>
+                                          </div>
+                                          <div class="col-xxl-6">
+                                             <div class="comment-input">
+                                                <input type="email" placeholder="Your Email*">
+                                             </div>
+                                          </div>
+                                          <div class="col-xxl-12">
+                                             <div class="comment-submit">
+                                                <button type="submit" class="tp-btn pro-submit">Submit</button>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </form>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
                </div>        
         </div>    
     </div>
