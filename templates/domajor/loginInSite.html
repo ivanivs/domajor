@@ -1,10 +1,10 @@
 <a href="{main_sait}ua/register.html"><i class="fal fa-user"></i></a>
-<div class="modal fade" tabindex="-1" role="dialog" id="modalLogin">
-    <div class="modal-dialog" role="document">
+<div class="modal" tabindex="-1" id="modalLogin">
+    <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Вхід на сайт</h4>
+                <h5 class="modal-title">Вхід на сайт</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <table class="table table-bordered table-striped">
@@ -22,9 +22,9 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
-                <button type="button" class="btn btn-success" onclick="loginInSite2();">Увійти</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                <button type="button" class="btn btn-primary" onclick="loginInSite2();">Увійти</button>
             </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+        </div>
+    </div>
+</div>
