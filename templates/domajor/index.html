@@ -194,12 +194,12 @@
 
    <!-- sidebar-menu-area -->
    <div class="tpsideinfo">
-      <button class="tpsideinfo__close">Close<i class="fal fa-times ml-10"></i></button>
+      <button class="tpsideinfo__close">Закрити<i class="fal fa-times ml-10"></i></button>
       <div class="tpsideinfo__search text-center pt-35">
-         <span class="tpsideinfo__search-title mb-20">What Are You Looking For?</span>
-         <form action="#">
-            <input type="text" placeholder="Search Products...">
-            <button><i class="fal fa-search"></i></button>
+         <span class="tpsideinfo__search-title mb-20">Пошук по сайту</span>
+         <form action="{main_sait}ua/shop/search/" name="myForm" method="GET">
+            <input type="text" name="search" placeholder="напр: Yamaha">
+            <button type="submit"><i class="fal fa-search"></i></button>
          </form>
       </div>
       <div class="tpsideinfo__nabtab">
