@@ -88,12 +88,12 @@
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                             <button class="nav-link active" id="nav-all-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-all" type="button" role="tab" aria-controls="nav-all"
-                                    aria-selected="true">Новинки</button>
+                                    aria-selected="true">Акція</button>
                             <button class="nav-link" id="nav-popular-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-popular" type="button" role="tab" aria-controls="nav-popular"
                                     aria-selected="false">Популярні</button>
                             <button class="nav-link" id="nav-sale-tab" data-bs-toggle="tab" data-bs-target="#nav-sale"
-                                    type="button" role="tab" aria-controls="nav-sale" aria-selected="false">Акція</button>
+                                    type="button" role="tab" aria-controls="nav-sale" aria-selected="false">Новинки</button>
                         </div>
                     </nav>
                 </div>
@@ -102,7 +102,7 @@
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
                 <div class="row row-cols-xxl-5 row-cols-xl-4 row-cols-lg-3 row-cols-md-3 row-cols-sm-2 row-cols-1">
-                    {lastAdd}
+                    {actions}
                 </div>
             </div>
             <div class="tab-pane fade" id="nav-popular" role="tabpanel" aria-labelledby="nav-popular-tab">
@@ -112,7 +112,7 @@
             </div>
             <div class="tab-pane fade" id="nav-sale" role="tabpanel" aria-labelledby="nav-sale-tab">
                 <div class="row row-cols-xxl-5 row-cols-xl-4 row-cols-lg-3 row-cols-md-3 row-cols-sm-2 row-cols-1">
-                    {actions}
+                    {lastAdd}
                 </div>
             </div>
         </div>
