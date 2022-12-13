@@ -118,33 +118,33 @@ VALUES (
         } else {
             $onlyNP = 'Адреса: <strong>'.htmlspecialchars($_POST['adress']).'</strong>';
         }
-        if ($config['user_params_40']==1){
-            require ('liqpay/LiqPay.php');
-            $liqpay = new LiqPay('i81386738015', 'oT01zWTShzV9gwaZFE4EkuwQj3LyLELMO4g5e2oj');
-            $htmlPay = $liqpay->cnb_form(array(
-                'action' => 'pay',
-                'language' => 'uk',
-                'version' => '3',
-                'amount' => $allPrice,
-                'currency' => 'UAH',
-                'result_url' => $config['site_url'].'ru/success.html',
-                'server_url' => $config['site_url'].'index.php?mode=ajax&ajax=checkoutLiqpay',
-                'description' => 'Оплата замовлення №'.$idOrder.' на '.$config['user_params_28'],
-                'order_id' => $idOrder
-            ));
-            if ($stopOnlinePay==0) {
-                $onlinePayBlock = '
-            <div class="row">
-                <div class="col-md-6 offset-md-3">
-                    <h3 style="text-align: center;">Ви можете оплатити замовлення Online</h3>
-                    <div style="text-align: center;">' . $htmlPay . '</div>
-                </div>
-            </div>
-            ';
-            } else {
-                $onlinePayBlock = '';
-            }
-        }
+//        if ($config['user_params_40']==1){
+//            require ('liqpay/LiqPay.php');
+//            $liqpay = new LiqPay('i81386738015', 'oT01zWTShzV9gwaZFE4EkuwQj3LyLELMO4g5e2oj');
+//            $htmlPay = $liqpay->cnb_form(array(
+//                'action' => 'pay',
+//                'language' => 'uk',
+//                'version' => '3',
+//                'amount' => $allPrice,
+//                'currency' => 'UAH',
+//                'result_url' => $config['site_url'].'ru/success.html',
+//                'server_url' => $config['site_url'].'index.php?mode=ajax&ajax=checkoutLiqpay',
+//                'description' => 'Оплата замовлення №'.$idOrder.' на '.$config['user_params_28'],
+//                'order_id' => $idOrder
+//            ));
+//            if ($stopOnlinePay==0) {
+//                $onlinePayBlock = '
+//            <div class="row">
+//                <div class="col-md-6 offset-md-3">
+//                    <h3 style="text-align: center;">Ви можете оплатити замовлення Online</h3>
+//                    <div style="text-align: center;">' . $htmlPay . '</div>
+//                </div>
+//            </div>
+//            ';
+//            } else {
+//                $onlinePayBlock = '';
+//            }
+//        }
         if (intval($_POST['notCallBack'])==1){
             $oplata = '
             <div class="alert alert-success mt-2 mb-2">
