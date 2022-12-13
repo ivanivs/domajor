@@ -1763,9 +1763,6 @@ $body = '
                      <div class="tpproduct-details__price mb-30">
                         '.$priceBlock.'
                      </div>
-                     <div class="tpproduct-details__pera">
-                        <p>Priyoshop has brought to you the Hijab 3 Pieces Combo Pack PS23. It is a <br>completely modern design and you feel comfortable to put on this hijab. <br>Buy it at the best price.</p>
-                     </div>
                      '.(($infoItem['text_4'])>0 ? '
                      <div class="tpproduct-details__count d-flex align-items-center flex-wrap mb-25">
                         <div class="tpproduct-details__quantity">
@@ -1783,7 +1780,7 @@ $body = '
                         <p>SKU:</p><span>'.$infoItem['text_5'].'</span>
                      </div>
                      <div class="tpproduct-details__information tpproduct-details__categories">
-                        <p>Categories:</p>
+                        <p>Категорії:</p>
                         <span><a href="'.getCategoryLinkById($infoItem['select_1']).'">'.getOneValueText($infoItem['select_1']).',</a></span>
                         '.((!empty($infoItem['select_2']) AND $infoItem['select_2']!=0) ? '<span><a href="'.getCategoryLinkById($infoItem['select_2']).'">'.getOneValueText($infoItem['select_2']).',</a></span>' : '').'
                         '.((!empty($infoItem['select_3']) AND $infoItem['select_3']!=0) ? '<span><a href="'.getCategoryLinkById($infoItem['select_3']).'">'.getOneValueText($infoItem['select_3']).',</a></span>' : '').'
