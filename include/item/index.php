@@ -1785,8 +1785,8 @@ $body = '
                      <div class="tpproduct-details__information tpproduct-details__categories">
                         <p>Categories:</p>
                         <span><a href="'.getCategoryLink($infoItem['select_1']).'">'.getOneValueText($infoItem['select_1']).',</a></span>
-                        '.((!empty($infoItem['select_2']) AND $infoItem['select_2']!=0) ?? '<span><a href="'.getCategoryLink($infoItem['select_2']).'">'.getOneValueText($infoItem['select_2']).',</a></span>').'
-                        '.((!empty($infoItem['select_3']) AND $infoItem['select_3']!=0) ?? '<span><a href="'.getCategoryLink($infoItem['select_3']).'">'.getOneValueText($infoItem['select_3']).',</a></span>').'
+                        '.((!empty($infoItem['select_2']) AND $infoItem['select_2']!=0) ? '<span><a href="'.getCategoryLink($infoItem['select_2']).'">'.getOneValueText($infoItem['select_2']).',</a></span>' : '').'
+                        '.((!empty($infoItem['select_3']) AND $infoItem['select_3']!=0) ? '<span><a href="'.getCategoryLink($infoItem['select_3']).'">'.getOneValueText($infoItem['select_3']).',</a></span>' : '').'
                      </div>
                   </div>
                </div>        
