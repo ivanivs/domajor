@@ -572,11 +572,15 @@ if (!isset ($_GET['go']))
                     <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
                         <div class="checkbox-form">
 							<h3>Дані для доставки</h3>
-							<div class="shopping_form">
-								<h4>Служба доставки<span>*</span></h4>
-								<select id="dostavka" onchange="checkDostavkaType();" class="validate-select" title="Служба доставки">
-									'.$select_optionsDostavka.'
-								</select>
+							<div class="row">
+							    <div class="col-md-12">
+                                    <div class="country-select">
+                                       <label>Служба доставки <span class="required">*</span></label>
+                                       <select id="dostavka" onchange="checkDostavkaType();" class="validate-select" title="Служба доставки">
+                                            '.$select_optionsDostavka.'
+                                        </select>
+                                    </div>							    
+                                </div>
 								<div id="regionSelect">
                                     <h4>Область</h4>
                                     <select id="region" class="required-entry validate-select" onchange="getCity();">'.$optionRegion.'</select>
