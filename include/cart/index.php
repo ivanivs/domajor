@@ -284,25 +284,31 @@ if (!isset ($_GET['go']))
             $html_item = str_replace ('{id_item}', $v['id'], $html_item);
             $html_item = str_replace ('{link}', '{main_sait}{lang}/mode/item-'.$v['id_item'].'.html', $html_item);
             if ($blockNumber==0) {
-                if (MOBILEVER == 0) {
-                    $html_item = str_replace('{number}', '<div class="numberItemHtml">
-                                        <input type="text" id="numberItem_' . $v['id'] . '" value="' . $v['number'] . '" class="input-text qty">
-                                            <div style="vertical-align:middle; margin-left: 5px; cursor: pointer; display:inline-block;" class="numberItem_' . $v['id'] . '_image" onclick="getNumberItem(\'numberItem_' . $v['id'] . '\');">
-                                                <i class="fa fa-refresh"></i>
-                                            </div>
-                                        </div>', $html_item);
-                } else {
-                    $html_item = str_replace('{number}', '
-                    <div class="input-group mb-3">
-                        <button type="button" class="btn btn-default btn-number" ' . (($v['number'] == 1) ? ' disabled="disabled"' : '') . ' data-type="minus" data-field="quant[' . $v['id'] . ']" style="border:none;">
-                          <span class="fa fa-minus"></span>
-                      </button>
-                      <input type="text" name="quant[' . $v['id'] . ']" class="form-control input-number" id="numberItem_' . $v['id'] . '" value="' . $v['number'] . '" min="1" max="100"  onchange="getNumberItem(\'numberItem_' . $v['id'] . '\');">
-                      <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[' . $v['id'] . ']" style="border:none;">
-                          <span class="fa fa-plus"></span>
-                      </button>
-                    </div>
-                    ', $html_item);
+                $html_item = str_replace('{number}', '
+                                    <div class="numberItemHtml">
+                                            <span class="cart-minus">-</span>
+                                          <input class="cart-input" type="text" value="'.$v['number'].'" id="numberItem_' . $v['id'] . '" onchange="getNumberItem(\'numberItem_' . $v['id'] . '\');">
+                                          <span class="cart-plus">+</span>
+                                    </div>', $html_item);
+//                if (MOBILEVER == 0) {
+//                    $html_item = str_replace('{number}', '<div class="numberItemHtml">
+//                                        <input type="text" id="numberItem_' . $v['id'] . '" value="' . $v['number'] . '" class="input-text qty">
+//                                            <div style="vertical-align:middle; margin-left: 5px; cursor: pointer; display:inline-block;" class="numberItem_' . $v['id'] . '_image" onclick="getNumberItem(\'numberItem_' . $v['id'] . '\');">
+//                                                <i class="fa fa-refresh"></i>
+//                                            </div>
+//                                        </div>', $html_item);
+//                } else {
+//                    $html_item = str_replace('{number}', '
+//                    <div class="input-group mb-3">
+//                        <button type="button" class="btn btn-default btn-number" ' . (($v['number'] == 1) ? ' disabled="disabled"' : '') . ' data-type="minus" data-field="quant[' . $v['id'] . ']" style="border:none;">
+//                          <span class="fa fa-minus"></span>
+//                      </button>
+//                      <input type="text" name="quant[' . $v['id'] . ']" class="form-control input-number" id="numberItem_' . $v['id'] . '" value="' . $v['number'] . '" min="1" max="100"  onchange="getNumberItem(\'numberItem_' . $v['id'] . '\');">
+//                      <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[' . $v['id'] . ']" style="border:none;">
+//                          <span class="fa fa-plus"></span>
+//                      </button>
+//                    </div>
+//                    ', $html_item);
                 }
             } else {
                 $html_item = str_replace('{number}', $v['number'], $html_item);
