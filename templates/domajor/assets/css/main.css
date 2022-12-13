@@ -6613,7 +6613,7 @@ input[type=color] {
 .tpproduct-details__sticky {
   margin-left: -25px;
   position: sticky;
-  top: 150px;
+  top: 10px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .tpproduct-details__sticky {
