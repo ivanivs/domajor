@@ -1702,7 +1702,7 @@ $body = '
 	</div>
 '.$admin_menu;
 $body = '
-<section class="breadcrumb__area pt-60 pb-60 tp-breadcrumb__bg" data-background="" style="">
+<section class="breadcrumb__area pt-60 tp-breadcrumb__bg" data-background="" style="">
  <div class="container">
     <div class="row align-items-center">
        <div class="col-xl-7 col-lg-12 col-md-12 col-12">
