@@ -309,7 +309,7 @@ if (!isset ($_GET['go']))
 //                      </button>
 //                    </div>
 //                    ', $html_item);
-                }
+//                }
             } else {
                 $html_item = str_replace('{number}', $v['number'], $html_item);
             }
