@@ -1731,7 +1731,93 @@ $body = '
               <div class="tpproduct-details__list-img">
                  '.$blockImage.'
               </div>
-           </div>        
+            </div>
+            <div class="col-lg-6 col-md-7">
+                  <div class="tpproduct-details__content tpproduct-details__sticky">
+                     <div class="tpproduct-details__tag-area d-flex align-items-center mb-5">
+                        <span class="tpproduct-details__tag">Dress</span>
+                        <div class="tpproduct-details__rating">
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                        </div>
+                        <a class="tpproduct-details__reviewers">10 Reviews</a>
+                     </div>
+                     <div class="tpproduct-details__title-area d-flex align-items-center flex-wrap mb-5">
+                        <h3 class="tpproduct-details__title">Wide Cotton Tunic Dress</h3>
+                        <span class="tpproduct-details__stock">In Stock</span>
+                     </div>
+                     <div class="tpproduct-details__price mb-30">
+                        <del>$9.35</del>
+                        <span>$7.25</span>
+                     </div>
+                     <div class="tpproduct-details__pera">
+                        <p>Priyoshop has brought to you the Hijab 3 Pieces Combo Pack PS23. It is a <br>completely modern design and you feel comfortable to put on this hijab. <br>Buy it at the best price.</p>
+                     </div>
+                     <div class="tpproduct-details__count d-flex align-items-center flex-wrap mb-25">
+                        <div class="tpproduct-details__quantity">
+                           <span class="cart-minus"><i class="far fa-minus"></i></span>
+                           <input class="tp-cart-input" type="text" value="1">
+                           <span class="cart-plus"><i class="far fa-plus"></i></span>
+                        </div>
+                        <div class="tpproduct-details__cart ml-20">
+                           <button><i class="fal fa-shopping-cart"></i> Add To Cart</button>
+                        </div>
+                        <div class="tpproduct-details__wishlist ml-20">
+                           <button><i class="fal fa-heart"></i></button>
+                        </div>
+                     </div>
+                     <div class="tpproductdot mb-30">
+                        <a class="tpproductdot__variationitem" href="#">
+                           <div class="tpproductdot__termshape">
+                              <span class="tpproductdot__termshape-bg"></span>
+                              <span class="tpproductdot__termshape-border"></span>
+                           </div>
+                        </a>
+                        <a class="tpproductdot__variationitem" href="#">
+                           <div class="tpproductdot__termshape">
+                              <span class="tpproductdot__termshape-bg red-product-bg"></span>
+                              <span class="tpproductdot__termshape-border red-product-border"></span>
+                           </div>
+                        </a>
+                        <a class="tpproductdot__variationitem" href="#">
+                           <div class="tpproductdot__termshape">
+                              <span class="tpproductdot__termshape-bg orange-product-bg"></span>
+                              <span class="tpproductdot__termshape-border orange-product-border"></span>
+                           </div>
+                        </a>
+                        <a class="tpproductdot__variationitem" href="#">
+                           <div class="tpproductdot__termshape">
+                              <span class="tpproductdot__termshape-bg purple-product-bg"></span>
+                              <span class="tpproductdot__termshape-border purple-product-border"></span>
+                           </div>
+                        </a>
+                     </div>
+                     <div class="tpproduct-details__information tpproduct-details__code">
+                        <p>SKU:</p><span>BO1D0MX8SJ</span>
+                     </div>
+                     <div class="tpproduct-details__information tpproduct-details__categories">
+                        <p>Categories:</p>
+                        <span><a href="#">T-Shirts,</a></span>
+                        <span><a href="#">Tops,</a></span>
+                        <span><a href="#">Womens</a></span>
+                     </div>
+                     <div class="tpproduct-details__information tpproduct-details__tags">
+                        <p>Tags:</p>
+                        <span><a href="#">fashion,</a></span>
+                        <span><a href="#">t-shirts,</a></span>
+                        <span><a href="#">women</a></span>
+                     </div>
+                     <div class="tpproduct-details__information tpproduct-details__social">
+                        <p>Share:</p>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                     </div>
+                  </div>
+               </div>        
         </div>    
     </div>
 </div>
