@@ -58,7 +58,7 @@ $optionRegion = getRegion();
 $body .= '
 <div class="container" style="min-height: 850px; margin-top: 80px; padding-bottom: 100px;">
     <div class="row">
-        <div class="col-lg-7 col-lg-offset-3">
+        <div class="col-lg-7">
             <div class="headerBodyRotator">
                 <h2>Реєстрація на сайті</h2>
             </div>
@@ -150,7 +150,11 @@ $body .= '
                 </table>
             </div>
         </div>
-        <div class="col-lg-4"><a href="#" onclick="$(\'#modalLogin\').modal(\'show\');" class="btn btn-danger btn-xs" style="border-radius: 3px;"><i class="fa fa-user" aria-hidden="true"></i> Вхід</a></div>
+        <div class="col-lg-4">
+            <div class="headerBodyRotator">
+                <h2>Вхід на сайт</h2>
+            </div>
+        <a href="#" onclick="$(\'#modalLogin\').modal(\'show\');" class="btn btn-danger btn-xs" style="border-radius: 3px;"><i class="fa fa-user" aria-hidden="true"></i> Увійти</a></div>
     </div>
 </div>
 ';
