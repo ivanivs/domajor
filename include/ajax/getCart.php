@@ -37,7 +37,7 @@ if ($array_item_in_cart = getArray($sql)){
             <li>
                  <div class="tpcart__item">
                     <div class="tpcart__img">
-                       <img src="{' .getImageFile(getMainImage($info_item['id']), 100, 100, 556). '" alt="">
+                       <img src="' .getImageFile(getMainImage($info_item['id']), 100, 100, 556). '" alt="">
                        <div class="tpcart__del">
                           <a href="#" onclick="removeItemFromCart('.$v['id'].'); return false;"><i class="far fa-times-circle"></i></a>
                        </div>
