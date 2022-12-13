@@ -582,7 +582,7 @@ if (!isset ($_GET['go']))
                                     </div>							    
                                 </div>
 							    <div class="col-md-12">
-                                    <div class="checkout-form-list">
+                                    <div class="country-select">
                                        <label>Область <span class="required">*</span></label>
                                        <select id="region" class="required-entry validate-select" onchange="getCity();">'.$optionRegion.'</select>
                                     </div>							    
