@@ -447,7 +447,7 @@ $art = '';
 if (strlen($infoItem['text_11'])>0){
     $art = $infoItem['text_11'];
 }
-$title = getNameItem($infoItem).' '.((!empty($infoItem['text_2']) ? '['.$infoItem['text_2'].']' : '')).' на Kombat.in.ua';
+$title = getNameItem($infoItem).' '.((!empty($infoItem['text_2']) ? '['.$infoItem['text_2'].']' : '')).' на domajor.com.ua';
 $description = $infoItem['text_1'].' купити в Украине. Доставка наложенным платежем по всей територии Украины.';
 $keywords = $infoItem['text_1'].' купити, продажа '.$infoItem['text_1'].', продажа '.$infoItem['text_1'].' в Украине';
 if ($infoItem['select_6']!=46 and strlen($infoItem['select_7'])>0)
@@ -995,7 +995,7 @@ if (!empty($v['text_3'])) {
     foreach ($arrayItemsColor as $oneItem){
         $itemsColor .= '
             <div class="itemColor col-xs-2">
-                <a href="https://Kombat.in.ua/ru/mode/item-'.$oneItem['id'].'.html" class="thumbnail"><img src="'.getImgSoroka($oneItem, 100,100).'" alt="'.$oneItem['text_1'].' '.$oneItem['text_4'].'" width="100" height="100"></a>
+                <a href="https://domajor.com.ua/ru/mode/item-'.$oneItem['id'].'.html" class="thumbnail"><img src="'.getImgSoroka($oneItem, 100,100).'" alt="'.$oneItem['text_1'].' '.$oneItem['text_4'].'" width="100" height="100"></a>
             </div>
             ';
     }
@@ -1091,7 +1091,7 @@ foreach ($infoItem as $key => $oneP){
                     }
 
                 } elseif ($trueKey==1) {
-                    $valueParam = '<a href="https://Kombat.in.ua/ua/shop/Brand/?param&select[1][]='.$infoItem['select_1'].'&sort=popular" target="_blank">'.getOneValueText($oneP).'</a>';
+                    $valueParam = '<a href="https://domajor.com.ua/ua/shop/Brand/?param&select[1][]='.$infoItem['select_1'].'&sort=popular" target="_blank">'.getOneValueText($oneP).'</a>';
                 } else {
                     $valueParam = getOneValueText($oneP);
 
@@ -1120,7 +1120,7 @@ $characteristics .= '
         </table>
         ';
 $infoCategory = getOneString("SELECT * FROM `ls_params_select_values` WHERE `id` = '".$infoItem['select_2']."';");
-$parentParam = '<li><a href="https://Kombat.in.ua/ru/shop/'.translit(getOneValueText($infoCategory['parent_param_id'])).'/?param&select[2][]='.$infoCategory['parent_param_id'].'&sort=popular">'.getOneValueText($infoCategory['parent_param_id']).'</a></li>';
+$parentParam = '<li><a href="https://domajor.com.ua/ru/shop/'.translit(getOneValueText($infoCategory['parent_param_id'])).'/?param&select[2][]='.$infoCategory['parent_param_id'].'&sort=popular">'.getOneValueText($infoCategory['parent_param_id']).'</a></li>';
 //$origin = '<meta property="og:image" content="'.getImgSoroka($infoItem, 1280, 800).'">';
 $origin = '<meta property="og:image" content="'.$config ['site_url'].'upload/userparams/'.getMainImage ($infoItem['id']).'">';
 
@@ -1370,7 +1370,7 @@ function sendMailFoundCheaper(){
                                         </tr>
                                         <tr>
                                             <td>Відправка: <strong>'.$otpravka.'</strong></td>
-                                            <td><a href="https://Kombat.in.ua/ru/mode/content-1.html">Умови оплати та доставки</a></td>
+                                            <td><a href="https://domajor.com.ua/ru/mode/content-1.html">Умови оплати та доставки</a></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -1495,12 +1495,12 @@ if (empty($arrayReview)){
         "@type": "Offer",
         "priceCurrency": "UAH",
         "priceValidUntil": "'.date('Y-m-d').'",
-        "url": "https://kombat.in.ua/ua/mode/item-'.$infoItem['id'].'.html",
+        "url": "https://domajor.com.ua/ua/mode/item-'.$infoItem['id'].'.html",
         "price": '.$infoItem['price_1'].',
         "itemCondition": "https://schema.org/NewCondition",
         "seller": {
             "@type": "Organization",
-            "name": "https://kombat.in.ua"
+            "name": "https://domajor.com.ua"
         },
         "availability": "https://schema.org/InStock"
     },
@@ -1524,12 +1524,12 @@ $body = '
         "@type": "Offer",
         "priceCurrency": "UAH",
         "priceValidUntil": "'.date('Y-m-d').'",
-        "url": "https://kombat.in.ua/ua/mode/item-'.$infoItem['id'].'.html",
+        "url": "https://domajor.com.ua/ua/mode/item-'.$infoItem['id'].'.html",
         "price": '.$infoItem['price_1'].',
         "itemCondition": "https://schema.org/NewCondition",
         "seller": {
             "@type": "Organization",
-            "name": "https://kombat.in.ua"
+            "name": "https://domajor.com.ua"
         },
         "availability": "https://schema.org/InStock"
     },
@@ -1713,6 +1713,39 @@ if (isset($priceArray['priceOld'])){
     ';
 }
 $body = '
+<script data-n-head=\'true\' name=\'product_structured_data\' type=\'application/ld+json\'>
+                {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "'.getNameItem($infoItem).'",
+    "image": "'.getImgSoroka($infoItem, 1280, 800).'",
+    "description": "'.addslashes($infoItem['text_2']).'",
+    '.((!empty($infoItem['text_5'])) ? '"gtin": "'.$infoItem['text_5'].'",' : '').'
+    "offers": {
+        "@type": "Offer",
+        "priceCurrency": "UAH",
+        "priceValidUntil": "'.date('Y-m-d').'",
+        "url": "https://domajor.com.ua/ua/mode/item-'.$infoItem['id'].'.html",
+        "price": '.$infoItem['price_1'].',
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+            "@type": "Organization",
+            "name": "https://domajor.com.ua"
+        },
+        "availability": "https://schema.org/InStock"
+    },
+    "brand": {
+        "@type": "brand",
+        "name": "'.getOneValueText($infoItem['select_3']).'"
+    },
+    '.((!empty($arrayJson)) ? '"review": '.json_encode($arrayJson).',' : '').'
+    '.$aggregateRating.'
+    "sku": "'.$infoItem['text_5'].'",
+    "mpn": "'.$infoItem['text_5'].'",
+    "model": "'.$infoItem['text_1'].'"
+}
+
+</script>
 <section class="breadcrumb__area pt-60 tp-breadcrumb__bg" data-background="" style="">
  <div class="container">
     <div class="row align-items-center">
