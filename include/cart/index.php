@@ -587,28 +587,30 @@ if (!isset ($_GET['go']))
                                        <select id="region" class="required-entry validate-select" onchange="getCity();">'.$optionRegion.'</select>
                                     </div>							    
                                 </div>
-								<div id="regionSelect">
-                                    <h4>Область</h4>
-                                    <select id="region" class="required-entry validate-select" onchange="getCity();">'.$optionRegion.'</select>
-								</div>
-								<div id="citySelect">
-                                    <h4>Місто</h4>
-                                    <select id="city" class="required-entry validate-select" onchange="getWarehouse(0); getWarehouse(1);">'.$optionCity.'</select>
-								</div>
-								<div class="onlyNP">
-                                    <h4>Відділення "Нової пошти"</h4>
-                                    <select id="warehouse" class="required-entry validate-select"  onchange="$(\'#warehousePoshtomat\').val(0);">'.$optionWarehouse.'</select>
-								</div>
-								<div class="onlyNP">
-                                    <h4>Поштомат "Нової пошти"</h4>
-                                    <select id="warehousePoshtomat" class="required-entry validate-select" onchange="$(\'#warehouse\').val(0);">'.$optionWarehouse.'</select>
-								</div>
-								<div id="onlyME" style="display: none;">
-                                    <h4>Адреса доставки</h4>
-                                    <input class="input-text validate-postcode" type="text" id="adress" value="">
-								</div>
-                                <h4>Варіант оплати"</h4>
-                                <select id="oplata" class="required-entry validate-select">'.$select_optionsOplata.'</select>
+							    <div class="col-md-12" id="citySelect">
+                                    <div class="country-select">
+                                       <label>Місто <span class="required">*</span></label>
+                                       <select id="city" class="required-entry validate-select" onchange="getWarehouse(0); getWarehouse(1);">'.$optionCity.'</select>
+                                    </div>							    
+                                </div>
+							    <div class="col-md-12 onlyNP">
+                                    <div class="country-select">
+                                       <label>Відділення "Нової пошти" <span class="required">*</span></label>
+                                       <select id="warehouse" class="required-entry validate-select"  onchange="$(\'#warehousePoshtomat\').val(0);">'.$optionWarehouse.'</select>
+                                    </div>							    
+                                </div>
+							    <div class="col-md-12 onlyNP">
+                                    <div class="country-select">
+                                       <label>Поштомат "Нової пошти"</label>
+                                       <select id="warehousePoshtomat" class="required-entry validate-select" onchange="$(\'#warehouse\').val(0);">'.$optionWarehouse.'</select>
+                                    </div>							    
+                                </div>
+							    <div class="col-md-12 onlyNP">
+                                    <div class="country-select">
+                                       <label>Варіант оплати</label>
+                                       <select id="oplata" class="required-entry validate-select">'.$select_optionsOplata.'</select>
+                                    </div>							    
+                                </div>
 							</div>
 						</div>                    
                     </div>    
