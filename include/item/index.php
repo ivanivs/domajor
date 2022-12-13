@@ -1719,7 +1719,7 @@ $body = '
     "@type": "Product",
     "name": "'.getNameItem($infoItem).'",
     "image": "'.getImgSoroka($infoItem, 1280, 800).'",
-    "description": "'.addslashes($infoItem['text_2']).'",
+    "description": "'.addslashes(strip_tags($infoItem['text_2'])).'",
     '.((!empty($infoItem['text_5'])) ? '"gtin": "'.$infoItem['text_5'].'",' : '').'
     "offers": {
         "@type": "Offer",
