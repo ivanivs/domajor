@@ -391,6 +391,53 @@ if (!isset ($_GET['go']))
 //            </div>
 //        </div>';
 //        }
+        $js_script .= '
+         $("#city").select2();
+                     $(\'#warehouse\').select2({
+                            language: "uk",
+                            placeholder: \'Select an item\',
+                            ajax: {
+                                url: \''.$config ['site_url'].'index.php?mode=ajax&ajax=getWarehouse\',
+                                dataType: \'json\',
+                                delay: 250,
+                                data: function (data) {
+                                    return {
+                                        search: data.term,
+                                        city: $("#city").val(),
+                                        type: 0
+                                    };
+                                },
+                                processResults: function (response) {
+                                    return {
+                                        results:response
+                                    };
+                                },
+                                cache: true
+                            }
+                        });
+                        $(\'#warehousePoshtomat\').select2({
+                            language: "uk",
+                            placeholder: \'Select an item\',
+                            ajax: {
+                                url: \''.$config ['site_url'].'index.php?mode=ajax&ajax=getWarehouse\',
+                                dataType: \'json\',
+                                delay: 250,
+                                data: function (data) {
+                                    return {
+                                        search: data.term,
+                                        city: $("#city").val(),
+                                        type: 1
+                                    };
+                                },
+                                processResults: function (response) {
+                                    return {
+                                        results:response
+                                    };
+                                },
+                                cache: true
+                            }
+                        });
+        ';
         if (MOBILEVER==1) {
             $js_script .= '
             $(\'.btn-number\').click(function(e){
@@ -518,6 +565,7 @@ if (!isset ($_GET['go']))
                 }
             }
         </script>
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
         <div class="cart-collaterals-item mt-5">
             <div class="container">
                 <div class="row">
