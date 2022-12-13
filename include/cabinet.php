@@ -46,7 +46,7 @@ $body = '
               <div class="panel-heading">
                 <h2>Кабінет<a class="anchorjs-link" href="#panel-title"><span class="anchorjs-icon"></span></a></h2>
               </div>
-              <div class="panel-body" style="padding: 0px;">
+              <div class="sidebar__widget-content" style="padding: 0px;">
                 <ul class="catagory">
                     <li'.$activeOrders.'><a href="{main_sait}ua/orders.html">Мої замовлення</a></li>
                     <li'.$activeUserInfo.'><a href="{main_sait}ua/userInfo.html">Мої дані</a></li>
