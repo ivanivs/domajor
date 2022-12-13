@@ -608,7 +608,7 @@ if (!isset ($_GET['go']))
 							    <div class="col-md-12 onlyNP">
                                     <div class="country-select">
                                        <label>Варіант оплати</label>
-                                       <select id="oplata" class="required-entry validate-select">'.$select_optionsOplata.'</select>
+                                       <select id="oplata" class="required-entry nice-select validate-select">'.$select_optionsOplata.'</select>
                                     </div>							    
                                 </div>
 							</div>
