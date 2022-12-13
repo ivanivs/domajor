@@ -1785,31 +1785,20 @@ $body = '
                         '.((!empty($infoItem['select_2']) AND $infoItem['select_2']!=0) ? '<span><a href="'.getCategoryLinkById($infoItem['select_2']).'">'.getOneValueText($infoItem['select_2']).',</a></span>' : '').'
                         '.((!empty($infoItem['select_3']) AND $infoItem['select_3']!=0) ? '<span><a href="'.getCategoryLinkById($infoItem['select_3']).'">'.getOneValueText($infoItem['select_3']).',</a></span>' : '').'
                      </div>
-                     <div class="tpproduct-details__navtab mb-60">
+                     <div class="tpproduct-details__navtab mb-60 mt-3">
                      <div class="tpproduct-details__nav mb-30">
                         <ul class="nav nav-tabs pro-details-nav-btn" id="myTabs" role="tablist">
                            <li class="nav-item" role="presentation">
-                              <button class="nav-links active" id="home-tab-1" data-bs-toggle="tab" data-bs-target="#home-1" type="button" role="tab" aria-controls="home-1" aria-selected="true">Description</button>
+                              <button class="nav-links active" id="home-tab-1" data-bs-toggle="tab" data-bs-target="#home-1" type="button" role="tab" aria-controls="home-1" aria-selected="true">Опис</button>
                            </li>
                            <li class="nav-item" role="presentation">
-                              <button class="nav-links" id="information-tab" data-bs-toggle="tab" data-bs-target="#additional-information" type="button" role="tab" aria-controls="additional-information" aria-selected="false">Additional information</button>
-                           </li>
-                           <li class="nav-item" role="presentation">
-                              <button class="nav-links" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">Reviews (2)</button>
+                              <button class="nav-links" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">Відгуки (2)</button>
                            </li>
                         </ul>
                      </div>
                      <div class="tab-content tp-content-tab" id="myTabContent-2">
                         <div class="tab-para tab-pane fade active show" id="home-1" role="tabpanel" aria-labelledby="home-tab-1">
-                           <p class="mb-30">In marketing a product is an object or system made available for consumer use it is anything that can be offered to a market to satisfy the desire or need of a customer. In retailing, products are often referred to as
-                              merchandise, and in manufacturing, products are bought as raw materials and then sold as finished goods. A service is also regarded to as a type of product. Commodities are usually raw materials such as metals
-                              and agricultural products, but a commodity can also be anything widely available in the open market. In project management, products are the formal definition of the project deliverables that make up contribute
-                              to delivering the objectives of the project.</p>
-                           <p>A product can be classified as tangible or intangible. A tangible product is a physical object that can be perceived by touch such as a building, vehicle, gadget, or clothing. An intangible product is a product that
-                              can only be perceived indirectly such as an insurance policy. Services can be broadly classified under intangible products which can be durable or non durable. A product line is "a group of products that are
-                              closely related, either because they function in a similar manner, are sold to the same customer groups, are marketed through the same types of outlets, or fall within given price ranges."Many businesses offer a
-                              range of product lines which may be unique to a single organisation or may be common across the business\'s industry. In 2002 the US Census compiled revenue figures for the finance and insurance industry by
-                              various product lines such as "accident, health and medical insurance premiums" and "income from secured consumer loans.</p>
+                           '.$infoItem['text_2'].'
                         </div>
                         <div class="tab-pane fade" id="additional-information" role="tabpanel" aria-labelledby="information-tab">
                            <div class="product__details-info table-responsive">
