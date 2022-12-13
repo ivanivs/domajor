@@ -1785,8 +1785,7 @@ $body = '
                         '.((!empty($infoItem['select_2']) AND $infoItem['select_2']!=0) ? '<span><a href="'.getCategoryLinkById($infoItem['select_2']).'">'.getOneValueText($infoItem['select_2']).',</a></span>' : '').'
                         '.((!empty($infoItem['select_3']) AND $infoItem['select_3']!=0) ? '<span><a href="'.getCategoryLinkById($infoItem['select_3']).'">'.getOneValueText($infoItem['select_3']).',</a></span>' : '').'
                      </div>
-                  </div>
-                  <div class="tpproduct-details__navtab mb-60">
+                     <div class="tpproduct-details__navtab mb-60">
                      <div class="tpproduct-details__nav mb-30">
                         <ul class="nav nav-tabs pro-details-nav-btn" id="myTabs" role="tablist">
                            <li class="nav-item" role="presentation">
@@ -1989,6 +1988,7 @@ $body = '
                            </div>
                         </div>
                      </div>
+                  </div>
                   </div>
                </div>        
         </div>    
