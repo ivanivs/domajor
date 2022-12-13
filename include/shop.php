@@ -314,7 +314,7 @@ if (isset ($_GET['select'][32])){
                     <div class="row align-items-center">
                        <div class="col-sm-6">
                           <div class="product-item-count">
-                             <span><b id="countView">32</b> з <span id="countViewFrom">'.$countItem.'</span></span>
+                             <span><b id="countView">'.(($countItem<32) ? $countItem : 32).'</b> з <span id="countViewFrom">'.$countItem.'</span></span>
                           </div>
                        </div>
                        <div class="col-sm-6">
