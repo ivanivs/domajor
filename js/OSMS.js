@@ -1217,8 +1217,6 @@ function addItemToCartWithVerification(id)
         url: main_site + 'index.php?mode=ajax&ajax=addItemToCartWithVerification',
         data: {
             id: id,
-            size: $("#size").val(),
-            color: $("#color").val(),
             number: $("#number").val(),
         },
         success: function(result) {

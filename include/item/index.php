@@ -1767,7 +1767,7 @@ $body = '
                      <div class="tpproduct-details__count d-flex align-items-center flex-wrap mb-25">
                         <div class="tpproduct-details__quantity">
                            <span class="cart-minus"><i class="far fa-minus"></i></span>
-                           <input class="tp-cart-input" type="text" value="1">
+                           <input class="tp-cart-input" type="text" value="1" id="number">
                            <span class="cart-plus"><i class="far fa-plus"></i></span>
                         </div>
                         <div class="tpproduct-details__cart ml-20">
