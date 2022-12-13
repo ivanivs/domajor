@@ -1735,7 +1735,7 @@ $body = '
             <div class="col-lg-6 col-md-7">
                   <div class="tpproduct-details__content tpproduct-details__sticky">
                      <div class="tpproduct-details__tag-area d-flex align-items-center mb-5">
-                        <span class="tpproduct-details__tag">Dress</span>
+                        <span class="tpproduct-details__tag">'.getOneValueText($infoItem['select_1']).'</span>
                         <div class="tpproduct-details__rating">
                            <a href="#"><i class="fas fa-star"></i></a>
                            <a href="#"><i class="fas fa-star"></i></a>
