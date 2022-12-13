@@ -395,7 +395,7 @@ if (!isset ($_GET['go']))
          $("#city").select2();
                      $(\'#warehouse\').select2({
                             language: "uk",
-                            placeholder: \'Select an item\',
+                            placeholder: \'Зробіть вибір відділення\',
                             ajax: {
                                 url: \''.$config ['site_url'].'index.php?mode=ajax&ajax=getWarehouse\',
                                 dataType: \'json\',
@@ -417,7 +417,7 @@ if (!isset ($_GET['go']))
                         });
                         $(\'#warehousePoshtomat\').select2({
                             language: "uk",
-                            placeholder: \'Select an item\',
+                            placeholder: \'або поштомату\',
                             ajax: {
                                 url: \''.$config ['site_url'].'index.php?mode=ajax&ajax=getWarehouse\',
                                 dataType: \'json\',
