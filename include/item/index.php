@@ -1754,7 +1754,7 @@ $body = '
                            <a href="#"><i class="fas fa-star"></i></a>
                            <a href="#"><i class="fas fa-star"></i></a>
                         </div>
-                        <a class="tpproduct-details__reviewers">10 Reviews</a>
+                        <a class="tpproduct-details__reviewers">'.getCountReview($infoItem['id']).' відгуків</a>
                      </div>
                      <div class="tpproduct-details__title-area d-flex align-items-center flex-wrap mb-5">
                         <h3 class="tpproduct-details__title">'.getNameItem($infoItem).'</h3>
