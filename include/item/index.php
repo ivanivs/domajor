@@ -1771,7 +1771,7 @@ $body = '
                            <span class="cart-plus"><i class="far fa-plus"></i></span>
                         </div>
                         <div class="tpproduct-details__cart ml-20">
-                           <button><i class="fal fa-shopping-cart"></i> Додати в корзину</button>
+                           <button  onclick="addItemToCartWithVerification('.$infoItem['id'].');"><i class="fal fa-shopping-cart"></i> Додати в корзину</button>
                         </div>
                      </div>
                      ' : '').'
