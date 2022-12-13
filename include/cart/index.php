@@ -518,7 +518,7 @@ if (!isset ($_GET['go']))
                 }
             }
         </script>
-        <div class="cart-collaterals-item">
+        <div class="cart-collaterals-item mt-5">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
