@@ -1798,7 +1798,7 @@ $body = '
                      </div>
                      <div class="tab-content tp-content-tab" id="myTabContent-2">
                         <div class="tab-para tab-pane fade active show" id="home-1" role="tabpanel" aria-labelledby="home-tab-1">
-                           '.$infoItem['text_2'].'
+                           '.str_replace('<img src=', '<img class="img-thumbnail" src=', $infoItem['text_2']).'
                         </div>
                         <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
                            <div class="product-details-review">
