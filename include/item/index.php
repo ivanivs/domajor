@@ -101,6 +101,11 @@ if ($infoAllPhoto)
                                 </a>
                         </div>
                     </li>';
+        $blockImage .= '
+            <div class="tpproduct-details__list-img-item">
+                <img src="' .getImageFile($v['value'], 700, 800, 130). '" title="'.$infoItem['text_1'].'">
+             </div>
+            ';
             if ($key==0){
                 $bigPhotoBlock .= '<div id="tab'.($key+1).'" class="tab-pane fade show active">
 								<div class="blog_tabs">
@@ -1719,4 +1724,15 @@ $body = '
     </div>
  </div>
 </section>
+<div class="product-area pt-80 pb-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+              <div class="tpproduct-details__list-img">
+                 '.$blockImage.'
+              </div>
+           </div>        
+        </div>    
+    </div>
+</div>
 ';
