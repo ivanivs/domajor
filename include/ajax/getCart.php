@@ -58,3 +58,62 @@ if ($array_item_in_cart = getArray($sql)){
 } else {
     echo '<a class="list_cl" href="cart.html"><i class="fa fa-shopping-cart"></i>Корзина <span class="cart_zero cart_zero1">0</span></a>';
 }
+/*
+ * <button class="tpcart__close"><i class="fal fa-times"></i></button><div class="tpcart">
+         <h4 class="tpcart__title">Your Cart</h4>
+         <div class="tpcart__product">
+            <div class="tpcart__product-list">
+               <ul>
+                  <li>
+                     <div class="tpcart__item">
+                        <div class="tpcart__img">
+                           <img src="{template}assets/img/product/home-one/product-3.jpg" alt="">
+                           <div class="tpcart__del">
+                              <a href="#"><i class="far fa-times-circle"></i></a>
+                           </div>
+                        </div>
+                        <div class="tpcart__content">
+                           <span class="tpcart__content-title"><a href="shop.html">Evo Lightweight Granite Shirt</a>
+                           </span>
+                           <div class="tpcart__cart-price">
+                              <span class="quantity">1 x</span>
+                              <span class="new-price">$138.00</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="tpcart__item">
+                        <div class="tpcart__img">
+                           <img src="{template}assets/img/product/home-one/product-5.jpg" alt="">
+                           <div class="tpcart__del">
+                              <a href="#"><i class="far fa-times-circle"></i></a>
+                           </div>
+                        </div>
+                        <div class="tpcart__content">
+                           <span class="tpcart__content-title"><a href="shop.html">Purab Enormous Miranda Bottle</a>
+                           </span>
+                           <div class="tpcart__cart-price">
+                              <span class="quantity">1 x</span>
+                              <span class="new-price">$162.8</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+            <div class="tpcart__checkout">
+               <div class="tpcart__total-price d-flex justify-content-between align-items-center">
+                  <span> Subtotal:</span>
+                  <span class="heilight-price"> $300.00</span>
+               </div>
+               <div class="tpcart__checkout-btn">
+                  <a class="tpcart-btn mb-10" href="#">View Cart</a>
+                  <a class="tpcheck-btn" href="#">Checkout</a>
+               </div>
+            </div>
+         </div>
+         <div class="tpcart__free-shipping text-center">
+            <span>Free shipping for orders <b>under 10km</b></span>
+         </div>
+      </div>*/
