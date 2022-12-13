@@ -12,6 +12,7 @@ foreach ($arraySelectTmp[1] as $oneSelectOption){
     }
     $html = str_replace('{select_'.$selectId.'_'.$selectValue.'}', $link, $html);
 }
+$mainCategory = '';
 if ($arrayCategory = getArray("SELECT * FROM `ls_params_select_values` WHERE `id_params` = 1 order by `position` DESC ")){
     $nav = '';
     foreach ($arrayCategory as $oneCategory){
@@ -22,6 +23,7 @@ if ($arrayCategory = getArray("SELECT * FROM `ls_params_select_values` WHERE `id
 											</span>
 										</a>
         ';
+        $mainCategory .= '<li><a href="'.getCategoryLink($oneCategory).'">'.getOneValue($oneCategory['id'])['text'].'</a></li>';
         if ($arrayChildCategory = getArray("SELECT * FROM `ls_params_select_values` WHERE `parent_param_id` = '".$oneCategory['id']."' ORDER by `position` DESC")){
             $nav .= '<ul class="submenu">';
             foreach ($arrayChildCategory as $child){
@@ -46,6 +48,7 @@ if ($arrayCategory = getArray("SELECT * FROM `ls_params_select_values` WHERE `id
     }
 }
 $html = str_replace ('{allCategory}', $nav, $html);
+$html = str_replace ('{mainCategory}', $mainCategory, $html);
 /*
  * <li><a href="shop-2.html"><i class="fal fa-chair"></i> Furniture</a></li>
                            <li class="menu-item-has-children"><a href="shop.html"><i class="far fa-campfire"></i>
