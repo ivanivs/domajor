@@ -447,7 +447,7 @@ $art = '';
 if (strlen($infoItem['text_11'])>0){
     $art = $infoItem['text_11'];
 }
-$title = getNameItem($infoItem).' '.((!empty($infoItem['text_2']) ? '['.$infoItem['text_2'].']' : '')).' на domajor.com.ua';
+$title = getNameItem($infoItem).' на domajor.com.ua';
 $description = $infoItem['text_1'].' купити в Украине. Доставка наложенным платежем по всей територии Украины.';
 $keywords = $infoItem['text_1'].' купити, продажа '.$infoItem['text_1'].', продажа '.$infoItem['text_1'].' в Украине';
 if ($infoItem['select_6']!=46 and strlen($infoItem['select_7'])>0)
