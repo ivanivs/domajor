@@ -1701,6 +1701,17 @@ $body = '
 		</div>
 	</div>
 '.$admin_menu;
+$priceArray = getPriceArray($infoItem);
+if (isset($priceArray['priceOld'])){
+    $priceBlock = '
+    <del>'.$priceArray['priceOld'].'</del>
+    <span>'.$priceArray['price'].' грн.</span>
+    ';
+} else {
+    $priceBlock = '
+    <span>'.$priceArray['price'].' грн.</span>
+    ';
+}
 $body = '
 <section class="breadcrumb__area pt-60 tp-breadcrumb__bg" data-background="" style="">
  <div class="container">
@@ -1750,8 +1761,7 @@ $body = '
                         <span class="tpproduct-details__stock">'.(($infoItem['text_4'])>0 ? 'В наявності' : 'Немає в наявності').'</span>
                      </div>
                      <div class="tpproduct-details__price mb-30">
-                        <del>$9.35</del>
-                        <span>$7.25</span>
+                        '.$priceBlock.'
                      </div>
                      <div class="tpproduct-details__pera">
                         <p>Priyoshop has brought to you the Hijab 3 Pieces Combo Pack PS23. It is a <br>completely modern design and you feel comfortable to put on this hijab. <br>Buy it at the best price.</p>
