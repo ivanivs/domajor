@@ -1794,3 +1794,4 @@ $body = '
     </div>
 </div>
 ';
+print_r ($infoItem);
