@@ -576,7 +576,7 @@ if (!isset ($_GET['go']))
 							    <div class="col-md-12">
                                     <div class="country-select">
                                        <label>Служба доставки <span class="required">*</span></label>
-                                       <select id="dostavka" onchange="checkDostavkaType();" class="validate-select" title="Служба доставки">
+                                       <select id="dostavka" onchange="checkDostavkaType();" class="validate-select nice-select" title="Служба доставки">
                                             '.$select_optionsDostavka.'
                                         </select>
                                     </div>							    
@@ -584,7 +584,7 @@ if (!isset ($_GET['go']))
 							    <div class="col-md-12">
                                     <div class="country-select">
                                        <label>Область <span class="required">*</span></label>
-                                       <select id="region" class="required-entry validate-select" onchange="getCity();">'.$optionRegion.'</select>
+                                       <select id="region" class="required-entry validate-select nice-select" onchange="getCity();">'.$optionRegion.'</select>
                                     </div>							    
                                 </div>
 							    <div class="col-md-12" id="citySelect">
