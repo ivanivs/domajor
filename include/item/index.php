@@ -1792,7 +1792,7 @@ $body = '
                               <button class="nav-links active" id="home-tab-1" data-bs-toggle="tab" data-bs-target="#home-1" type="button" role="tab" aria-controls="home-1" aria-selected="true">Опис</button>
                            </li>
                            <li class="nav-item" role="presentation">
-                              <button class="nav-links" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">Відгуки (2)</button>
+                              <button class="nav-links" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">Відгуки ('.getCountReview($infoItem['id']).')</button>
                            </li>
                         </ul>
                      </div>
