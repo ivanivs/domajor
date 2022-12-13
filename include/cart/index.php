@@ -665,7 +665,7 @@ if (!isset ($_GET['go']))
 					    <div class="cart-page-total">
                              <h2>Загальна вартість</h2>
                              <ul class="mb-20">
-                                <li>Разом <span>'.$allpriceFullHtml.$allsuma.'</span> грн.</span></li>
+                                <li>Разом <span>'.$allpriceFullHtml.$allsuma.' грн.</span></li>
                              </ul>
                              <a href="#" onclick="checkDostavka();" class="tp-btn tp-color-btn banner-animation">Оформити замовлення</a>
                           </div>
