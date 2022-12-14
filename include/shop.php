@@ -299,7 +299,7 @@ if (isset ($_GET['select'][32])){
                 <span class="breadcrumb-item-active"><a href="'.$config['site_url'].'">Головна</a></span>
                 '.$valueBreadcrumb.'
              </div>
-             <h2 class="tp-breadcrumb__title">'.$valueBreadcrumb.htmlspecialchars($addH1).'</h2>
+             <h2 class="tp-breadcrumb__title">'.$valueBreadcrumb.(($countItem!=0) ? htmlspecialchars($addH1) : '').'</h2>
           </div>
        </div>
     </div>
