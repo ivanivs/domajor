@@ -54,19 +54,6 @@ $slider = '';
 if ($arrayBaner = getArray("SELECT * FROM `ls_baner` WHERE `main` = 0 ORDER by `id` DESC LIMIT 0,5")){
     foreach ($arrayBaner as $v){
         $slider .= '
-        <div class="swiper-slide">
-            <div class="tp-slide-item">
-                <div class="tp-slide-item__content">
-                    <h3 class="tp-slide-item__title mb-25">'.$v['name'].'</h3>
-                    <a class="tp-slide-item__slide-btn tp-btn" href="'.$v['link'].'">детальніше... <i class="fal fa-long-arrow-right"></i></a>
-                </div>
-                <div class="tp-slide-item__img">
-                    <img src="'.$config['site_url'].$v['file'].'" alt="'.$v['name'].'">
-                </div>
-            </div>
-        </div>
-        ';
-        $slider .= '
         <div class="col-lg-12 col-md-6">
             <div class="tpslider-banner tp-slider-sm-banner mb-30">
                 <a href="'.$v['link'].'">
