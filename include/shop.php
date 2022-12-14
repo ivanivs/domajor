@@ -88,7 +88,7 @@ if (isset ($_GET['param']) AND !isset($_GET['search']))
         }
         $array_items = getAllItemsWithParamSEARCH($_GET['search'], $limit, $sortSql, 1);
         $countItem = getNumberAllItemsWithParamSEARCH($_GET['search']);
-        $numberPage = ceil($countItem/33);
+        $numberPage = ceil($countItem/32);
         $title = 'Domajor.com.ua - '.ucfirst(htmlspecialchars($_GET['search']));
     }
 }
