@@ -6,7 +6,7 @@ mysql_query ("SET NAMES 'UTF8';");
 require ('../include/functions.php');
 if ($arrayItems = getArray("SELECT * FROM `ls_items`")){
     foreach ($arrayItems as $v){
-        $searchField = getOneValueText($v['select_1']).' '.$v['text_1'].' '.getOneValueText($v['select_1']).' '.$v['text_4'].' '.getOneValueText($v['select_1']);
+        $searchField = getOneValueText($v['select_3']).' '.$v['text_1'].' '.getOneValueText($v['select_3']).' '.$v['text_1'].' '.getOneValueText($v['select_3']);
         mysql_query("UPDATE `ls_items` SET `searchField` = '".mysql_real_escape_string($searchField)."' WHERE `id` = '".$v['id']."';");
     }
 }
