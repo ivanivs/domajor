@@ -45,12 +45,12 @@ if (fwrite($fp, $page)) {
 
         if ($infoItem = getOneString("SELECT * FROM `ls_items` WHERE `select_4` = '1' AND `text_3` = '" . $oneItem['code'] . "'")) {
             echo $infoItem['id']." ".$infoItem['text_1']."\r\n";
-            $data = file_get_contents('https://new.domajor.com.ua/srv/jamParcer.php?id='.$oneItem['code']);
-            if ($data!='error'){
-                $dataArray = json_decode($data,true);
-                $body = $dataArray['body'];
-            }
-            mysql_query("UPDATE `ls_items` SET `text_2` = '".mysql_real_escape_string($body)."', `price_1` = '" . mysql_real_escape_string($oneItem['price']) . "', `price_2` = '" . mysql_real_escape_string($oneItem['acc']) . "', `text_4` = '" . $stock . "' WHERE `id` = '" . $infoItem['id'] . "';");
+//            $data = file_get_contents('https://new.domajor.com.ua/srv/jamParcer.php?id='.$oneItem['code']);
+//            if ($data!='error'){
+//                $dataArray = json_decode($data,true);
+//                $body = $dataArray['body'];
+//            }
+            mysql_query("UPDATE `ls_items` SET `price_1` = '" . mysql_real_escape_string($oneItem['price']) . "', `price_2` = '" . mysql_real_escape_string($oneItem['acc']) . "', `text_4` = '" . $stock . "' WHERE `id` = '" . $infoItem['id'] . "';");
             sleep(1);
             $update++;
         } else {
