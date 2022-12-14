@@ -40,7 +40,7 @@ $body_admin .= '
     <div>Ссылка: <input type="text" name="link"></div>
     <div>Текст: <input type="text" name="name' .
     '"></div>
-    <div>Куда? <select class="form-control" name="main"><option value="1">В верхний банер</option><option value="0">В левый банер</option></select></div>
+    <div>Куда? <select class="form-control" name="main"><option value="1">Лівий</option><option value="0">Правий</option></select></div>
     <div>Отправить этот файл: <input name="userfile" type="file" /></div>
     <div><input type="submit" value="Загрузить" /></div>
 </form>
@@ -60,10 +60,10 @@ if ($array = getArray("SELECT * FROM `ls_baner`")){
     foreach ($array as $v){
         switch ($v['main']){
             case 0:
-                $main = 'лівий банер';
+                $main = 'Правий банер';
                 break;
             case 1:
-                $main = 'верхній банер';
+                $main = 'Лівий банер';
                 break;
         }
         $body_admin .= '
