@@ -298,7 +298,7 @@ if (isset ($_GET['select'][32])){
              <div class="tp-breadcrumb__link mb-10">
                 <span class="breadcrumb-item-active"><a href="'.$config['site_url'].'">Головна</a></span>
                 '.$valueBreadcrumb.'
-                '.(($countItem!=0) ? $addH1 : '').'
+                '.(($countItem!=0) ? htmlspecialchars($_GET['search']) : '').'
              </div>
              <h2 class="tp-breadcrumb__title">'.$valueBreadcrumb.(($countItem!=0) ? $addH1 : '').'</h2>
           </div>
