@@ -1114,7 +1114,7 @@ input[type=color] {
 }
 
 .header-meta {
-  margin-left: 40px;
+  margin-right: 40px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .header-meta {
