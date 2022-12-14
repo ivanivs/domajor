@@ -42,7 +42,7 @@ if ($arrayBaner = getArray("SELECT * FROM `ls_baner` ORDER by `id` DESC LIMIT 0,
                     <a class="tp-slide-item__slide-btn tp-btn" href="'.$v['link'].'">детальніше... <i class="fal fa-long-arrow-right"></i></a>
                 </div>
                 <div class="tp-slide-item__img">
-                    <img src="'.$config['site_url'].$v['link'].'" alt="'.$v['name'].'">
+                    <img src="'.$config['site_url'].$v['file'].'" alt="'.$v['name'].'">
                 </div>
             </div>
         </div>
