@@ -16,11 +16,13 @@ if (isset ($_POST['link'])){
         $body_admin .= '<div class="alert alert-success">Файл корректен и был успешно загружен.</div>';
         mysql_query("
         INSERT INTO  `ls_baner` (
+        `name` ,
         `link` ,
         `file`,
         `main`
         )
         VALUES (
+        '".mysql_real_escape_string($_POST['name'])."' ,
         '".mysql_real_escape_string($_POST['link'])."' ,
         '".mysql_real_escape_string($uploadfile)."' ,
         '".intval($_POST['main'])."'
@@ -36,6 +38,8 @@ $body_admin .= '
     <!-- Поле MAX_FILE_SIZE должно быть указано до поля загрузки файла -->
         <!-- Название элемента input определяет имя в массиве $_FILES -->
     <div>Ссылка: <input type="text" name="link"></div>
+    <div>Текст: <input type="text" name="name' .
+    '"></div>
     <div>Куда? <select class="form-control" name="main"><option value="1">В верхний банер</option><option value="0">В левый банер</option></select></div>
     <div>Отправить этот файл: <input name="userfile" type="file" /></div>
     <div><input type="submit" value="Загрузить" /></div>
