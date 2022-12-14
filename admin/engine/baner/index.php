@@ -52,6 +52,7 @@ if ($array = getArray("SELECT * FROM `ls_baner`")){
     <thead>
         <th>IMG</th>
         <th>Розміщення</th>
+        <th>Текст</th>
         <th>LINK</th>
         <th>DEL</th>
     </thead>
@@ -70,6 +71,7 @@ if ($array = getArray("SELECT * FROM `ls_baner`")){
         <tr>
             <td><img src="'.$config['site_url'].$v['file'].'" style="width: 200px;"></td>
             <td>'.$main.'</td>
+            <td>'.$v['name'].'</td>
             <td><a href="'.$v['link'].'" target="_blank">'.$v['link'].'</a></td>
             <td><a href="index.php?do=baner&del='.$v['id'].'">видалити</a></td>
         </tr>
