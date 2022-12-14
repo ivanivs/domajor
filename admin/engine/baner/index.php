@@ -33,16 +33,16 @@ if (isset ($_POST['link'])){
     }
 }
 $body_admin .= '
-<h2>Добавить банер</h2>
+<h2>Додати банер</h2>
 <form enctype="multipart/form-data" action="" method="POST">
     <!-- Поле MAX_FILE_SIZE должно быть указано до поля загрузки файла -->
         <!-- Название элемента input определяет имя в массиве $_FILES -->
-    <div>Ссылка: <input type="text" name="link"></div>
+    <div>Посилання: <input type="text" name="link"></div>
     <div>Текст: <input type="text" name="name' .
     '"></div>
-    <div>Куда? <select class="form-control" name="main"><option value="1">Лівий</option><option value="0">Правий</option></select></div>
-    <div>Отправить этот файл: <input name="userfile" type="file" /></div>
-    <div><input type="submit" value="Загрузить" /></div>
+    <div>Куди? <select class="form-control" name="main"><option value="1">Лівий</option><option value="0">Правий</option></select></div>
+    <div>Файл: <input name="userfile" type="file" /></div>
+    <div><input type="submit" value="Завантажити" /></div>
 </form>
 <h2>Завантажені банери:</h2>
 ';
