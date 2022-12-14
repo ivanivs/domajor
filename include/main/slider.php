@@ -32,7 +32,7 @@ $slider = '';
 //        ';
 //    }
 //}
-if ($arrayBaner = getArray("SELECT * FROM `ls_baner` ORDER by `id` DESC LIMIT 0,5")){
+if ($arrayBaner = getArray("SELECT * FROM `ls_baner` WHERE `main` = 1 ORDER by `id` DESC LIMIT 0,5")){
     foreach ($arrayBaner as $v){
         $slider .= '
         <div class="swiper-slide">
