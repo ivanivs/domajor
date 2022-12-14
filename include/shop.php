@@ -308,7 +308,7 @@ if (isset ($_GET['select'][32])){
 </section>
 <div class="container">
     <div class="row" style="margin-top: 30px;">
-        <div class="col-lg-10 col-md-12" style="position: relative;">
+        <div class="'.((!isset ($_GET['search']) ? 'col-lg-10' : 'col-lg-12')).' col-md-12" style="position: relative;">
             <div class="product-sidebar__product-item">
                 <input type="hidden" id="searchField" value="'.htmlspecialchars($_GET['search']).'">
                 <div class="product-filter-content mb-40">
@@ -366,14 +366,15 @@ if (isset ($_GET['select'][32])){
                 <input type="hidden" id="categoryId" value="'.$idCategory.'">
             </div>
         </div>
-        <div class="col-lg-2 col-md-12">
+        '.(!isset ($_GET['search']) ? '<div class="col-lg-2 col-md-12">
             <div class="tpsidebar product-sidebar__product-category">
                 <div class="product-sidebar">
                     '.$leftBlock.'
                     '.$addFiltr.'                                    
                 </div>            
             </div>
-        </div>
+        </div>': '').'
+        
     </div>
 </div>
     ';
