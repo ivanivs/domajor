@@ -778,7 +778,7 @@ function checkDostavka(){
             if ($("#warehouse").val()!=0){
                 warehouse = $("#warehouse").val();
             }
-            if ($("#warehousePoshtomat").val()!=0){
+            if ($("#warehousePoshtomat").val()!=0 && $("#warehousePoshtomat").val()!=null){
                 warehouse = $("#warehousePoshtomat").val();
             }
             console.log(warehouse);
