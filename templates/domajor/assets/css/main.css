@@ -8534,3 +8534,12 @@ p.checkout-coupon input[type=text]:focus {
 }
 
 /*# sourceMappingURL=main.css.map */
+.select2-container--default .select2-selection--single {
+  border: 1px solid #eaedff;
+  color: #6f7172;
+  height: 45px;
+  font-size: 14px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #6f7172;
+}
