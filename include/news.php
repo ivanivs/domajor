@@ -105,13 +105,61 @@ if (!isset ($_GET['id_category']))
         $info_full_news = mysql_fetch_array(mysql_query($sql), MYSQL_ASSOC);
         $infoShort = mysql_fetch_array(mysql_query("SELECT * FROM `ls_translate` where `id_elements` = '".mysql_real_escape_string($_GET['id_news'])."' and `type` = 'news_short';"), MYSQL_ASSOC);
         if (strlen($info_full_news['text'])>11) {
-            $template_tmp['template'] = str_replace('{full_news}', $info_full_news['text'], $template_tmp['template']);
+            $fullNews = $info_full_news['text'];
         } else {
-            $template_tmp['template'] = str_replace('{full_news}', $infoShort['text'], $template_tmp['template']);
+            $fullNews = $infoShort['text'];
         }
         $template_tmp['template'] = str_replace ('{name_news}', $info_name_news['text'], $template_tmp['template']);
         $template_tmp['template'] = str_replace ('{date}', date('d.m.Y H:i:s', $info_news['time']), $template_tmp['template']);
-//        $title = $inf
+//        $title = $info_name_news['text'];
+//        $keywords = $info_key_news['text'];
+//        $description = $info_descriptio_news['text'];
+//        $body .= $template_tmp['template'];
+        $body .= '
+        <section class="breadcrumb__area pt-60 pb-60 tp-breadcrumb__bg">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-xl-7 col-lg-12 col-md-12 col-12">
+                  <div class="tp-breadcrumb">
+                     <div class="tp-breadcrumb__link mb-10">
+                        <span class="breadcrumb-item-active"><a href="{main_sait}">Головна</a></span>
+                        <span>'.$info_name_news['text'].'</span>
+                     </div>
+                     <h2 class="tp-breadcrumb__title">'.$info_name_news['text'].'</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                  <div class="postbox__wrapper pr-20">
+                     <article class="postbox__item format-image mb-50 transition-3">
+                        <div class="postbox__content">
+                           <div class="row">
+                              <div class="col-lg-12">
+                                 <div class="postbox__content postbox__content-area mb-55">
+                                    <div class="postbox__meta mb-15">
+                                       <span><a href="#"><i class="fal fa-user-alt"></i> Адміністратор</a></span>
+                                       <span><i class="fal fa-clock"></i> '.date('d.m.Y H:i:s', $info_news['time']).'</span>
+                                    </div>
+                                    <h4 class="mb-35">
+                                       '.$info_name_news['text'].'
+                                    </h4>
+                                    '.$fullNews.'
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </article>
+                  </div>
+               </div>            
+            </div>        
+        </div>      
+      </section>
+        ';
     }
 }
 ?>
