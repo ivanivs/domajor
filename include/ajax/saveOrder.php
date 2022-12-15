@@ -270,17 +270,17 @@ VALUES (
 //            send_sms (0);
         }
         if (!empty($_POST['email']) and intval($_POST['oplata'])==2){
-//            mail ($_POST['email'], 'Замовлення KOMBAT.IN.UA', "Дякуємо!\r\nВаше замовлення №".$idOrder." на суму ".$allPrice."грн.\r\nПриватБанк: ".$config['user_params_36']." ".$config['user_params_37']."\r\nВідправка щодня о 15 год.");
+//            mail ($_POST['email'], 'Замовлення DOMAJOR.COM.UA', "Дякуємо!\r\nВаше замовлення №".$idOrder." на суму ".$allPrice."грн.\r\nПриватБанк: ".$config['user_params_36']." ".$config['user_params_37']."\r\nВідправка щодня о 15 год.");
 //            go_sms ($_POST['phoneOrder'], "Дякуємо! Ваше замовлення №".$idOrder." на суму ".$allPrice."грн ПриватБанк: ".$config['user_params_36']." ".$config['user_params_37']);
         } elseif (intval($_POST['oplata'])==2) {
 //            go_sms ($_POST['phoneOrder'], "Дякуємо! Ваше замовлення №".$idOrder." на суму ".$allPrice."грн ПриватБанк: ".$config['user_params_36']." ".$config['user_params_37']);
         } elseif (!empty($_POST['email'])) {
-//            mail ($_POST['email'], 'Замовлення KOMBAT.IN.UA', "Дякуємо!\r\nВаше замовлення №".$idOrder." на суму ".$allPrice."грн. на стадії обробки\r\nЙого буде реалізовано після його підтвердження менеджеру інетрнет-магазину. Очікуйте на телефонний дзвінок.\r\nwww.KOMBAT.IN.UA");
+//            mail ($_POST['email'], 'Замовлення DOMAJOR.COM.UA', "Дякуємо!\r\nВаше замовлення №".$idOrder." на суму ".$allPrice."грн. на стадії обробки\r\nЙого буде реалізовано після його підтвердження менеджеру інетрнет-магазину. Очікуйте на телефонний дзвінок.\r\nwww.DOMAJOR.COM.UA");
         }
         $notCallBack = intval($_POST['notCallBack']);
         sms_new_order(str_replace (' ', '', $_POST['phoneOrder']), $idOrder, $notCallBack);
         if (!empty($_POST['email'])){
-            mail ($_POST['email'], 'Замовлення KOMBAT.IN.UA',"Дякуємо! Замовлення №".$idOrder." на суму ".$allPrice."грн. прийнято.\r\nВ найближчий робочий час, з Вами зв’яжеться наш менеджер. Слідкувати за статусом замовлення можна також в особистому кабінеті у нас на сайті. \r\nwww.kombat.in.ua");
+            mail ($_POST['email'], 'Замовлення DOMAJOR.COM.UA',"Дякуємо! Замовлення №".$idOrder." на суму ".$allPrice."грн. прийнято.\r\nВ найближчий робочий час, з Вами зв’яжеться наш менеджер. Слідкувати за статусом замовлення можна також в особистому кабінеті у нас на сайті. \r\nwww.DOMAJOR.COM.UA");
         }
         mail($config['user_params_22'], 'New order', 'Link to order: '.$config['site_url'].'/admin/list_item.php?uniq='.$uniq_id_in_base.'&id='.$idOrder);
     }

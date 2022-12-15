@@ -26,12 +26,12 @@ if ($_GET['mode']!='cabinet'){
             break;
         case "changePassword":
             $activeChangePassword = ' class="active"';
-            $title= 'KOMBAT.IN.UA - змінити пароль';
+            $title= 'Domajor.com.ua - змінити пароль';
             require ('include/cabinet/changePassword.php');
             break;
         case "favorite":
             $activeFavorite = ' class="active"';
-            $title= 'KOMBAT.IN.UA - обрані товари';
+            $title= 'Domajor.com.ua - обрані товари';
             require ('include/cabinet/favorite.php');
             break;
     }
