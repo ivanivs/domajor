@@ -21,5 +21,5 @@ $config['email_password'] = 'Mb2pO0VN';
 $config['smtp_host'] = '127.0.0.1';
 $config['smtp_port'] = '25';
 $config['ssl'] = '0';
-$config['tlgrm']['token'] = '5595055585:AAFSQW29bCeCHyyBn4GjCdycnsd5kcb5zNI';
+$config['tlgrm']['token'] = '5968002536:AAEaAmZXmM0DMzc0JzKbZSoyYe79Z383DAM';
 ?>
