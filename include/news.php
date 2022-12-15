@@ -143,7 +143,7 @@ if (!isset ($_GET['id_category']))
                                  <div class="postbox__content postbox__content-area mb-55">
                                     <div class="postbox__meta mb-15">
                                        <span><a href="#"><i class="fal fa-user-alt"></i> Адміністратор</a></span>
-                                       <span><i class="fal fa-clock"></i> '.date('d.m.Y H:i:s', $info_news['time']).'</span>
+                                       <span><i class="fal fa-clock"></i> '.date('d.m.Y H:i', $info_news['time']).'</span>
                                     </div>
                                     '.$fullNews.'
                                  </div>
