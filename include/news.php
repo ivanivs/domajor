@@ -145,9 +145,6 @@ if (!isset ($_GET['id_category']))
                                        <span><a href="#"><i class="fal fa-user-alt"></i> Адміністратор</a></span>
                                        <span><i class="fal fa-clock"></i> '.date('d.m.Y H:i:s', $info_news['time']).'</span>
                                     </div>
-                                    <h4 class="mb-35">
-                                       '.$info_name_news['text'].'
-                                    </h4>
                                     '.$fullNews.'
                                  </div>
                               </div>
