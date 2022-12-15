@@ -30,7 +30,7 @@ INSERT INTO  `ls_orders` (
 )
 VALUES (
 '".mysql_real_escape_string($_POST['promocode'])."',
-'kombat.in.ua',
+'domajor.com.ua',
 '".$uniq_id_in_base."',
 '".$infoUser['id']."',
 '".mysql_real_escape_string($_POST['pib'])."',
