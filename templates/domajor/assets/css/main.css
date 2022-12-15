@@ -5269,6 +5269,9 @@ input[type=color] {
   font-size: 36px;
   line-height: 1.25;
 }
+.postbox__content-area img {
+  margin-right: 10px;
+}
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 768px) and (max-width: 991px) {
   .postbox__content-area h4 {
     font-size: 30px;
