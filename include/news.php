@@ -111,9 +111,9 @@ if (!isset ($_GET['id_category']))
         }
         $template_tmp['template'] = str_replace ('{name_news}', $info_name_news['text'], $template_tmp['template']);
         $template_tmp['template'] = str_replace ('{date}', date('d.m.Y H:i:s', $info_news['time']), $template_tmp['template']);
-//        $title = $info_name_news['text'];
-//        $keywords = $info_key_news['text'];
-//        $description = $info_descriptio_news['text'];
+        $title = $info_name_news['text'];
+        $keywords = $info_key_news['text'];
+        $description = $info_descriptio_news['text'];
 //        $body .= $template_tmp['template'];
         $body .= '
         <section class="breadcrumb__area pt-60 pb-60 tp-breadcrumb__bg">
