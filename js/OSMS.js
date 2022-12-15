@@ -750,6 +750,10 @@ function getCartBlock ()
         url: main_site + 'index.php?mode=ajax&ajax=getCart',
         success: function(result) {
             $(".fieldCartBlock").html(result);
+            $(".tpcart__close").on("click", function () {
+                $(".tp-cart-info-area").removeClass("tp-sidebar-opened");
+                $(".cartbody-overlay").removeClass("opened");
+            });
         },
     });
 }
