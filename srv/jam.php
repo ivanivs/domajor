@@ -11,6 +11,7 @@ $port = '5839';
 $ftp_user_name = 'export';
 $ftp_user_pass = 'pSnko92m';
 //echo "ftp://export:pSnko92m@193.193.194.28:5839/export/export.xml';
+echo "ftp://" . $ftp_user_name . ':' . $ftp_user_pass . '@' . $srv . ':5839' . '/export/export.xml';
 $page = file_get_contents("ftp://" . $ftp_user_name . ':' . $ftp_user_pass . '@' . $srv . ':5839' . '/export/export.xml');
 $fp = fopen('files/jam.xml', 'w+');
 if (fwrite($fp, $page)) {
