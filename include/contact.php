@@ -40,7 +40,7 @@ if ($info_contact['feedback'])
     $contactForm = '
         <b>'.$lang[636].'</b>
         '.$error_message.'
-        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 mt-3">
             <form class="contact-form-style" id="contact-form" action="" method="post">
                 <div class="row">
                     <div class="col-lg-4">
