@@ -43,31 +43,31 @@ if ($info_contact['feedback'])
         <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 mt-3">
             <form class="contact-form-style" id="contact-form" action="" method="post">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 mt-2 mb-2">
                         <div class="form-floating mb-3">
                           <input type="text" class="form-control" id="name"  name="name" placeholder="Ім\'я" value="'.$_POST['name'].'">
                           <label for="name">Ім\'я</label>
                         </div>                    
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 mt-2 mb-2">
                         <div class="form-floating mb-3">
                           <input type="email" class="form-control" id="email"  name="email" placeholder="Email" value="'.$_POST['email'].'">
                           <label for="email">Email</label>
                         </div>                    
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 mt-2 mb-2">
                         <div class="form-floating mb-3">
                           <input type="text" class="form-control" id="phone"  name="phone" placeholder="Телефон" value="'.$_POST['phone'].'">
                           <label for="phone">Телефон</label>
                         </div>                    
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 mt-2 mb-2">
                         <div class="form-floating">
                           <textarea class="form-control" placeholder="'.$lang[640].'" id="body" name="body" style="height: 100px"></textarea>
                           <label for="body">Повідомлення</label>
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 mt-3">
                         <button class="btn btn-primary" type="submit" class="btn btn-success">Надіслати</button>                    
                     </div>
                 </div>
